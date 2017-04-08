@@ -1,0 +1,7 @@
+# 
+tokenize	nil	# Gen:   Convert input to token list.
+pat	HTMLFormattingElements	# comment
+pat	HTMLTextTagging	# comment
+pat	HTMLCharacterPatterns	# comment
+pat	HTMLTextFunctions	# comment
+rec	HTMLTagStructure	# comment

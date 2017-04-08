@@ -1,0 +1,2513 @@
+ind attr
+"concept"
+0
+"concept" "sys" "attrs" "common" "var"
+psym
+"cg_CONCEPT"
+end ind
+
+
+ind attr
+"concept" "gram"
+0
+"concept" "sys" "dict" "a" "x" "xu" "xwhite"
+pst
+"true"
+end ind
+
+
+ind attr
+"concept" "gram"
+0
+"concept" "sys" "dict" "a" "c" "co" "constrain"
+pst
+"true"
+end ind
+
+
+ind attr
+"concept" "gram"
+0
+"concept" "sys" "dict" "a" "c" "cl" "closed"
+pst
+"false"
+end ind
+
+
+ind attr
+"concept" "gram"
+0
+"concept" "sys" "dict" "a" "l" "li" "lit"
+pst
+"false"
+end ind
+
+
+ind attr
+"concept" "gram"
+0
+"concept" "sys" "dict" "a" "s" "sp" "split"
+pst
+"false"
+end ind
+
+
+ind attr
+"concept" "gram"
+0
+"concept" "sys" "dict" "a" "g" "ge" "gen"
+pst
+"false"
+end ind
+
+
+ind attr
+"concept" "gram"
+0
+"concept" "sys" "dict" "a" "l" "lo" "locked"
+pst
+"false"
+end ind
+
+
+ind attr
+"concept" "gram"
+0
+"concept" "sys" "dict" "a" "d" "di" "dirty"
+pst
+"true"
+end ind
+
+
+ind attr
+"concept" "gram"
+0
+"concept" "sys" "dict" "a" "q" "qu" "quicksem"
+pst
+"false"
+end ind
+
+
+ind attr
+"concept" "gram"
+0
+"concept" "sys" "dict" "a" "c" "co" "counter"
+pst
+"false"
+end ind
+
+
+ind attr
+"concept" "gram"
+0
+"concept" "sys" "dict" "a" "n" "no" "notrig"
+pst
+"false"
+end ind
+
+
+ind attr
+"concept" "sys"
+0
+"concept" "sys" "attrs" "common" "var"
+psym
+"con_SYS"
+end ind
+
+
+ind attr
+"concept" "sys" "attrs"
+0
+"concept" "sys" "attrs" "common" "var"
+psym
+"sys_ATTRS"
+end ind
+
+
+ind attr
+"concept" "sys" "attrs" "proxy"
+0
+"concept" "sys" "attrs" "common" "var"
+psym
+"attrs_PROXY"
+end ind
+
+
+ind attr
+"concept" "sys" "attrs" "proxy" "atom"
+0
+"concept" "sys" "attrs" "common" "var"
+psym
+"cg_ATOM"
+end ind
+
+
+ind attr
+"concept" "sys" "attrs" "pproxy"
+0
+"concept" "sys" "attrs" "common" "var"
+psym
+"attrs_PPROXY"
+end ind
+
+
+ind attr
+"concept" "sys" "attrs" "pproxy" "phrase"
+0
+"concept" "sys" "attrs" "common" "var"
+psym
+"cg_PHRASE"
+end ind
+
+
+ind attr
+"concept" "sys" "attrs" "common"
+0
+"concept" "sys" "attrs" "common" "var"
+psym
+"attrs_COMMON"
+end ind
+
+
+ind attr
+"concept" "sys" "attrs" "common" "var"
+0
+"concept" "sys" "attrs" "common" "var"
+psym
+"cg_VAR"
+end ind
+
+
+ind attr
+"concept" "sys" "nlp"
+0
+"concept" "sys" "attrs" "common" "var"
+psym
+"sys_NLP"
+end ind
+
+
+ind attr
+"concept" "sys" "nlp" "lex" "slot" "cases"
+0
+"concept" "sys" "attrs" "common" "var"
+psym
+"id_CASES"
+end ind
+
+
+ind attr
+"concept" "sys" "mean" "slot" "case"
+0
+"concept" "sys" "attrs" "common" "var"
+psym
+"id_mslot_CASE"
+end ind
+
+
+ind attr
+"concept" "sys" "mean" "slot" "case" "cap"
+0
+"concept" "sys" "attrs" "common" "var"
+psym
+"id_CAP"
+end ind
+
+
+ind attr
+"concept" "sys" "mean" "slot" "case" "allcap"
+0
+"concept" "sys" "attrs" "common" "var"
+psym
+"id_ALLCAP"
+end ind
+
+
+ind attr
+"concept" "sys" "mean" "slot" "case" "mixed"
+0
+"concept" "sys" "attrs" "common" "var"
+psym
+"id_MIXED"
+end ind
+
+
+ind attr
+"concept" "sys" "mean" "slot" "mixed"
+0
+"concept" "sys" "attrs" "common" "var"
+psym
+"id_mslot_MIXED"
+end ind
+
+
+ind attr
+"concept" "sys" "dict"
+0
+"concept" "sys" "attrs" "common" "var"
+psym
+"sys_DICT"
+end ind
+
+
+ind attr
+"concept" "sys" "dict" "a"
+0
+"concept" "sys" "attrs" "common" "var"
+psym
+"dict_ALPHA"
+end ind
+
+
+ind attr
+"concept" "sys" "dict" "unknown"
+0
+"concept" "sys" "attrs" "common" "var"
+psym
+"dict_UNKNOWN"
+end ind
+
+
+ind attr
+"concept" "sys" "gui" "spec" "tokenize"
+0
+"concept" "sys" "dict" "a" "a" "al" "algo"
+pst
+"tokenize"
+end ind
+
+
+ind attr
+"concept" "sys" "gui" "spec" "tokenize"
+0
+"concept" "sys" "dict" "a" "d" "da" "data"
+pst
+"nil"
+end ind
+
+
+ind attr
+"concept" "sys" "gui" "spec" "tokenize"
+0
+"concept" "sys" "dict" "a" "c" "co" "comment"
+pst
+"Gen:   Convert input to token list."
+end ind
+
+
+ind attr
+"concept" "sys" "gui" "spec" "tokenize"
+0
+"concept" "sys" "dict" "a" "a" "ac" "active"
+pnum
+1
+end ind
+
+
+ind attr
+"concept" "sys" "gui" "spec" "tokenize"
+0
+"concept" "sys" "dict" "a" "p" "pa" "pass"
+pnum
+1
+end ind
+
+
+ind attr
+"concept" "sys" "gui" "spec" "tokenize"
+0
+"concept" "sys" "dict" "a" "t" "ty" "type"
+pnum
+2
+end ind
+
+
+ind attr
+"concept" "sys" "gui" "spec" "HTMLFormattingElements"
+0
+"concept" "sys" "dict" "a" "a" "al" "algo"
+pst
+"pat"
+end ind
+
+
+ind attr
+"concept" "sys" "gui" "spec" "HTMLFormattingElements"
+0
+"concept" "sys" "dict" "a" "d" "da" "data"
+pst
+"HTMLFormattingElements"
+end ind
+
+
+ind attr
+"concept" "sys" "gui" "spec" "HTMLFormattingElements"
+0
+"concept" "sys" "dict" "a" "c" "co" "comment"
+pst
+"comment"
+end ind
+
+
+ind attr
+"concept" "sys" "gui" "spec" "HTMLFormattingElements"
+0
+"concept" "sys" "dict" "a" "a" "ac" "active"
+pnum
+1
+end ind
+
+
+ind attr
+"concept" "sys" "gui" "spec" "HTMLFormattingElements"
+0
+"concept" "sys" "dict" "a" "p" "pa" "pass"
+pnum
+2
+end ind
+
+
+ind attr
+"concept" "sys" "gui" "spec" "HTMLFormattingElements"
+0
+"concept" "sys" "dict" "a" "t" "ty" "type"
+pnum
+1
+end ind
+
+
+ind attr
+"concept" "sys" "gui" "spec" "HTMLTextTagging"
+0
+"concept" "sys" "dict" "a" "a" "al" "algo"
+pst
+"pat"
+end ind
+
+
+ind attr
+"concept" "sys" "gui" "spec" "HTMLTextTagging"
+0
+"concept" "sys" "dict" "a" "d" "da" "data"
+pst
+"HTMLTextTagging"
+end ind
+
+
+ind attr
+"concept" "sys" "gui" "spec" "HTMLTextTagging"
+0
+"concept" "sys" "dict" "a" "c" "co" "comment"
+pst
+"comment"
+end ind
+
+
+ind attr
+"concept" "sys" "gui" "spec" "HTMLTextTagging"
+0
+"concept" "sys" "dict" "a" "a" "ac" "active"
+pnum
+1
+end ind
+
+
+ind attr
+"concept" "sys" "gui" "spec" "HTMLTextTagging"
+0
+"concept" "sys" "dict" "a" "p" "pa" "pass"
+pnum
+3
+end ind
+
+
+ind attr
+"concept" "sys" "gui" "spec" "HTMLTextTagging"
+0
+"concept" "sys" "dict" "a" "t" "ty" "type"
+pnum
+1
+end ind
+
+
+ind attr
+"concept" "sys" "gui" "spec" "HTMLCharacterPatterns"
+0
+"concept" "sys" "dict" "a" "a" "al" "algo"
+pst
+"pat"
+end ind
+
+
+ind attr
+"concept" "sys" "gui" "spec" "HTMLCharacterPatterns"
+0
+"concept" "sys" "dict" "a" "d" "da" "data"
+pst
+"HTMLCharacterPatterns"
+end ind
+
+
+ind attr
+"concept" "sys" "gui" "spec" "HTMLCharacterPatterns"
+0
+"concept" "sys" "dict" "a" "c" "co" "comment"
+pst
+"comment"
+end ind
+
+
+ind attr
+"concept" "sys" "gui" "spec" "HTMLCharacterPatterns"
+0
+"concept" "sys" "dict" "a" "a" "ac" "active"
+pnum
+1
+end ind
+
+
+ind attr
+"concept" "sys" "gui" "spec" "HTMLCharacterPatterns"
+0
+"concept" "sys" "dict" "a" "p" "pa" "pass"
+pnum
+4
+end ind
+
+
+ind attr
+"concept" "sys" "gui" "spec" "HTMLCharacterPatterns"
+0
+"concept" "sys" "dict" "a" "t" "ty" "type"
+pnum
+1
+end ind
+
+
+ind attr
+"concept" "sys" "gui" "spec" "HTMLTextFunctions"
+0
+"concept" "sys" "dict" "a" "a" "al" "algo"
+pst
+"pat"
+end ind
+
+
+ind attr
+"concept" "sys" "gui" "spec" "HTMLTextFunctions"
+0
+"concept" "sys" "dict" "a" "d" "da" "data"
+pst
+"HTMLTextFunctions"
+end ind
+
+
+ind attr
+"concept" "sys" "gui" "spec" "HTMLTextFunctions"
+0
+"concept" "sys" "dict" "a" "c" "co" "comment"
+pst
+"comment"
+end ind
+
+
+ind attr
+"concept" "sys" "gui" "spec" "HTMLTextFunctions"
+0
+"concept" "sys" "dict" "a" "a" "ac" "active"
+pnum
+1
+end ind
+
+
+ind attr
+"concept" "sys" "gui" "spec" "HTMLTextFunctions"
+0
+"concept" "sys" "dict" "a" "p" "pa" "pass"
+pnum
+5
+end ind
+
+
+ind attr
+"concept" "sys" "gui" "spec" "HTMLTextFunctions"
+0
+"concept" "sys" "dict" "a" "t" "ty" "type"
+pnum
+1
+end ind
+
+
+ind attr
+"concept" "sys" "gui" "spec" "HTMLTagStructure"
+0
+"concept" "sys" "dict" "a" "d" "da" "data"
+pst
+"HTMLTagStructure"
+end ind
+
+
+ind attr
+"concept" "sys" "gui" "spec" "HTMLTagStructure"
+0
+"concept" "sys" "dict" "a" "c" "co" "comment"
+pst
+"comment"
+end ind
+
+
+ind attr
+"concept" "sys" "gui" "spec" "HTMLTagStructure"
+0
+"concept" "sys" "dict" "a" "p" "pa" "pass"
+pnum
+6
+end ind
+
+
+ind attr
+"concept" "sys" "gui" "spec" "HTMLTagStructure"
+0
+"concept" "sys" "dict" "a" "a" "al" "algo"
+pst
+"rec"
+end ind
+
+
+ind attr
+"concept" "sys" "gui" "spec" "HTMLTagStructure"
+0
+"concept" "sys" "dict" "a" "a" "ac" "active"
+pnum
+1
+end ind
+
+
+ind attr
+"concept" "sys" "gui" "spec" "HTMLTagStructure"
+0
+"concept" "sys" "dict" "a" "t" "ty" "type"
+pnum
+5
+end ind
+
+
+ind attr
+"concept" "sys" "gui" "text" "PRNS9771800.htm"
+0
+"concept" "sys" "dict" "a" "t" "ty" "type"
+pnum
+3
+end ind
+
+
+ind attr
+"concept" "sys" "gui" "text" "PRNS9771800.htm" "ana001.log"
+0
+"concept" "sys" "dict" "a" "t" "ty" "type"
+pnum
+4
+end ind
+
+
+ind attr
+"concept" "sys" "gui" "text" "PRNS9771800.htm" "ana002.log"
+0
+"concept" "sys" "dict" "a" "t" "ty" "type"
+pnum
+4
+end ind
+
+
+ind attr
+"concept" "sys" "gui" "text" "PRNS9771800.htm" "ana003.log"
+0
+"concept" "sys" "dict" "a" "t" "ty" "type"
+pnum
+4
+end ind
+
+
+ind attr
+"concept" "sys" "gui" "text" "PRNS9771800.htm" "ana004.log"
+0
+"concept" "sys" "dict" "a" "t" "ty" "type"
+pnum
+4
+end ind
+
+
+ind attr
+"concept" "sys" "gui" "text" "PRNS9771800.htm" "ana005.log"
+0
+"concept" "sys" "dict" "a" "t" "ty" "type"
+pnum
+4
+end ind
+
+
+ind attr
+"concept" "sys" "gui" "text" "PRNS9771800.htm" "ana006.log"
+0
+"concept" "sys" "dict" "a" "t" "ty" "type"
+pnum
+4
+end ind
+
+
+ind attr
+"concept" "sys" "gui" "text" "PRNS9771800.htm" "err.log"
+0
+"concept" "sys" "dict" "a" "t" "ty" "type"
+pnum
+4
+end ind
+
+
+ind attr
+"concept" "sys" "gui" "text" "PRNS9771800.htm" "final.log"
+0
+"concept" "sys" "dict" "a" "t" "ty" "type"
+pnum
+4
+end ind
+
+
+ind attr
+"concept" "sys" "gui" "text" "PRNS9771800.htm" "init.log"
+0
+"concept" "sys" "dict" "a" "t" "ty" "type"
+pnum
+4
+end ind
+
+
+ind attr
+"concept" "character_codes" "quot"
+0
+"concept" "sys" "dict" "a" "t" "te" "textValue"
+pst
+"\""
+end ind
+
+
+ind attr
+"concept" "character_codes" "amp"
+0
+"concept" "sys" "dict" "a" "t" "te" "textValue"
+pst
+"&"
+end ind
+
+
+ind attr
+"concept" "character_codes" "lt"
+0
+"concept" "sys" "dict" "a" "t" "te" "textValue"
+pst
+"<"
+end ind
+
+
+ind attr
+"concept" "character_codes" "gt"
+0
+"concept" "sys" "dict" "a" "t" "te" "textValue"
+pst
+">"
+end ind
+
+
+ind attr
+"concept" "character_codes" "OElig"
+0
+"concept" "sys" "dict" "a" "t" "te" "textValue"
+pst
+"OE"
+end ind
+
+
+ind attr
+"concept" "character_codes" "oelig"
+0
+"concept" "sys" "dict" "a" "t" "te" "textValue"
+pst
+"oe"
+end ind
+
+
+ind attr
+"concept" "character_codes" "iexcl"
+0
+"concept" "sys" "dict" "a" "t" "te" "textValue"
+pst
+"¡"
+end ind
+
+
+ind attr
+"concept" "character_codes" "cent"
+0
+"concept" "sys" "dict" "a" "t" "te" "textValue"
+pst
+"¢"
+end ind
+
+
+ind attr
+"concept" "character_codes" "pound"
+0
+"concept" "sys" "dict" "a" "t" "te" "textValue"
+pst
+"£"
+end ind
+
+
+ind attr
+"concept" "character_codes" "curren"
+0
+"concept" "sys" "dict" "a" "t" "te" "textValue"
+pst
+"¤"
+end ind
+
+
+ind attr
+"concept" "character_codes" "yen"
+0
+"concept" "sys" "dict" "a" "t" "te" "textValue"
+pst
+"¥"
+end ind
+
+
+ind attr
+"concept" "character_codes" "brvbar"
+0
+"concept" "sys" "dict" "a" "t" "te" "textValue"
+pst
+"¦"
+end ind
+
+
+ind attr
+"concept" "character_codes" "sect"
+0
+"concept" "sys" "dict" "a" "t" "te" "textValue"
+pst
+"§"
+end ind
+
+
+ind attr
+"concept" "character_codes" "uml"
+0
+"concept" "sys" "dict" "a" "t" "te" "textValue"
+pst
+"¨"
+end ind
+
+
+ind attr
+"concept" "character_codes" "copy"
+0
+"concept" "sys" "dict" "a" "t" "te" "textValue"
+pst
+"©"
+end ind
+
+
+ind attr
+"concept" "character_codes" "ordf"
+0
+"concept" "sys" "dict" "a" "t" "te" "textValue"
+pst
+"ª"
+end ind
+
+
+ind attr
+"concept" "character_codes" "laquo"
+0
+"concept" "sys" "dict" "a" "t" "te" "textValue"
+pst
+"\""
+end ind
+
+
+ind attr
+"concept" "character_codes" "not"
+0
+"concept" "sys" "dict" "a" "t" "te" "textValue"
+pst
+"not"
+end ind
+
+
+ind attr
+"concept" "character_codes" "shy"
+0
+"concept" "sys" "dict" "a" "t" "te" "textValue"
+pst
+"-­"
+end ind
+
+
+ind attr
+"concept" "character_codes" "reg"
+0
+"concept" "sys" "dict" "a" "t" "te" "textValue"
+pst
+"®"
+end ind
+
+
+ind attr
+"concept" "character_codes" "macr"
+0
+"concept" "sys" "dict" "a" "t" "te" "textValue"
+pst
+"¯"
+end ind
+
+
+ind attr
+"concept" "character_codes" "deg"
+0
+"concept" "sys" "dict" "a" "t" "te" "textValue"
+pst
+"°"
+end ind
+
+
+ind attr
+"concept" "character_codes" "plusmn"
+0
+"concept" "sys" "dict" "a" "t" "te" "textValue"
+pst
+"±"
+end ind
+
+
+ind attr
+"concept" "character_codes" "sup2"
+0
+"concept" "sys" "dict" "a" "t" "te" "textValue"
+pst
+"²"
+end ind
+
+
+ind attr
+"concept" "character_codes" "sup3"
+0
+"concept" "sys" "dict" "a" "t" "te" "textValue"
+pst
+"³"
+end ind
+
+
+ind attr
+"concept" "character_codes" "acute"
+0
+"concept" "sys" "dict" "a" "t" "te" "textValue"
+pst
+"´"
+end ind
+
+
+ind attr
+"concept" "character_codes" "micro"
+0
+"concept" "sys" "dict" "a" "t" "te" "textValue"
+pst
+"µ"
+end ind
+
+
+ind attr
+"concept" "character_codes" "para"
+0
+"concept" "sys" "dict" "a" "t" "te" "textValue"
+pst
+"<para>"
+end ind
+
+
+ind attr
+"concept" "character_codes" "middot"
+0
+"concept" "sys" "dict" "a" "t" "te" "textValue"
+pst
+"·"
+end ind
+
+
+ind attr
+"concept" "character_codes" "cedil"
+0
+"concept" "sys" "dict" "a" "t" "te" "textValue"
+pst
+"¸"
+end ind
+
+
+ind attr
+"concept" "character_codes" "sup1"
+0
+"concept" "sys" "dict" "a" "t" "te" "textValue"
+pst
+"¹"
+end ind
+
+
+ind attr
+"concept" "character_codes" "ordm"
+0
+"concept" "sys" "dict" "a" "t" "te" "textValue"
+pst
+"º"
+end ind
+
+
+ind attr
+"concept" "character_codes" "raquo"
+0
+"concept" "sys" "dict" "a" "t" "te" "textValue"
+pst
+"\""
+end ind
+
+
+ind attr
+"concept" "character_codes" "frac14"
+0
+"concept" "sys" "dict" "a" "t" "te" "textValue"
+pst
+"¼"
+end ind
+
+
+ind attr
+"concept" "character_codes" "frac12"
+0
+"concept" "sys" "dict" "a" "t" "te" "textValue"
+pst
+"½"
+end ind
+
+
+ind attr
+"concept" "character_codes" "frac34"
+0
+"concept" "sys" "dict" "a" "t" "te" "textValue"
+pst
+"¾"
+end ind
+
+
+ind attr
+"concept" "character_codes" "iquest"
+0
+"concept" "sys" "dict" "a" "t" "te" "textValue"
+pst
+"¿"
+end ind
+
+
+ind attr
+"concept" "character_codes" "Agrave"
+0
+"concept" "sys" "dict" "a" "t" "te" "textValue"
+pst
+"À"
+end ind
+
+
+ind attr
+"concept" "character_codes" "Aacute"
+0
+"concept" "sys" "dict" "a" "t" "te" "textValue"
+pst
+"Á"
+end ind
+
+
+ind attr
+"concept" "character_codes" "Acirc"
+0
+"concept" "sys" "dict" "a" "t" "te" "textValue"
+pst
+"Â"
+end ind
+
+
+ind attr
+"concept" "character_codes" "Atilde"
+0
+"concept" "sys" "dict" "a" "t" "te" "textValue"
+pst
+"Ã"
+end ind
+
+
+ind attr
+"concept" "character_codes" "Auml"
+0
+"concept" "sys" "dict" "a" "t" "te" "textValue"
+pst
+"Ä"
+end ind
+
+
+ind attr
+"concept" "character_codes" "Aring"
+0
+"concept" "sys" "dict" "a" "t" "te" "textValue"
+pst
+"Å"
+end ind
+
+
+ind attr
+"concept" "character_codes" "AElig"
+0
+"concept" "sys" "dict" "a" "t" "te" "textValue"
+pst
+"Æ"
+end ind
+
+
+ind attr
+"concept" "character_codes" "Ccedil"
+0
+"concept" "sys" "dict" "a" "t" "te" "textValue"
+pst
+"Ç"
+end ind
+
+
+ind attr
+"concept" "character_codes" "Egrave"
+0
+"concept" "sys" "dict" "a" "t" "te" "textValue"
+pst
+"È"
+end ind
+
+
+ind attr
+"concept" "character_codes" "Eacute"
+0
+"concept" "sys" "dict" "a" "t" "te" "textValue"
+pst
+"É"
+end ind
+
+
+ind attr
+"concept" "character_codes" "Ecirc"
+0
+"concept" "sys" "dict" "a" "t" "te" "textValue"
+pst
+"Ê"
+end ind
+
+
+ind attr
+"concept" "character_codes" "Euml"
+0
+"concept" "sys" "dict" "a" "t" "te" "textValue"
+pst
+"Ë"
+end ind
+
+
+ind attr
+"concept" "character_codes" "Igrave"
+0
+"concept" "sys" "dict" "a" "t" "te" "textValue"
+pst
+"Ì"
+end ind
+
+
+ind attr
+"concept" "character_codes" "Iacute"
+0
+"concept" "sys" "dict" "a" "t" "te" "textValue"
+pst
+"Í"
+end ind
+
+
+ind attr
+"concept" "character_codes" "Icirc"
+0
+"concept" "sys" "dict" "a" "t" "te" "textValue"
+pst
+"Î"
+end ind
+
+
+ind attr
+"concept" "character_codes" "Iuml"
+0
+"concept" "sys" "dict" "a" "t" "te" "textValue"
+pst
+"Ï"
+end ind
+
+
+ind attr
+"concept" "character_codes" "ETH"
+0
+"concept" "sys" "dict" "a" "t" "te" "textValue"
+pst
+"Ð"
+end ind
+
+
+ind attr
+"concept" "character_codes" "Ntilde"
+0
+"concept" "sys" "dict" "a" "t" "te" "textValue"
+pst
+"Ñ"
+end ind
+
+
+ind attr
+"concept" "character_codes" "Ograve"
+0
+"concept" "sys" "dict" "a" "t" "te" "textValue"
+pst
+"Ò"
+end ind
+
+
+ind attr
+"concept" "character_codes" "Oacute"
+0
+"concept" "sys" "dict" "a" "t" "te" "textValue"
+pst
+"Ó"
+end ind
+
+
+ind attr
+"concept" "character_codes" "Ocirc"
+0
+"concept" "sys" "dict" "a" "t" "te" "textValue"
+pst
+"Ô"
+end ind
+
+
+ind attr
+"concept" "character_codes" "Otilde"
+0
+"concept" "sys" "dict" "a" "t" "te" "textValue"
+pst
+"Õ"
+end ind
+
+
+ind attr
+"concept" "character_codes" "Ouml"
+0
+"concept" "sys" "dict" "a" "t" "te" "textValue"
+pst
+"Ö"
+end ind
+
+
+ind attr
+"concept" "character_codes" "times"
+0
+"concept" "sys" "dict" "a" "t" "te" "textValue"
+pst
+"×"
+end ind
+
+
+ind attr
+"concept" "character_codes" "Oslash"
+0
+"concept" "sys" "dict" "a" "t" "te" "textValue"
+pst
+"Ø"
+end ind
+
+
+ind attr
+"concept" "character_codes" "Ugrave"
+0
+"concept" "sys" "dict" "a" "t" "te" "textValue"
+pst
+"Ù"
+end ind
+
+
+ind attr
+"concept" "character_codes" "Uacute"
+0
+"concept" "sys" "dict" "a" "t" "te" "textValue"
+pst
+"Ú"
+end ind
+
+
+ind attr
+"concept" "character_codes" "Ucirc"
+0
+"concept" "sys" "dict" "a" "t" "te" "textValue"
+pst
+"Û"
+end ind
+
+
+ind attr
+"concept" "character_codes" "Uuml"
+0
+"concept" "sys" "dict" "a" "t" "te" "textValue"
+pst
+"Ü"
+end ind
+
+
+ind attr
+"concept" "character_codes" "Yacute"
+0
+"concept" "sys" "dict" "a" "t" "te" "textValue"
+pst
+"Ý"
+end ind
+
+
+ind attr
+"concept" "character_codes" "THORN"
+0
+"concept" "sys" "dict" "a" "t" "te" "textValue"
+pst
+"Þ"
+end ind
+
+
+ind attr
+"concept" "character_codes" "szlig"
+0
+"concept" "sys" "dict" "a" "t" "te" "textValue"
+pst
+"ß"
+end ind
+
+
+ind attr
+"concept" "character_codes" "agrave"
+0
+"concept" "sys" "dict" "a" "t" "te" "textValue"
+pst
+"à"
+end ind
+
+
+ind attr
+"concept" "character_codes" "aacute"
+0
+"concept" "sys" "dict" "a" "t" "te" "textValue"
+pst
+"á"
+end ind
+
+
+ind attr
+"concept" "character_codes" "acirc"
+0
+"concept" "sys" "dict" "a" "t" "te" "textValue"
+pst
+"â"
+end ind
+
+
+ind attr
+"concept" "character_codes" "atilde"
+0
+"concept" "sys" "dict" "a" "t" "te" "textValue"
+pst
+"ã"
+end ind
+
+
+ind attr
+"concept" "character_codes" "auml"
+0
+"concept" "sys" "dict" "a" "t" "te" "textValue"
+pst
+"ä"
+end ind
+
+
+ind attr
+"concept" "character_codes" "aring"
+0
+"concept" "sys" "dict" "a" "t" "te" "textValue"
+pst
+"å"
+end ind
+
+
+ind attr
+"concept" "character_codes" "aelig"
+0
+"concept" "sys" "dict" "a" "t" "te" "textValue"
+pst
+"æ"
+end ind
+
+
+ind attr
+"concept" "character_codes" "ccedil"
+0
+"concept" "sys" "dict" "a" "t" "te" "textValue"
+pst
+"ç"
+end ind
+
+
+ind attr
+"concept" "character_codes" "egrave"
+0
+"concept" "sys" "dict" "a" "t" "te" "textValue"
+pst
+"è"
+end ind
+
+
+ind attr
+"concept" "character_codes" "eacute"
+0
+"concept" "sys" "dict" "a" "t" "te" "textValue"
+pst
+"é"
+end ind
+
+
+ind attr
+"concept" "character_codes" "ecirc"
+0
+"concept" "sys" "dict" "a" "t" "te" "textValue"
+pst
+"ê"
+end ind
+
+
+ind attr
+"concept" "character_codes" "euml"
+0
+"concept" "sys" "dict" "a" "t" "te" "textValue"
+pst
+"ë"
+end ind
+
+
+ind attr
+"concept" "character_codes" "igrave"
+0
+"concept" "sys" "dict" "a" "t" "te" "textValue"
+pst
+"ì"
+end ind
+
+
+ind attr
+"concept" "character_codes" "iacute"
+0
+"concept" "sys" "dict" "a" "t" "te" "textValue"
+pst
+"í"
+end ind
+
+
+ind attr
+"concept" "character_codes" "icirc"
+0
+"concept" "sys" "dict" "a" "t" "te" "textValue"
+pst
+"î"
+end ind
+
+
+ind attr
+"concept" "character_codes" "iuml"
+0
+"concept" "sys" "dict" "a" "t" "te" "textValue"
+pst
+"ï"
+end ind
+
+
+ind attr
+"concept" "character_codes" "eth"
+0
+"concept" "sys" "dict" "a" "t" "te" "textValue"
+pst
+"ð"
+end ind
+
+
+ind attr
+"concept" "character_codes" "ntilde"
+0
+"concept" "sys" "dict" "a" "t" "te" "textValue"
+pst
+"ñ"
+end ind
+
+
+ind attr
+"concept" "character_codes" "ograve"
+0
+"concept" "sys" "dict" "a" "t" "te" "textValue"
+pst
+"ò"
+end ind
+
+
+ind attr
+"concept" "character_codes" "oacute"
+0
+"concept" "sys" "dict" "a" "t" "te" "textValue"
+pst
+"ó"
+end ind
+
+
+ind attr
+"concept" "character_codes" "ocirc"
+0
+"concept" "sys" "dict" "a" "t" "te" "textValue"
+pst
+"ô"
+end ind
+
+
+ind attr
+"concept" "character_codes" "otilde"
+0
+"concept" "sys" "dict" "a" "t" "te" "textValue"
+pst
+"õ"
+end ind
+
+
+ind attr
+"concept" "character_codes" "ouml"
+0
+"concept" "sys" "dict" "a" "t" "te" "textValue"
+pst
+"ö"
+end ind
+
+
+ind attr
+"concept" "character_codes" "divide"
+0
+"concept" "sys" "dict" "a" "t" "te" "textValue"
+pst
+"÷"
+end ind
+
+
+ind attr
+"concept" "character_codes" "oslash"
+0
+"concept" "sys" "dict" "a" "t" "te" "textValue"
+pst
+"ø"
+end ind
+
+
+ind attr
+"concept" "character_codes" "ugrave"
+0
+"concept" "sys" "dict" "a" "t" "te" "textValue"
+pst
+"ù"
+end ind
+
+
+ind attr
+"concept" "character_codes" "uacute"
+0
+"concept" "sys" "dict" "a" "t" "te" "textValue"
+pst
+"ú"
+end ind
+
+
+ind attr
+"concept" "character_codes" "ucirc"
+0
+"concept" "sys" "dict" "a" "t" "te" "textValue"
+pst
+"û"
+end ind
+
+
+ind attr
+"concept" "character_codes" "uuml"
+0
+"concept" "sys" "dict" "a" "t" "te" "textValue"
+pst
+"ü"
+end ind
+
+
+ind attr
+"concept" "character_codes" "yacute"
+0
+"concept" "sys" "dict" "a" "t" "te" "textValue"
+pst
+"ý"
+end ind
+
+
+ind attr
+"concept" "character_codes" "thorn"
+0
+"concept" "sys" "dict" "a" "t" "te" "textValue"
+pst
+"þ"
+end ind
+
+
+ind attr
+"concept" "character_codes" "yuml"
+0
+"concept" "sys" "dict" "a" "t" "te" "textValue"
+pst
+"y"
+end ind
+
+
+ind attr
+"concept" "character_codes" "34"
+0
+"concept" "sys" "dict" "a" "t" "te" "textValue"
+pst
+"\""
+end ind
+
+
+ind attr
+"concept" "character_codes" "38"
+0
+"concept" "sys" "dict" "a" "t" "te" "textValue"
+pst
+"&"
+end ind
+
+
+ind attr
+"concept" "character_codes" "60"
+0
+"concept" "sys" "dict" "a" "t" "te" "textValue"
+pst
+"<"
+end ind
+
+
+ind attr
+"concept" "character_codes" "62"
+0
+"concept" "sys" "dict" "a" "t" "te" "textValue"
+pst
+">"
+end ind
+
+
+ind attr
+"concept" "character_codes" "338"
+0
+"concept" "sys" "dict" "a" "t" "te" "textValue"
+pst
+"OE"
+end ind
+
+
+ind attr
+"concept" "character_codes" "339"
+0
+"concept" "sys" "dict" "a" "t" "te" "textValue"
+pst
+"oe"
+end ind
+
+
+ind attr
+"concept" "character_codes" "160"
+0
+"concept" "sys" "dict" "a" "t" "te" "textValue"
+pst
+" "
+end ind
+
+
+ind attr
+"concept" "character_codes" "161"
+0
+"concept" "sys" "dict" "a" "t" "te" "textValue"
+pst
+"¡"
+end ind
+
+
+ind attr
+"concept" "character_codes" "162"
+0
+"concept" "sys" "dict" "a" "t" "te" "textValue"
+pst
+"¢"
+end ind
+
+
+ind attr
+"concept" "character_codes" "163"
+0
+"concept" "sys" "dict" "a" "t" "te" "textValue"
+pst
+"£"
+end ind
+
+
+ind attr
+"concept" "character_codes" "164"
+0
+"concept" "sys" "dict" "a" "t" "te" "textValue"
+pst
+"¤"
+end ind
+
+
+ind attr
+"concept" "character_codes" "165"
+0
+"concept" "sys" "dict" "a" "t" "te" "textValue"
+pst
+"¥"
+end ind
+
+
+ind attr
+"concept" "character_codes" "166"
+0
+"concept" "sys" "dict" "a" "t" "te" "textValue"
+pst
+"¦"
+end ind
+
+
+ind attr
+"concept" "character_codes" "167"
+0
+"concept" "sys" "dict" "a" "t" "te" "textValue"
+pst
+"§"
+end ind
+
+
+ind attr
+"concept" "character_codes" "168"
+0
+"concept" "sys" "dict" "a" "t" "te" "textValue"
+pst
+"¨"
+end ind
+
+
+ind attr
+"concept" "character_codes" "169"
+0
+"concept" "sys" "dict" "a" "t" "te" "textValue"
+pst
+"©"
+end ind
+
+
+ind attr
+"concept" "character_codes" "170"
+0
+"concept" "sys" "dict" "a" "t" "te" "textValue"
+pst
+"ª"
+end ind
+
+
+ind attr
+"concept" "character_codes" "171"
+0
+"concept" "sys" "dict" "a" "t" "te" "textValue"
+pst
+"\""
+end ind
+
+
+ind attr
+"concept" "character_codes" "172"
+0
+"concept" "sys" "dict" "a" "t" "te" "textValue"
+pst
+"not"
+end ind
+
+
+ind attr
+"concept" "character_codes" "173"
+0
+"concept" "sys" "dict" "a" "t" "te" "textValue"
+pst
+"­-"
+end ind
+
+
+ind attr
+"concept" "character_codes" "174"
+0
+"concept" "sys" "dict" "a" "t" "te" "textValue"
+pst
+"®"
+end ind
+
+
+ind attr
+"concept" "character_codes" "175"
+0
+"concept" "sys" "dict" "a" "t" "te" "textValue"
+pst
+"¯"
+end ind
+
+
+ind attr
+"concept" "character_codes" "176"
+0
+"concept" "sys" "dict" "a" "t" "te" "textValue"
+pst
+"°"
+end ind
+
+
+ind attr
+"concept" "character_codes" "177"
+0
+"concept" "sys" "dict" "a" "t" "te" "textValue"
+pst
+"±"
+end ind
+
+
+ind attr
+"concept" "character_codes" "178"
+0
+"concept" "sys" "dict" "a" "t" "te" "textValue"
+pst
+"²"
+end ind
+
+
+ind attr
+"concept" "character_codes" "179"
+0
+"concept" "sys" "dict" "a" "t" "te" "textValue"
+pst
+"³"
+end ind
+
+
+ind attr
+"concept" "character_codes" "180"
+0
+"concept" "sys" "dict" "a" "t" "te" "textValue"
+pst
+"´"
+end ind
+
+
+ind attr
+"concept" "character_codes" "181"
+0
+"concept" "sys" "dict" "a" "t" "te" "textValue"
+pst
+"µ"
+end ind
+
+
+ind attr
+"concept" "character_codes" "182"
+0
+"concept" "sys" "dict" "a" "t" "te" "textValue"
+pst
+"<para>"
+end ind
+
+
+ind attr
+"concept" "character_codes" "183"
+0
+"concept" "sys" "dict" "a" "t" "te" "textValue"
+pst
+"·"
+end ind
+
+
+ind attr
+"concept" "character_codes" "184"
+0
+"concept" "sys" "dict" "a" "t" "te" "textValue"
+pst
+"¸"
+end ind
+
+
+ind attr
+"concept" "character_codes" "185"
+0
+"concept" "sys" "dict" "a" "t" "te" "textValue"
+pst
+"¹"
+end ind
+
+
+ind attr
+"concept" "character_codes" "186"
+0
+"concept" "sys" "dict" "a" "t" "te" "textValue"
+pst
+"º"
+end ind
+
+
+ind attr
+"concept" "character_codes" "187"
+0
+"concept" "sys" "dict" "a" "t" "te" "textValue"
+pst
+"\""
+end ind
+
+
+ind attr
+"concept" "character_codes" "188"
+0
+"concept" "sys" "dict" "a" "t" "te" "textValue"
+pst
+"¼"
+end ind
+
+
+ind attr
+"concept" "character_codes" "189"
+0
+"concept" "sys" "dict" "a" "t" "te" "textValue"
+pst
+"½"
+end ind
+
+
+ind attr
+"concept" "character_codes" "190"
+0
+"concept" "sys" "dict" "a" "t" "te" "textValue"
+pst
+"¾"
+end ind
+
+
+ind attr
+"concept" "character_codes" "191"
+0
+"concept" "sys" "dict" "a" "t" "te" "textValue"
+pst
+"¿"
+end ind
+
+
+ind attr
+"concept" "character_codes" "192"
+0
+"concept" "sys" "dict" "a" "t" "te" "textValue"
+pst
+"À"
+end ind
+
+
+ind attr
+"concept" "character_codes" "193"
+0
+"concept" "sys" "dict" "a" "t" "te" "textValue"
+pst
+"Á"
+end ind
+
+
+ind attr
+"concept" "character_codes" "194"
+0
+"concept" "sys" "dict" "a" "t" "te" "textValue"
+pst
+"Â"
+end ind
+
+
+ind attr
+"concept" "character_codes" "195"
+0
+"concept" "sys" "dict" "a" "t" "te" "textValue"
+pst
+"Ã"
+end ind
+
+
+ind attr
+"concept" "character_codes" "196"
+0
+"concept" "sys" "dict" "a" "t" "te" "textValue"
+pst
+"Ä"
+end ind
+
+
+ind attr
+"concept" "character_codes" "197"
+0
+"concept" "sys" "dict" "a" "t" "te" "textValue"
+pst
+"Å"
+end ind
+
+
+ind attr
+"concept" "character_codes" "198"
+0
+"concept" "sys" "dict" "a" "t" "te" "textValue"
+pst
+"Æ"
+end ind
+
+
+ind attr
+"concept" "character_codes" "199"
+0
+"concept" "sys" "dict" "a" "t" "te" "textValue"
+pst
+"Ç"
+end ind
+
+
+ind attr
+"concept" "character_codes" "200"
+0
+"concept" "sys" "dict" "a" "t" "te" "textValue"
+pst
+"È"
+end ind
+
+
+ind attr
+"concept" "character_codes" "201"
+0
+"concept" "sys" "dict" "a" "t" "te" "textValue"
+pst
+"É"
+end ind
+
+
+ind attr
+"concept" "character_codes" "202"
+0
+"concept" "sys" "dict" "a" "t" "te" "textValue"
+pst
+"Ê"
+end ind
+
+
+ind attr
+"concept" "character_codes" "203"
+0
+"concept" "sys" "dict" "a" "t" "te" "textValue"
+pst
+"Ë"
+end ind
+
+
+ind attr
+"concept" "character_codes" "204"
+0
+"concept" "sys" "dict" "a" "t" "te" "textValue"
+pst
+"Ì"
+end ind
+
+
+ind attr
+"concept" "character_codes" "205"
+0
+"concept" "sys" "dict" "a" "t" "te" "textValue"
+pst
+"Í"
+end ind
+
+
+ind attr
+"concept" "character_codes" "206"
+0
+"concept" "sys" "dict" "a" "t" "te" "textValue"
+pst
+"Î"
+end ind
+
+
+ind attr
+"concept" "character_codes" "207"
+0
+"concept" "sys" "dict" "a" "t" "te" "textValue"
+pst
+"Ï"
+end ind
+
+
+ind attr
+"concept" "character_codes" "208"
+0
+"concept" "sys" "dict" "a" "t" "te" "textValue"
+pst
+"Ð"
+end ind
+
+
+ind attr
+"concept" "character_codes" "209"
+0
+"concept" "sys" "dict" "a" "t" "te" "textValue"
+pst
+"Ñ"
+end ind
+
+
+ind attr
+"concept" "character_codes" "210"
+0
+"concept" "sys" "dict" "a" "t" "te" "textValue"
+pst
+"Ò"
+end ind
+
+
+ind attr
+"concept" "character_codes" "211"
+0
+"concept" "sys" "dict" "a" "t" "te" "textValue"
+pst
+"Ó"
+end ind
+
+
+ind attr
+"concept" "character_codes" "212"
+0
+"concept" "sys" "dict" "a" "t" "te" "textValue"
+pst
+"Ô"
+end ind
+
+
+ind attr
+"concept" "character_codes" "213"
+0
+"concept" "sys" "dict" "a" "t" "te" "textValue"
+pst
+"Õ"
+end ind
+
+
+ind attr
+"concept" "character_codes" "214"
+0
+"concept" "sys" "dict" "a" "t" "te" "textValue"
+pst
+"Ö"
+end ind
+
+
+ind attr
+"concept" "character_codes" "215"
+0
+"concept" "sys" "dict" "a" "t" "te" "textValue"
+pst
+"×"
+end ind
+
+
+ind attr
+"concept" "character_codes" "216"
+0
+"concept" "sys" "dict" "a" "t" "te" "textValue"
+pst
+"Ø"
+end ind
+
+
+ind attr
+"concept" "character_codes" "217"
+0
+"concept" "sys" "dict" "a" "t" "te" "textValue"
+pst
+"Ù"
+end ind
+
+
+ind attr
+"concept" "character_codes" "218"
+0
+"concept" "sys" "dict" "a" "t" "te" "textValue"
+pst
+"Ú"
+end ind
+
+
+ind attr
+"concept" "character_codes" "219"
+0
+"concept" "sys" "dict" "a" "t" "te" "textValue"
+pst
+"Û"
+end ind
+
+
+ind attr
+"concept" "character_codes" "220"
+0
+"concept" "sys" "dict" "a" "t" "te" "textValue"
+pst
+"Ü"
+end ind
+
+
+ind attr
+"concept" "character_codes" "221"
+0
+"concept" "sys" "dict" "a" "t" "te" "textValue"
+pst
+"Ý"
+end ind
+
+
+ind attr
+"concept" "character_codes" "222"
+0
+"concept" "sys" "dict" "a" "t" "te" "textValue"
+pst
+"Þ"
+end ind
+
+
+ind attr
+"concept" "character_codes" "223"
+0
+"concept" "sys" "dict" "a" "t" "te" "textValue"
+pst
+"ß"
+end ind
+
+
+ind attr
+"concept" "character_codes" "224"
+0
+"concept" "sys" "dict" "a" "t" "te" "textValue"
+pst
+"à"
+end ind
+
+
+ind attr
+"concept" "character_codes" "225"
+0
+"concept" "sys" "dict" "a" "t" "te" "textValue"
+pst
+"á"
+end ind
+
+
+ind attr
+"concept" "character_codes" "226"
+0
+"concept" "sys" "dict" "a" "t" "te" "textValue"
+pst
+"â"
+end ind
+
+
+ind attr
+"concept" "character_codes" "227"
+0
+"concept" "sys" "dict" "a" "t" "te" "textValue"
+pst
+"ã"
+end ind
+
+
+ind attr
+"concept" "character_codes" "228"
+0
+"concept" "sys" "dict" "a" "t" "te" "textValue"
+pst
+"ä"
+end ind
+
+
+ind attr
+"concept" "character_codes" "229"
+0
+"concept" "sys" "dict" "a" "t" "te" "textValue"
+pst
+"å"
+end ind
+
+
+ind attr
+"concept" "character_codes" "230"
+0
+"concept" "sys" "dict" "a" "t" "te" "textValue"
+pst
+"æ"
+end ind
+
+
+ind attr
+"concept" "character_codes" "231"
+0
+"concept" "sys" "dict" "a" "t" "te" "textValue"
+pst
+"ç"
+end ind
+
+
+ind attr
+"concept" "character_codes" "232"
+0
+"concept" "sys" "dict" "a" "t" "te" "textValue"
+pst
+"è"
+end ind
+
+
+ind attr
+"concept" "character_codes" "233"
+0
+"concept" "sys" "dict" "a" "t" "te" "textValue"
+pst
+"é"
+end ind
+
+
+ind attr
+"concept" "character_codes" "234"
+0
+"concept" "sys" "dict" "a" "t" "te" "textValue"
+pst
+"ê"
+end ind
+
+
+ind attr
+"concept" "character_codes" "235"
+0
+"concept" "sys" "dict" "a" "t" "te" "textValue"
+pst
+"ë"
+end ind
+
+
+ind attr
+"concept" "character_codes" "236"
+0
+"concept" "sys" "dict" "a" "t" "te" "textValue"
+pst
+"ì"
+end ind
+
+
+ind attr
+"concept" "character_codes" "237"
+0
+"concept" "sys" "dict" "a" "t" "te" "textValue"
+pst
+"í"
+end ind
+
+
+ind attr
+"concept" "character_codes" "238"
+0
+"concept" "sys" "dict" "a" "t" "te" "textValue"
+pst
+"î"
+end ind
+
+
+ind attr
+"concept" "character_codes" "239"
+0
+"concept" "sys" "dict" "a" "t" "te" "textValue"
+pst
+"ï"
+end ind
+
+
+ind attr
+"concept" "character_codes" "240"
+0
+"concept" "sys" "dict" "a" "t" "te" "textValue"
+pst
+"ð"
+end ind
+
+
+ind attr
+"concept" "character_codes" "241"
+0
+"concept" "sys" "dict" "a" "t" "te" "textValue"
+pst
+"ñ"
+end ind
+
+
+ind attr
+"concept" "character_codes" "242"
+0
+"concept" "sys" "dict" "a" "t" "te" "textValue"
+pst
+"ò"
+end ind
+
+
+ind attr
+"concept" "character_codes" "243"
+0
+"concept" "sys" "dict" "a" "t" "te" "textValue"
+pst
+"ó"
+end ind
+
+
+ind attr
+"concept" "character_codes" "244"
+0
+"concept" "sys" "dict" "a" "t" "te" "textValue"
+pst
+"ô"
+end ind
+
+
+ind attr
+"concept" "character_codes" "245"
+0
+"concept" "sys" "dict" "a" "t" "te" "textValue"
+pst
+"õ"
+end ind
+
+
+ind attr
+"concept" "character_codes" "246"
+0
+"concept" "sys" "dict" "a" "t" "te" "textValue"
+pst
+"ö"
+end ind
+
+
+ind attr
+"concept" "character_codes" "247"
+0
+"concept" "sys" "dict" "a" "t" "te" "textValue"
+pst
+"÷"
+end ind
+
+
+ind attr
+"concept" "character_codes" "248"
+0
+"concept" "sys" "dict" "a" "t" "te" "textValue"
+pst
+"ø"
+end ind
+
+
+ind attr
+"concept" "character_codes" "249"
+0
+"concept" "sys" "dict" "a" "t" "te" "textValue"
+pst
+"ù"
+end ind
+
+
+ind attr
+"concept" "character_codes" "250"
+0
+"concept" "sys" "dict" "a" "t" "te" "textValue"
+pst
+"ú"
+end ind
+
+
+ind attr
+"concept" "character_codes" "251"
+0
+"concept" "sys" "dict" "a" "t" "te" "textValue"
+pst
+"û"
+end ind
+
+
+ind attr
+"concept" "character_codes" "252"
+0
+"concept" "sys" "dict" "a" "t" "te" "textValue"
+pst
+"ü"
+end ind
+
+
+ind attr
+"concept" "character_codes" "253"
+0
+"concept" "sys" "dict" "a" "t" "te" "textValue"
+pst
+"ý"
+end ind
+
+
+ind attr
+"concept" "character_codes" "254"
+0
+"concept" "sys" "dict" "a" "t" "te" "textValue"
+pst
+"þ"
+end ind
+
+
+ind attr
+"concept" "character_codes" "255"
+0
+"concept" "sys" "dict" "a" "t" "te" "textValue"
+pst
+"y"
+end ind
+
+
+quit
+

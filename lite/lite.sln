@@ -1,0 +1,34 @@
+Microsoft Visual Studio Solution File, Format Version 10.00
+# Visual Studio 2008
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "lite", "lite.vcproj", "{5B63F12C-3F96-4650-8CD2-FC5A1D98167F}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug_QDBM|Win32 = Debug_QDBM|Win32
+		Debug|Win32 = Debug|Win32
+		Release_QDBM|Win32 = Release_QDBM|Win32
+		Release_Static|Win32 = Release_Static|Win32
+		Release|Win32 = Release|Win32
+		Unicode_Debug|Win32 = Unicode_Debug|Win32
+		Unicode_Release|Win32 = Unicode_Release|Win32
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{5B63F12C-3F96-4650-8CD2-FC5A1D98167F}.Debug_QDBM|Win32.ActiveCfg = Debug_QDBM|Win32
+		{5B63F12C-3F96-4650-8CD2-FC5A1D98167F}.Debug_QDBM|Win32.Build.0 = Debug_QDBM|Win32
+		{5B63F12C-3F96-4650-8CD2-FC5A1D98167F}.Debug|Win32.ActiveCfg = Debug|Win32
+		{5B63F12C-3F96-4650-8CD2-FC5A1D98167F}.Debug|Win32.Build.0 = Debug|Win32
+		{5B63F12C-3F96-4650-8CD2-FC5A1D98167F}.Release_QDBM|Win32.ActiveCfg = Release_QDBM|Win32
+		{5B63F12C-3F96-4650-8CD2-FC5A1D98167F}.Release_QDBM|Win32.Build.0 = Release_QDBM|Win32
+		{5B63F12C-3F96-4650-8CD2-FC5A1D98167F}.Release_Static|Win32.ActiveCfg = Release_Static|Win32
+		{5B63F12C-3F96-4650-8CD2-FC5A1D98167F}.Release_Static|Win32.Build.0 = Release_Static|Win32
+		{5B63F12C-3F96-4650-8CD2-FC5A1D98167F}.Release|Win32.ActiveCfg = Release|Win32
+		{5B63F12C-3F96-4650-8CD2-FC5A1D98167F}.Release|Win32.Build.0 = Release|Win32
+		{5B63F12C-3F96-4650-8CD2-FC5A1D98167F}.Unicode_Debug|Win32.ActiveCfg = Unicode_Debug|Win32
+		{5B63F12C-3F96-4650-8CD2-FC5A1D98167F}.Unicode_Debug|Win32.Build.0 = Unicode_Debug|Win32
+		{5B63F12C-3F96-4650-8CD2-FC5A1D98167F}.Unicode_Release|Win32.ActiveCfg = Unicode_Release|Win32
+		{5B63F12C-3F96-4650-8CD2-FC5A1D98167F}.Unicode_Release|Win32.Build.0 = Unicode_Release|Win32
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

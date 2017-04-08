@@ -1,0 +1,708 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="14.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug_QDBM|Win32">
+      <Configuration>Debug_QDBM</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release_QDBM|Win32">
+      <Configuration>Release_QDBM</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release_Static|Win32">
+      <Configuration>Release_Static</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Unicode_Debug|Win32">
+      <Configuration>Unicode_Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Unicode_Release|Win32">
+      <Configuration>Unicode_Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{5B63F12C-3F96-4650-8CD2-FC5A1D98167F}</ProjectGuid>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release_QDBM|Win32'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <PlatformToolset>v140</PlatformToolset>
+    <UseOfMfc>false</UseOfMfc>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug_QDBM|Win32'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <PlatformToolset>v140</PlatformToolset>
+    <UseOfMfc>false</UseOfMfc>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release_Static|Win32'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <PlatformToolset>v140</PlatformToolset>
+    <UseOfMfc>false</UseOfMfc>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Unicode_Debug|Win32'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <PlatformToolset>v140</PlatformToolset>
+    <UseOfMfc>false</UseOfMfc>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Unicode_Release|Win32'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <PlatformToolset>v140</PlatformToolset>
+    <UseOfMfc>false</UseOfMfc>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <PlatformToolset>v140</PlatformToolset>
+    <UseOfMfc>false</UseOfMfc>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <PlatformToolset>v140</PlatformToolset>
+    <UseOfMfc>false</UseOfMfc>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Release_QDBM|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+    <Import Project="$(VCTargetsPath)Microsoft.CPP.UpgradeFromVC71.props" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Debug_QDBM|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+    <Import Project="$(VCTargetsPath)Microsoft.CPP.UpgradeFromVC71.props" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Release_Static|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+    <Import Project="$(VCTargetsPath)Microsoft.CPP.UpgradeFromVC71.props" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Unicode_Debug|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+    <Import Project="$(VCTargetsPath)Microsoft.CPP.UpgradeFromVC71.props" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Unicode_Release|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+    <Import Project="$(VCTargetsPath)Microsoft.CPP.UpgradeFromVC71.props" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+    <Import Project="$(VCTargetsPath)Microsoft.CPP.UpgradeFromVC71.props" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+    <Import Project="$(VCTargetsPath)Microsoft.CPP.UpgradeFromVC71.props" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup>
+    <_ProjectFileVersion>14.0.24730.2</_ProjectFileVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <OutDir>.\Release\</OutDir>
+    <IntDir>.\Release\</IntDir>
+    <LinkIncremental>false</LinkIncremental>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <OutDir>.\Debug\</OutDir>
+    <IntDir>.\Debug\</IntDir>
+    <LinkIncremental>false</LinkIncremental>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Unicode_Release|Win32'">
+    <OutDir>Unicode_Release\</OutDir>
+    <IntDir>Unicode_Release\</IntDir>
+    <LinkIncremental>false</LinkIncremental>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Unicode_Debug|Win32'">
+    <OutDir>Unicode_Debug\</OutDir>
+    <IntDir>Unicode_Debug\</IntDir>
+    <LinkIncremental>false</LinkIncremental>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release_Static|Win32'">
+    <OutDir>$(Configuration)\</OutDir>
+    <IntDir>$(Configuration)\</IntDir>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug_QDBM|Win32'">
+    <OutDir>$(Configuration)\</OutDir>
+    <IntDir>$(Configuration)\</IntDir>
+    <LinkIncremental>false</LinkIncremental>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release_QDBM|Win32'">
+    <OutDir>$(Configuration)\</OutDir>
+    <IntDir>$(Configuration)\</IntDir>
+    <LinkIncremental>false</LinkIncremental>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Midl>
+      <PreprocessorDefinitions>NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <MkTypLibCompatible>true</MkTypLibCompatible>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <TargetEnvironment>Win32</TargetEnvironment>
+      <TypeLibraryName>.\Release/lite.tlb</TypeLibraryName>
+    </Midl>
+    <ClCompile>
+      <AdditionalOptions>/Zm250  %(AdditionalOptions)</AdditionalOptions>
+      <InlineFunctionExpansion>OnlyExplicitInline</InlineFunctionExpansion>
+      <AdditionalIncludeDirectories>$(TAIDEV)\include\Api\lite;$(TAIDEV)\include\Api\web;$(TAIDEV)\include\Api;$(TAIDEV)\wn;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>NONSTD_;WIN32;NDEBUG;_WINDOWS;_USRDLL;LITE_EXPORTS;WORDNET;GENPRETTY_;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <StringPooling>true</StringPooling>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <PrecompiledHeaderFile>stdafx.h</PrecompiledHeaderFile>
+      <PrecompiledHeaderOutputFile>.\Release/lite.pch</PrecompiledHeaderOutputFile>
+      <AssemblerListingLocation>.\Release/</AssemblerListingLocation>
+      <ObjectFileName>.\Release/</ObjectFileName>
+      <ProgramDataBaseFileName>.\Release/</ProgramDataBaseFileName>
+      <WarningLevel>Level3</WarningLevel>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <CompileAs>Default</CompileAs>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <Culture>0x0409</Culture>
+    </ResourceCompile>
+    <Link>
+      <AdditionalOptions>/MACHINE:I386 /FIXED:NO %(AdditionalOptions)</AdditionalOptions>
+      <AdditionalDependencies>odbc32.lib;odbccp32.lib;web.lib;libconsh.lib;words.lib;libprim.lib;wn.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <OutputFile>.\Release/lite.dll</OutputFile>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <AdditionalLibraryDirectories>$(TAIDEV)\lib</AdditionalLibraryDirectories>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <ProgramDatabaseFile>.\Release/lite.pdb</ProgramDatabaseFile>
+      <RandomizedBaseAddress>false</RandomizedBaseAddress>
+      <DataExecutionPrevention />
+      <ImportLibrary>.\Release/lite.lib</ImportLibrary>
+    </Link>
+    <PostBuildEvent>
+      <Command>del /q $(TAIDEV)\bin\lite.dll
+del /q $(TAIDEV)\lib\lite.lib
+del /q $(TAIDEV)\lib\lite.exp
+copy release\lite.dll $(TAIDEV)\bin\lite.dll
+copy release\lite.lib $(TAIDEV)\lib\lite.lib
+copy release\lite.exp $(TAIDEV)\lib\lite.exp
+</Command>
+    </PostBuildEvent>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Midl>
+      <PreprocessorDefinitions>_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <MkTypLibCompatible>true</MkTypLibCompatible>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <TargetEnvironment>Win32</TargetEnvironment>
+      <TypeLibraryName>.\Debug/lite.tlb</TypeLibraryName>
+    </Midl>
+    <ClCompile>
+      <AdditionalOptions>/Zm200  %(AdditionalOptions)</AdditionalOptions>
+      <Optimization>Disabled</Optimization>
+      <AdditionalIncludeDirectories>$(TAIDEV)\include\Api\lite;$(TAIDEV)\include\Api\web;$(TAIDEV)\include\Api;$(TAIDEV)\wn;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>PERFORM_;NONSTD_;WIN32;_DEBUG;_WINDOWS;_USRDLL;LITE_EXPORTS;WORDNET;GENPRETTY_;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <BasicRuntimeChecks>Default</BasicRuntimeChecks>
+      <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <PrecompiledHeaderFile>stdafx.h</PrecompiledHeaderFile>
+      <PrecompiledHeaderOutputFile>.\Debug/lite.pch</PrecompiledHeaderOutputFile>
+      <AssemblerListingLocation>.\Debug/</AssemblerListingLocation>
+      <ObjectFileName>.\Debug/</ObjectFileName>
+      <ProgramDataBaseFileName>.\Debug/</ProgramDataBaseFileName>
+      <BrowseInformation>true</BrowseInformation>
+      <WarningLevel>Level3</WarningLevel>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <CompileAs>Default</CompileAs>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <Culture>0x0409</Culture>
+    </ResourceCompile>
+    <Link>
+      <AdditionalOptions>/MACHINE:I386 /FIXED:NO %(AdditionalOptions)</AdditionalOptions>
+      <AdditionalDependencies>odbc32.lib;odbccp32.lib;webd.lib;libconshd.lib;wordsd.lib;libprimd.lib;wnd.lib;wininet.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <OutputFile>Debug/lited.dll</OutputFile>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <AdditionalLibraryDirectories>$(TAIDEV)\lib</AdditionalLibraryDirectories>
+      <IgnoreAllDefaultLibraries>false</IgnoreAllDefaultLibraries>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <ProgramDatabaseFile>.\Debug/lited.pdb</ProgramDatabaseFile>
+      <RandomizedBaseAddress>false</RandomizedBaseAddress>
+      <DataExecutionPrevention />
+      <ImportLibrary>.\Debug/lited.lib</ImportLibrary>
+    </Link>
+    <PostBuildEvent>
+      <Command>del $(TAIDEV)\bin\lited.dll
+del $(TAIDEV)\lib\lited.lib
+del $(TAIDEV)\lib\lited.exp
+copy debug\lited.dll $(TAIDEV)\bin\lited.dll
+copy debug\lited.lib $(TAIDEV)\lib\lited.lib
+copy debug\lited.exp $(TAIDEV)\lib\lited.exp
+copy debug\lited.pdb $(TAIDEV)\bin\lited.pdb
+</Command>
+    </PostBuildEvent>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Unicode_Release|Win32'">
+    <Midl>
+      <PreprocessorDefinitions>NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <MkTypLibCompatible>true</MkTypLibCompatible>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <TargetEnvironment>Win32</TargetEnvironment>
+      <TypeLibraryName>.\Unicode_Release/liteu.tlb</TypeLibraryName>
+      <HeaderFileName>liteu_h.h</HeaderFileName>
+    </Midl>
+    <ClCompile>
+      <AdditionalOptions>/Zm250  %(AdditionalOptions)</AdditionalOptions>
+      <InlineFunctionExpansion>OnlyExplicitInline</InlineFunctionExpansion>
+      <AdditionalIncludeDirectories>$(TAI)\include\Api\lite;$(TAI)\include\Api\web;$(TAI)\include\Api;$(TAI)\wn;$(TAI)\icu\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>NONSTD_;WIN32;NDEBUG;_WINDOWS;_USRDLL;UNICODE;_UNICODE;LITE_EXPORTS;WORDNET;GENPRETTY_;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <StringPooling>true</StringPooling>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <TreatWChar_tAsBuiltInType>true</TreatWChar_tAsBuiltInType>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <PrecompiledHeaderFile>stdafx.h</PrecompiledHeaderFile>
+      <PrecompiledHeaderOutputFile>.\Unicode_Release/liteu.pch</PrecompiledHeaderOutputFile>
+      <AssemblerListingLocation>.\Unicode_Release/</AssemblerListingLocation>
+      <ObjectFileName>.\Unicode_Release/</ObjectFileName>
+      <ProgramDataBaseFileName>.\Unicode_Release/</ProgramDataBaseFileName>
+      <WarningLevel>Level3</WarningLevel>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <CompileAs>Default</CompileAs>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <Culture>0x0409</Culture>
+      <ResourceOutputFileName>.\Unicode_Release/liteu.res</ResourceOutputFileName>
+    </ResourceCompile>
+    <Link>
+      <AdditionalOptions>/MACHINE:I386 /FIXED:NO %(AdditionalOptions)</AdditionalOptions>
+      <AdditionalDependencies>odbc32.lib;odbccp32.lib;webu.lib;libconshu.lib;wordsu.lib;libprimu.lib;libstreamu.lib;wnu.lib;icudt.lib;icuuc.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <OutputFile>.\Unicode_Release/liteu.dll</OutputFile>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <AdditionalLibraryDirectories>$(TAI)\lib;$(TAI)\icu\lib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <ProgramDatabaseFile>.\Unicode_Release/liteu.pdb</ProgramDatabaseFile>
+      <RandomizedBaseAddress>false</RandomizedBaseAddress>
+      <DataExecutionPrevention />
+      <ImportLibrary>.\Unicode_Release/liteu.lib</ImportLibrary>
+    </Link>
+    <PostBuildEvent>
+      <Command>del /q $(TAI)\bin\liteu.dll
+del /q $(TAI)\lib\liteu.lib
+del /q $(TAI)\lib\liteu.exp
+copy Unicode_release\liteu.dll $(TAI)\bin\liteu.dll
+copy Unicode_release\liteu.lib $(TAI)\lib\liteu.lib
+copy Unicode_release\liteu.exp $(TAI)\lib\liteu.exp
+</Command>
+    </PostBuildEvent>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Unicode_Debug|Win32'">
+    <Midl>
+      <PreprocessorDefinitions>_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <MkTypLibCompatible>true</MkTypLibCompatible>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <TargetEnvironment>Win32</TargetEnvironment>
+      <TypeLibraryName>.\Unicode_Debug/litedu.tlb</TypeLibraryName>
+      <HeaderFileName>litedu_h.h</HeaderFileName>
+    </Midl>
+    <ClCompile>
+      <AdditionalOptions>/Zm200  %(AdditionalOptions)</AdditionalOptions>
+      <Optimization>Disabled</Optimization>
+      <AdditionalIncludeDirectories>$(TAI)\include\Api\lite;$(TAI)\include\Api\web;$(TAI)\include\Api;$(TAI)\wn;$(TAI)\icu\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>NONSTD_;GENPRETTY_;WIN32;_DEBUG;_WINDOWS;_USRDLL;UNICODE;_UNICODE;LITE_EXPORTS;WORDNET;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
+      <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
+      <TreatWChar_tAsBuiltInType>true</TreatWChar_tAsBuiltInType>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <PrecompiledHeaderFile>stdafx.h</PrecompiledHeaderFile>
+      <PrecompiledHeaderOutputFile>.\Unicode_Debug/litedu.pch</PrecompiledHeaderOutputFile>
+      <AssemblerListingLocation>.\Unicode_Debug/</AssemblerListingLocation>
+      <ObjectFileName>.\Unicode_Debug/</ObjectFileName>
+      <ProgramDataBaseFileName>.\Unicode_Debug/</ProgramDataBaseFileName>
+      <BrowseInformation>true</BrowseInformation>
+      <BrowseInformationFile>.\Unicode_Debug/</BrowseInformationFile>
+      <WarningLevel>Level3</WarningLevel>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <CompileAs>Default</CompileAs>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <Culture>0x0409</Culture>
+      <ResourceOutputFileName>.\Unicode_Debug/litedu.res</ResourceOutputFileName>
+    </ResourceCompile>
+    <Link>
+      <AdditionalOptions>/MACHINE:I386 /FIXED:NO %(AdditionalOptions)</AdditionalOptions>
+      <AdditionalDependencies>odbc32.lib;odbccp32.lib;webdu.lib;libconshdu.lib;wordsdu.lib;libprimdu.lib;libstreamdu.lib;wndu.lib;icudt.lib;icuuc.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <OutputFile>Unicode_Debug/litedu.dll</OutputFile>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <AdditionalLibraryDirectories>$(TAI)\lib;$(TAI)\icu\lib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <ProgramDatabaseFile>.\Unicode_Debug/litedu.pdb</ProgramDatabaseFile>
+      <RandomizedBaseAddress>false</RandomizedBaseAddress>
+      <DataExecutionPrevention />
+      <ImportLibrary>.\Unicode_Debug/litedu.lib</ImportLibrary>
+    </Link>
+    <PostBuildEvent>
+      <Command>del $(TAI)\bin\litedu.dll
+del $(TAI)\lib\litedu.lib
+del $(TAI)\lib\litedu.exp
+copy Unicode_debug\litedu.dll $(TAI)\bin\litedu.dll
+copy Unicode_debug\litedu.lib $(TAI)\lib\litedu.lib
+copy Unicode_debug\litedu.exp $(TAI)\lib\litedu.exp
+</Command>
+    </PostBuildEvent>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release_Static|Win32'">
+    <Midl>
+      <PreprocessorDefinitions>NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <MkTypLibCompatible>true</MkTypLibCompatible>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <TargetEnvironment>Win32</TargetEnvironment>
+      <TypeLibraryName>.\Release/lite.tlb</TypeLibraryName>
+    </Midl>
+    <ClCompile>
+      <AdditionalOptions>/Zm250  %(AdditionalOptions)</AdditionalOptions>
+      <InlineFunctionExpansion>OnlyExplicitInline</InlineFunctionExpansion>
+      <AdditionalIncludeDirectories>$(TAI)\include\Api\lite;$(TAI)\include\Api\web;$(TAI)\include\Api;$(TAI)\wn;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>NONSTD_;WIN32;NDEBUG;_WINDOWS;_USRDLL;LITE_STATIC;WORDNET;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <StringPooling>true</StringPooling>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <PrecompiledHeaderFile>stdafx.h</PrecompiledHeaderFile>
+      <PrecompiledHeaderOutputFile>.\Release_Static/lite.pch</PrecompiledHeaderOutputFile>
+      <AssemblerListingLocation>.\Release_Static/</AssemblerListingLocation>
+      <ObjectFileName>.\Release_Static/</ObjectFileName>
+      <ProgramDataBaseFileName>.\Release_Static/</ProgramDataBaseFileName>
+      <WarningLevel>Level3</WarningLevel>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <CompileAs>Default</CompileAs>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <Culture>0x0409</Culture>
+    </ResourceCompile>
+    <Lib>
+      <OutputFile>$(OutDir)$(ProjectName)_static.lib</OutputFile>
+      <IgnoreAllDefaultLibraries>true</IgnoreAllDefaultLibraries>
+    </Lib>
+    <PostBuildEvent>
+      <Command>del /q $(TAI)\lib\lite_static.lib
+copy release_static\lite_static.lib $(TAI)\lib\lite_static.lib
+</Command>
+    </PostBuildEvent>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug_QDBM|Win32'">
+    <Midl>
+      <PreprocessorDefinitions>_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <MkTypLibCompatible>true</MkTypLibCompatible>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <TargetEnvironment>Win32</TargetEnvironment>
+      <TypeLibraryName>.\Debug/lite.tlb</TypeLibraryName>
+    </Midl>
+    <ClCompile>
+      <AdditionalOptions>/Zm200  %(AdditionalOptions)</AdditionalOptions>
+      <Optimization>Disabled</Optimization>
+      <AdditionalIncludeDirectories>$(TAI)\include\Api\lite;$(TAI)\include\Api\web;$(TAI)\include\Api;$(TAI)\wn;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>PERFORM_;NONSTD_;QDBM_;WIN32;_DEBUG;_WINDOWS;_USRDLL;LITE_EXPORTS;WORDNET;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <BasicRuntimeChecks>Default</BasicRuntimeChecks>
+      <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <PrecompiledHeaderFile>stdafx.h</PrecompiledHeaderFile>
+      <PrecompiledHeaderOutputFile>.\Debug_QDBM/liteqd.pch</PrecompiledHeaderOutputFile>
+      <AssemblerListingLocation>.\Debug_QDBM/</AssemblerListingLocation>
+      <ObjectFileName>.\Debug_QDBM/</ObjectFileName>
+      <ProgramDataBaseFileName>.\Debug_QDBM/</ProgramDataBaseFileName>
+      <BrowseInformation>true</BrowseInformation>
+      <WarningLevel>Level3</WarningLevel>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <CompileAs>Default</CompileAs>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <Culture>0x0409</Culture>
+    </ResourceCompile>
+    <Link>
+      <AdditionalOptions>/MACHINE:I386 /FIXED:NO %(AdditionalOptions)</AdditionalOptions>
+      <AdditionalDependencies>odbc32.lib;odbccp32.lib;webd.lib;libqconshd.lib;wordsd.lib;libprimd.lib;wnd.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <OutputFile>Debug_QDBM/liteqd.dll</OutputFile>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <AdditionalLibraryDirectories>$(TAI)\lib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <IgnoreAllDefaultLibraries>false</IgnoreAllDefaultLibraries>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <ProgramDatabaseFile>.\Debug_QDBM/liteqd.pdb</ProgramDatabaseFile>
+      <RandomizedBaseAddress>false</RandomizedBaseAddress>
+      <DataExecutionPrevention />
+      <ImportLibrary>.\Debug_QDBM/liteqd.lib</ImportLibrary>
+    </Link>
+    <PostBuildEvent>
+      <Command>del $(TAI)\bin\liteqd.dll
+del $(TAI)\lib\liteqd.lib
+del $(TAI)\lib\liteqd.exp
+copy debug_qdbm\liteqd.dll $(TAI)\bin\liteqd.dll
+copy debug_qdbm\liteqd.lib $(TAI)\lib\liteqd.lib
+copy debug_qdbm\liteqd.exp $(TAI)\lib\liteqd.exp
+copy debug_qdbm\liteqd.pdb $(TAI)\bin\liteqd.pdb
+</Command>
+    </PostBuildEvent>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release_QDBM|Win32'">
+    <Midl>
+      <PreprocessorDefinitions>NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <MkTypLibCompatible>true</MkTypLibCompatible>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <TargetEnvironment>Win32</TargetEnvironment>
+      <TypeLibraryName>.\Release/lite.tlb</TypeLibraryName>
+    </Midl>
+    <ClCompile>
+      <AdditionalOptions>/Zm250  %(AdditionalOptions)</AdditionalOptions>
+      <InlineFunctionExpansion>OnlyExplicitInline</InlineFunctionExpansion>
+      <AdditionalIncludeDirectories>$(TAI)\include\Api\lite;$(TAI)\include\Api\web;$(TAI)\include\Api;$(TAI)\wn;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>NONSTD_;WIN32;NDEBUG;QDBM_;_WINDOWS;_USRDLL;LITE_EXPORTS;WORDNET;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <StringPooling>true</StringPooling>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <PrecompiledHeaderFile>stdafx.h</PrecompiledHeaderFile>
+      <PrecompiledHeaderOutputFile>.\Release_QDBM/liteq.pch</PrecompiledHeaderOutputFile>
+      <AssemblerListingLocation>.\Release_QDBM/</AssemblerListingLocation>
+      <ObjectFileName>.\Release_QDBM/</ObjectFileName>
+      <ProgramDataBaseFileName>.\Release_QDBM/</ProgramDataBaseFileName>
+      <WarningLevel>Level3</WarningLevel>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <CompileAs>Default</CompileAs>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <Culture>0x0409</Culture>
+    </ResourceCompile>
+    <Link>
+      <AdditionalOptions>/MACHINE:I386 /FIXED:NO %(AdditionalOptions)</AdditionalOptions>
+      <AdditionalDependencies>odbc32.lib;odbccp32.lib;web.lib;libqconsh.lib;words.lib;libprim.lib;wn.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <OutputFile>.\Release_QDBM/liteq.dll</OutputFile>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <AdditionalLibraryDirectories>$(TAI)\lib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <ProgramDatabaseFile>.\Release_QDBM/liteq.pdb</ProgramDatabaseFile>
+      <RandomizedBaseAddress>false</RandomizedBaseAddress>
+      <DataExecutionPrevention />
+      <ImportLibrary>.\Release_QDBM/liteq.lib</ImportLibrary>
+    </Link>
+    <PostBuildEvent>
+      <Command>del /q $(TAI)\bin\liteq.dll
+del /q $(TAI)\lib\liteq.lib
+del /q $(TAI)\lib\liteq.exp
+copy release_qdbm\liteq.dll $(TAI)\bin\liteq.dll
+copy release_qdbm\liteq.lib $(TAI)\lib\liteq.lib
+copy release_qdbm\liteq.exp $(TAI)\lib\liteq.exp
+</Command>
+    </PostBuildEvent>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClCompile Include="Agram.cpp" />
+    <ClCompile Include="algo.cpp" />
+    <ClCompile Include="ana.cpp" />
+    <ClCompile Include="angen.cpp" />
+    <ClCompile Include="arg.cpp" />
+    <ClCompile Include="Arug.cpp" />
+    <ClCompile Include="Arun.cpp" />
+    <ClCompile Include="Aseq.cpp" />
+    <ClCompile Include="Auser.cpp" />
+    <ClCompile Include="Avar.cpp" />
+    <ClCompile Include="chars.cpp" />
+    <ClCompile Include="check.cpp" />
+    <ClCompile Include="cmltok.cpp" />
+    <ClCompile Include="code.cpp" />
+    <ClCompile Include="dicttok.cpp" />
+    <ClCompile Include="dir.cpp" />
+    <ClCompile Include="dirfile.cpp" />
+    <ClCompile Include="dsem.cpp" />
+    <ClCompile Include="dyn.cpp" />
+    <ClCompile Include="eana.cpp" />
+    <ClCompile Include="fn.cpp" />
+    <ClCompile Include="fnrun.cpp" />
+    <ClCompile Include="folder.cpp" />
+    <ClCompile Include="gen.cpp" />
+    <ClCompile Include="genhash.cpp" />
+    <ClCompile Include="global.cpp" />
+    <ClCompile Include="Gui.cpp" />
+    <ClCompile Include="htab.cpp" />
+    <ClCompile Include="iaction.cpp" />
+    <ClCompile Include="iarg.cpp" />
+    <ClCompile Include="ielement.cpp" />
+    <ClCompile Include="ielt.cpp" />
+    <ClCompile Include="iexpr.cpp" />
+    <ClCompile Include="iexprstmt.cpp" />
+    <ClCompile Include="ifile.cpp" />
+    <ClCompile Include="ifunc.cpp" />
+    <ClCompile Include="iifstmt.cpp" />
+    <ClCompile Include="intern.cpp" />
+    <ClCompile Include="io.cpp" />
+    <ClCompile Include="iop.cpp" />
+    <ClCompile Include="ipair.cpp" />
+    <ClCompile Include="ipnode.cpp" />
+    <ClCompile Include="ipost.cpp" />
+    <ClCompile Include="ipre.cpp" />
+    <ClCompile Include="irecurse.cpp" />
+    <ClCompile Include="iregion.cpp" />
+    <ClCompile Include="ireturn.cpp" />
+    <ClCompile Include="irule.cpp" />
+    <ClCompile Include="istmt.cpp" />
+    <ClCompile Include="istr.cpp" />
+    <ClCompile Include="isugg.cpp" />
+    <ClCompile Include="ivar.cpp" />
+    <ClCompile Include="iwhilestmt.cpp" />
+    <ClCompile Include="kb.cpp" />
+    <ClCompile Include="lextagger.cpp" />
+    <ClCompile Include="line.cpp" />
+    <ClCompile Include="lite.cpp" />
+    <ClCompile Include="literug.cpp" />
+    <ClCompile Include="ln.cpp" />
+    <ClCompile Include="mach.cpp" />
+    <ClCompile Include="mode.cpp" />
+    <ClCompile Include="multi.cpp" />
+    <ClCompile Include="nintern.cpp" />
+    <ClCompile Include="nlp.cpp" />
+    <ClCompile Include="nlppp.cpp" />
+    <ClCompile Include="nug.cpp" />
+    <ClCompile Include="parse.cpp" />
+    <ClCompile Include="pat.cpp" />
+    <ClCompile Include="path.cpp" />
+    <ClCompile Include="phash.cpp" />
+    <ClCompile Include="pn.cpp" />
+    <ClCompile Include="post.cpp" />
+    <ClCompile Include="postrfa.cpp" />
+    <ClCompile Include="pre.cpp" />
+    <ClCompile Include="rec.cpp" />
+    <ClCompile Include="regexp.cpp" />
+    <ClCompile Include="rfa.cpp" />
+    <ClCompile Include="rfasem.cpp" />
+    <ClCompile Include="rug.cpp" />
+    <ClCompile Include="sem.cpp" />
+    <ClCompile Include="seqn.cpp" />
+    <ClCompile Include="stab.cpp" />
+    <ClCompile Include="starr.cpp" />
+    <ClCompile Include="std.cpp" />
+    <ClCompile Include="StdAfx.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug_QDBM|Win32'">Create</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Create</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release_QDBM|Win32'">Create</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release_Static|Win32'">Create</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Create</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Unicode_Debug|Win32'">Create</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Unicode_Release|Win32'">Create</PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="str.cpp" />
+    <ClCompile Include="string.cpp" />
+    <ClCompile Include="stub_e.cpp" />
+    <ClCompile Include="stub_s.cpp" />
+    <ClCompile Include="sym.cpp" />
+    <ClCompile Include="tok.cpp" />
+    <ClCompile Include="tsym.cpp" />
+    <ClCompile Include="uAlgo.cpp" />
+    <ClCompile Include="u_ofstream.cpp" />
+    <ClCompile Include="u_out.cpp" />
+    <ClCompile Include="var.cpp" />
+    <ClCompile Include="vtrun.cpp" />
+    <ClCompile Include="WNFunctions.cpp" />
+    <ClCompile Include="xml.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="angen.h" />
+    <ClInclude Include="Arug.h" />
+    <ClInclude Include="chars.h" />
+    <ClInclude Include="check.h" />
+    <ClInclude Include="cmltok.h" />
+    <ClInclude Include="dicttok.h" />
+    <ClInclude Include="dsem.h" />
+    <ClInclude Include="dyn.h" />
+    <ClInclude Include="eana.h" />
+    <ClInclude Include="fn.h" />
+    <ClInclude Include="folder.h" />
+    <ClInclude Include="funcs.h" />
+    <ClInclude Include="func_defs.h" />
+    <ClInclude Include="gen.h" />
+    <ClInclude Include="genhash.h" />
+    <ClInclude Include="htab.h" />
+    <ClInclude Include="iaction.h" />
+    <ClInclude Include="ielement.h" />
+    <ClInclude Include="ielt.h" />
+    <ClInclude Include="iexpr.h" />
+    <ClInclude Include="iexprstmt.h" />
+    <ClInclude Include="ifile.h" />
+    <ClInclude Include="ifunc.h" />
+    <ClInclude Include="iifstmt.h" />
+    <ClInclude Include="intern.h" />
+    <ClInclude Include="io.h" />
+    <ClInclude Include="iop.h" />
+    <ClInclude Include="ipair.h" />
+    <ClInclude Include="ipnode.h" />
+    <ClInclude Include="ipost.h" />
+    <ClInclude Include="ipre.h" />
+    <ClInclude Include="irecurse.h" />
+    <ClInclude Include="iregion.h" />
+    <ClInclude Include="ireturn.h" />
+    <ClInclude Include="irule.h" />
+    <ClInclude Include="istmt.h" />
+    <ClInclude Include="istr.h" />
+    <ClInclude Include="isugg.h" />
+    <ClInclude Include="ivar.h" />
+    <ClInclude Include="iwhilestmt.h" />
+    <ClInclude Include="kb.h" />
+    <ClInclude Include="lextagger.h" />
+    <ClInclude Include="line.h" />
+    <ClInclude Include="ln.h" />
+    <ClInclude Include="mode.h" />
+    <ClInclude Include="multi.h" />
+    <ClInclude Include="nintern.h" />
+    <ClInclude Include="nug.h" />
+    <ClInclude Include="pat.h" />
+    <ClInclude Include="path.h" />
+    <ClInclude Include="phash.h" />
+    <ClInclude Include="post.h" />
+    <ClInclude Include="postrfa.h" />
+    <ClInclude Include="rec.h" />
+    <ClInclude Include="regexp.h" />
+    <ClInclude Include="resource.h" />
+    <ClInclude Include="rfa.h" />
+    <ClInclude Include="seqn.h" />
+    <ClInclude Include="stab.h" />
+    <ClInclude Include="starr.h" />
+    <ClInclude Include="StdAfx.h" />
+    <ClInclude Include="str.h" />
+    <ClInclude Include="string.h" />
+    <ClInclude Include="stub_e.h" />
+    <ClInclude Include="stub_s.h" />
+    <ClInclude Include="sym.h" />
+    <ClInclude Include="thtab.h" />
+    <ClInclude Include="tok.h" />
+    <ClInclude Include="tsym.h" />
+    <ClInclude Include="uAlgo.h" />
+    <ClInclude Include="u_ofstream.h" />
+    <ClInclude Include="u_out.h" />
+    <ClInclude Include="var.h" />
+    <ClInclude Include="web.h" />
+    <ClInclude Include="WNFunctions.h" />
+    <ClInclude Include="xml.h" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>

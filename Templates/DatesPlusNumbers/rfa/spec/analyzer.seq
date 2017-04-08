@@ -1,0 +1,27 @@
+# 
+tokenize		# 
+line		# 
+pat	retok	# 
+pat	bigtok	# 
+pat	x_commas	# 
+pat	components	# 
+pat	x_white	# 
+pat	list	# 
+pat	action	# 
+pat	pair	# 
+pat	pairs	# 
+pat	element	# 
+pat	rule	# 
+pat	rules	# 
+pat	actions	# 
+pat	nodes	# 
+pat	multi	# 
+pat	path	# 
+pat	select	# 
+pat	region	# 
+pat	regions	# 
+pat	recurse	# 
+pat	recurses	# 
+pat	code	# 
+pat	rulesfile	# 
+intern	nil	# 

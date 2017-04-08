@@ -1,0 +1,25 @@
+Microsoft Visual Studio Solution File, Format Version 10.00
+# Visual Studio 2008
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "libkbm", "libkbm.vcproj", "{334B440D-2B5F-48CC-94E3-9D0BCC4D8922}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Win32 = Debug|Win32
+		Release|Win32 = Release|Win32
+		Unicode_Debug|Win32 = Unicode_Debug|Win32
+		Unicode_Release|Win32 = Unicode_Release|Win32
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{334B440D-2B5F-48CC-94E3-9D0BCC4D8922}.Debug|Win32.ActiveCfg = Debug|Win32
+		{334B440D-2B5F-48CC-94E3-9D0BCC4D8922}.Debug|Win32.Build.0 = Debug|Win32
+		{334B440D-2B5F-48CC-94E3-9D0BCC4D8922}.Release|Win32.ActiveCfg = Release|Win32
+		{334B440D-2B5F-48CC-94E3-9D0BCC4D8922}.Release|Win32.Build.0 = Release|Win32
+		{334B440D-2B5F-48CC-94E3-9D0BCC4D8922}.Unicode_Debug|Win32.ActiveCfg = Unicode_Debug|Win32
+		{334B440D-2B5F-48CC-94E3-9D0BCC4D8922}.Unicode_Debug|Win32.Build.0 = Unicode_Debug|Win32
+		{334B440D-2B5F-48CC-94E3-9D0BCC4D8922}.Unicode_Release|Win32.ActiveCfg = Unicode_Release|Win32
+		{334B440D-2B5F-48CC-94E3-9D0BCC4D8922}.Unicode_Release|Win32.Build.0 = Unicode_Release|Win32
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
