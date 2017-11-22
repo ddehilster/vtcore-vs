@@ -20,29 +20,30 @@
   </ItemGroup>
   <PropertyGroup Label="Globals">
     <ProjectGuid>{4BF8BE3A-3E74-4029-B995-5B2A7601F50B}</ProjectGuid>
+    <WindowsTargetPlatformVersion>8.1</WindowsTargetPlatformVersion>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Unicode_Debug|Win32'" Label="Configuration">
     <ConfigurationType>DynamicLibrary</ConfigurationType>
-    <PlatformToolset>v140</PlatformToolset>
+    <PlatformToolset>v120</PlatformToolset>
     <UseOfMfc>false</UseOfMfc>
     <CharacterSet>Unicode</CharacterSet>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Unicode_Release|Win32'" Label="Configuration">
     <ConfigurationType>DynamicLibrary</ConfigurationType>
-    <PlatformToolset>v140</PlatformToolset>
+    <PlatformToolset>v120</PlatformToolset>
     <UseOfMfc>false</UseOfMfc>
     <CharacterSet>Unicode</CharacterSet>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
     <ConfigurationType>DynamicLibrary</ConfigurationType>
-    <PlatformToolset>v140</PlatformToolset>
+    <PlatformToolset>v120</PlatformToolset>
     <UseOfMfc>false</UseOfMfc>
     <CharacterSet>MultiByte</CharacterSet>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
     <ConfigurationType>DynamicLibrary</ConfigurationType>
-    <PlatformToolset>v140</PlatformToolset>
+    <PlatformToolset>v120</PlatformToolset>
     <UseOfMfc>false</UseOfMfc>
     <CharacterSet>MultiByte</CharacterSet>
   </PropertyGroup>
@@ -73,6 +74,7 @@
     <OutDir>.\Debug\</OutDir>
     <IntDir>.\Debug\</IntDir>
     <LinkIncremental>false</LinkIncremental>
+    <TargetName>$(ProjectName)d</TargetName>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
     <OutDir>.\Release\</OutDir>
@@ -83,11 +85,13 @@
     <OutDir>Unicode_Release\</OutDir>
     <IntDir>Unicode_Release\</IntDir>
     <LinkIncremental>false</LinkIncremental>
+    <TargetName>$(ProjectName)u</TargetName>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Unicode_Debug|Win32'">
     <OutDir>Unicode_Debug\</OutDir>
     <IntDir>Unicode_Debug\</IntDir>
     <LinkIncremental>false</LinkIncremental>
+    <TargetName>$(ProjectName)du</TargetName>
   </PropertyGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <Midl>
@@ -100,7 +104,7 @@
     <ClCompile>
       <Optimization>Disabled</Optimization>
       <AdditionalIncludeDirectories>$(TAIDEV)\include\Api\web;$(TAIDEV)\include\Api;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
-      <PreprocessorDefinitions>_AFXDLL;WIN32;_DEBUG;_WINDOWS;_USRDLL;WEB_EXPORTS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions>_AFXDLL;WIN32;_DEBUG;_WINDOWS;_USRDLL;WEB_EXPORTS;_CRT_SECURE_NO_WARNINGS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <BasicRuntimeChecks>Default</BasicRuntimeChecks>
       <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
       <PrecompiledHeader>Use</PrecompiledHeader>
@@ -131,14 +135,8 @@
       <ImportLibrary>.\Debug/webd.lib</ImportLibrary>
     </Link>
     <PostBuildEvent>
-      <Command>del $(TAIDEV)\bin\webd.dll
-del $(TAIDEV)\lib\webd.lib
-del $(TAIDEV)\lib\webd.exp
-copy debug\webd.dll $(TAIDEV)\bin\webd.dll
-copy debug\webd.lib $(TAIDEV)\lib\webd.lib
-copy debug\webd.exp $(TAIDEV)\lib\webd.exp
-copy debug\webd.pdb $(TAIDEV)\bin\webd.pdb
-</Command>
+      <Command>
+      </Command>
     </PostBuildEvent>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
@@ -152,7 +150,7 @@ copy debug\webd.pdb $(TAIDEV)\bin\webd.pdb
     <ClCompile>
       <InlineFunctionExpansion>OnlyExplicitInline</InlineFunctionExpansion>
       <AdditionalIncludeDirectories>$(TAIDEV)\include\Api\web;$(TAIDEV)\include\Api;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
-      <PreprocessorDefinitions>_AFXDLL;WIN32;NDEBUG;_WINDOWS;_USRDLL;WEB_EXPORTS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions>_AFXDLL;WIN32;NDEBUG;_WINDOWS;_USRDLL;WEB_EXPORTS;_CRT_SECURE_NO_WARNINGS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <StringPooling>true</StringPooling>
       <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
       <FunctionLevelLinking>true</FunctionLevelLinking>
@@ -183,13 +181,8 @@ copy debug\webd.pdb $(TAIDEV)\bin\webd.pdb
       <ImportLibrary>.\Release/web.lib</ImportLibrary>
     </Link>
     <PostBuildEvent>
-      <Command>del /q $(TAIDEV)\bin\web.dll
-del /q $(TAIDEV)\lib\web.lib
-del /q $(TAIDEV)\lib\web.exp
-copy release\web.dll $(TAIDEV)\bin\web.dll
-copy release\web.lib $(TAIDEV)\lib\web.lib
-copy release\web.exp $(TAIDEV)\lib\web.exp
-</Command>
+      <Command>
+      </Command>
     </PostBuildEvent>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Unicode_Release|Win32'">
@@ -203,8 +196,8 @@ copy release\web.exp $(TAIDEV)\lib\web.exp
     </Midl>
     <ClCompile>
       <InlineFunctionExpansion>OnlyExplicitInline</InlineFunctionExpansion>
-      <AdditionalIncludeDirectories>$(TAI)\include\Api\web;$(TAI)\include\Api;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
-      <PreprocessorDefinitions>_AFXDLL;WIN32;NDEBUG;_WINDOWS;_USRDLL;UNICODE;_UNICODE;WEB_EXPORTS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>..\..\include\Api\web;..\..\include\Api</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>_AFXDLL;WIN32;NDEBUG;_WINDOWS;_USRDLL;UNICODE;_UNICODE;WEB_EXPORTS;_CRT_SECURE_NO_WARNINGS;_CRT_NON_CONFORMING_SWPRINTFS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <StringPooling>true</StringPooling>
       <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
       <FunctionLevelLinking>true</FunctionLevelLinking>
@@ -238,13 +231,10 @@ copy release\web.exp $(TAIDEV)\lib\web.exp
       <ImportLibrary>.\Unicode_Release/webu.lib</ImportLibrary>
     </Link>
     <PostBuildEvent>
-      <Command>del /q $(TAI)\bin\webu.dll
-del /q $(TAI)\lib\webu.lib
-del /q $(TAI)\lib\webu.exp
-copy Unicode_release\webu.dll $(TAI)\bin\webu.dll
-copy Unicode_release\webu.lib $(TAI)\lib\webu.lib
-copy Unicode_release\webu.exp $(TAI)\lib\webu.exp
-</Command>
+      <Command>del ..\..\..\visualtext3\Unicode_Debug\webu.dll
+copy Unicode_Release\webu.dll ..\..\..\visualtext3\Unicode_Release\webu.dll
+del ..\..\..\vt3\webu.dll
+copy Unicode_Release\webu.dll ..\..\..\vt3\webu.dll</Command>
     </PostBuildEvent>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Unicode_Debug|Win32'">
@@ -259,7 +249,7 @@ copy Unicode_release\webu.exp $(TAI)\lib\webu.exp
     <ClCompile>
       <Optimization>Disabled</Optimization>
       <AdditionalIncludeDirectories>$(TAI)\include\Api\web;$(TAI)\include\Api;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
-      <PreprocessorDefinitions>_AFXDLL;WIN32;_DEBUG;_WINDOWS;_USRDLL;UNICODE;_UNICODE;WEB_EXPORTS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions>_AFXDLL;WIN32;_DEBUG;_WINDOWS;_USRDLL;UNICODE;_UNICODE;WEB_EXPORTS;_CRT_SECURE_NO_WARNINGS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
       <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
       <TreatWChar_tAsBuiltInType>true</TreatWChar_tAsBuiltInType>
@@ -284,7 +274,7 @@ copy Unicode_release\webu.exp $(TAI)\lib\webu.exp
       <AdditionalDependencies>odbc32.lib;odbccp32.lib;libstreamdu.lib;%(AdditionalDependencies)</AdditionalDependencies>
       <OutputFile>Unicode_Debug/webdu.dll</OutputFile>
       <SuppressStartupBanner>true</SuppressStartupBanner>
-      <AdditionalLibraryDirectories>$(TAI)/lib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalLibraryDirectories>..\..\cs\libStream\Unicode_Debug</AdditionalLibraryDirectories>
       <IgnoreSpecificDefaultLibraries>msvcrt;%(IgnoreSpecificDefaultLibraries)</IgnoreSpecificDefaultLibraries>
       <GenerateDebugInformation>true</GenerateDebugInformation>
       <ProgramDatabaseFile>.\Unicode_Debug/webdu.pdb</ProgramDatabaseFile>
@@ -293,13 +283,10 @@ copy Unicode_release\webu.exp $(TAI)\lib\webu.exp
       <ImportLibrary>.\Unicode_Debug/webdu.lib</ImportLibrary>
     </Link>
     <PostBuildEvent>
-      <Command>del $(TAI)\bin\webdu.dll
-del $(TAI)\lib\webdu.lib
-del $(TAI)\lib\webdu.exp
-copy Unicode_debug\webdu.dll $(TAI)\bin\webdu.dll
-copy Unicode_debug\webdu.lib $(TAI)\lib\webdu.lib
-copy Unicode_debug\webdu.exp $(TAI)\lib\webdu.exp
-</Command>
+      <Command>del ..\..\..\visualtext3\Unicode_Debug\webdu.dll
+copy Unicode_Debug\webdu.dll ..\..\..\visualtext3\Unicode_Debug\webdu.dll
+del ..\..\..\vt3d\webdu.dll
+copy Unicode_Debug\webdu.dll ..\..\..\vt3d\webdu.dll</Command>
     </PostBuildEvent>
   </ItemDefinitionGroup>
   <ItemGroup>

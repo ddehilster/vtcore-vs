@@ -911,7 +911,7 @@ switch (pval->kind)	// 12/27/06 AM.
 		val = pval->v.vfloat;
 		break;
 	case pNUM:			// 12/27/06 AM.
-		val = pval->v.vnum;	// Convert.	// 12/27/06 AM.
+		val = (float)pval->v.vnum;	// Convert.	// 12/27/06 AM.
 		break;
 	default:				// 12/27/06 AM.
 		*cgerr << _T("[findVal: Attribute value not a float.]") << endl;

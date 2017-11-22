@@ -32,47 +32,48 @@
   </ItemGroup>
   <PropertyGroup Label="Globals">
     <ProjectGuid>{5B63F12C-3F96-4650-8CD2-FC5A1D98167F}</ProjectGuid>
+    <WindowsTargetPlatformVersion>8.1</WindowsTargetPlatformVersion>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release_QDBM|Win32'" Label="Configuration">
     <ConfigurationType>DynamicLibrary</ConfigurationType>
-    <PlatformToolset>v140</PlatformToolset>
+    <PlatformToolset>v120</PlatformToolset>
     <UseOfMfc>false</UseOfMfc>
     <CharacterSet>MultiByte</CharacterSet>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug_QDBM|Win32'" Label="Configuration">
     <ConfigurationType>DynamicLibrary</ConfigurationType>
-    <PlatformToolset>v140</PlatformToolset>
+    <PlatformToolset>v120</PlatformToolset>
     <UseOfMfc>false</UseOfMfc>
     <CharacterSet>MultiByte</CharacterSet>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release_Static|Win32'" Label="Configuration">
     <ConfigurationType>StaticLibrary</ConfigurationType>
-    <PlatformToolset>v140</PlatformToolset>
+    <PlatformToolset>v120</PlatformToolset>
     <UseOfMfc>false</UseOfMfc>
     <CharacterSet>MultiByte</CharacterSet>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Unicode_Debug|Win32'" Label="Configuration">
     <ConfigurationType>DynamicLibrary</ConfigurationType>
-    <PlatformToolset>v140</PlatformToolset>
+    <PlatformToolset>v120</PlatformToolset>
     <UseOfMfc>false</UseOfMfc>
     <CharacterSet>Unicode</CharacterSet>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Unicode_Release|Win32'" Label="Configuration">
     <ConfigurationType>DynamicLibrary</ConfigurationType>
-    <PlatformToolset>v140</PlatformToolset>
+    <PlatformToolset>v120</PlatformToolset>
     <UseOfMfc>false</UseOfMfc>
     <CharacterSet>Unicode</CharacterSet>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
     <ConfigurationType>DynamicLibrary</ConfigurationType>
-    <PlatformToolset>v140</PlatformToolset>
+    <PlatformToolset>v120</PlatformToolset>
     <UseOfMfc>false</UseOfMfc>
     <CharacterSet>MultiByte</CharacterSet>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
     <ConfigurationType>DynamicLibrary</ConfigurationType>
-    <PlatformToolset>v140</PlatformToolset>
+    <PlatformToolset>v120</PlatformToolset>
     <UseOfMfc>false</UseOfMfc>
     <CharacterSet>MultiByte</CharacterSet>
   </PropertyGroup>
@@ -125,11 +126,13 @@
     <OutDir>Unicode_Release\</OutDir>
     <IntDir>Unicode_Release\</IntDir>
     <LinkIncremental>false</LinkIncremental>
+    <TargetName>$(ProjectName)u</TargetName>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Unicode_Debug|Win32'">
     <OutDir>Unicode_Debug\</OutDir>
     <IntDir>Unicode_Debug\</IntDir>
     <LinkIncremental>false</LinkIncremental>
+    <TargetName>$(ProjectName)du</TargetName>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release_Static|Win32'">
     <OutDir>$(Configuration)\</OutDir>
@@ -156,8 +159,8 @@
     <ClCompile>
       <AdditionalOptions>/Zm250  %(AdditionalOptions)</AdditionalOptions>
       <InlineFunctionExpansion>OnlyExplicitInline</InlineFunctionExpansion>
-      <AdditionalIncludeDirectories>$(TAIDEV)\include\Api\lite;$(TAIDEV)\include\Api\web;$(TAIDEV)\include\Api;$(TAIDEV)\wn;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
-      <PreprocessorDefinitions>NONSTD_;WIN32;NDEBUG;_WINDOWS;_USRDLL;LITE_EXPORTS;WORDNET;GENPRETTY_;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>..\src\web;..\src\words;..\wn;..\include\Api\lite;..\cs\include;..\include\Api</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>NONSTD_;WIN32;NDEBUG;_WINDOWS;_USRDLL;LITE_EXPORTS;WORDNET;GENPRETTY_;_CRT_SECURE_NO_WARNINGS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <StringPooling>true</StringPooling>
       <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
       <FunctionLevelLinking>true</FunctionLevelLinking>
@@ -181,7 +184,7 @@
       <AdditionalDependencies>odbc32.lib;odbccp32.lib;web.lib;libconsh.lib;words.lib;libprim.lib;wn.lib;%(AdditionalDependencies)</AdditionalDependencies>
       <OutputFile>.\Release/lite.dll</OutputFile>
       <SuppressStartupBanner>true</SuppressStartupBanner>
-      <AdditionalLibraryDirectories>$(TAIDEV)\lib</AdditionalLibraryDirectories>
+      <AdditionalLibraryDirectories>..\wn\Release;..\src\web\Release;..\src\words\Release;..\cs\libprim\Release;..\cs\libconsh\Release;..\cs\libkbm\Release</AdditionalLibraryDirectories>
       <GenerateDebugInformation>true</GenerateDebugInformation>
       <ProgramDatabaseFile>.\Release/lite.pdb</ProgramDatabaseFile>
       <RandomizedBaseAddress>false</RandomizedBaseAddress>
@@ -189,13 +192,8 @@
       <ImportLibrary>.\Release/lite.lib</ImportLibrary>
     </Link>
     <PostBuildEvent>
-      <Command>del /q $(TAIDEV)\bin\lite.dll
-del /q $(TAIDEV)\lib\lite.lib
-del /q $(TAIDEV)\lib\lite.exp
-copy release\lite.dll $(TAIDEV)\bin\lite.dll
-copy release\lite.lib $(TAIDEV)\lib\lite.lib
-copy release\lite.exp $(TAIDEV)\lib\lite.exp
-</Command>
+      <Command>
+      </Command>
     </PostBuildEvent>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
@@ -209,8 +207,8 @@ copy release\lite.exp $(TAIDEV)\lib\lite.exp
     <ClCompile>
       <AdditionalOptions>/Zm200  %(AdditionalOptions)</AdditionalOptions>
       <Optimization>Disabled</Optimization>
-      <AdditionalIncludeDirectories>$(TAIDEV)\include\Api\lite;$(TAIDEV)\include\Api\web;$(TAIDEV)\include\Api;$(TAIDEV)\wn;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
-      <PreprocessorDefinitions>PERFORM_;NONSTD_;WIN32;_DEBUG;_WINDOWS;_USRDLL;LITE_EXPORTS;WORDNET;GENPRETTY_;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>..\src\web;..\src\words;..\wn;..\include\Api\lite;..\include\Api;..\cs\include</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>PERFORM_;NONSTD_;WIN32;_DEBUG;_WINDOWS;_USRDLL;LITE_EXPORTS;WORDNET;GENPRETTY_;_CRT_SECURE_NO_WARNINGS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <BasicRuntimeChecks>Default</BasicRuntimeChecks>
       <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
       <PrecompiledHeader>Use</PrecompiledHeader>
@@ -234,7 +232,7 @@ copy release\lite.exp $(TAIDEV)\lib\lite.exp
       <AdditionalDependencies>odbc32.lib;odbccp32.lib;webd.lib;libconshd.lib;wordsd.lib;libprimd.lib;wnd.lib;wininet.lib;%(AdditionalDependencies)</AdditionalDependencies>
       <OutputFile>Debug/lited.dll</OutputFile>
       <SuppressStartupBanner>true</SuppressStartupBanner>
-      <AdditionalLibraryDirectories>$(TAIDEV)\lib</AdditionalLibraryDirectories>
+      <AdditionalLibraryDirectories>..\cs\libprim\Debug;..\cs\libkbm\Debug;..\cs\libconsh\Debug;..\wn\Debug;..\src\words\Debug;..\src\web\Debug</AdditionalLibraryDirectories>
       <IgnoreAllDefaultLibraries>false</IgnoreAllDefaultLibraries>
       <GenerateDebugInformation>true</GenerateDebugInformation>
       <ProgramDatabaseFile>.\Debug/lited.pdb</ProgramDatabaseFile>
@@ -243,14 +241,8 @@ copy release\lite.exp $(TAIDEV)\lib\lite.exp
       <ImportLibrary>.\Debug/lited.lib</ImportLibrary>
     </Link>
     <PostBuildEvent>
-      <Command>del $(TAIDEV)\bin\lited.dll
-del $(TAIDEV)\lib\lited.lib
-del $(TAIDEV)\lib\lited.exp
-copy debug\lited.dll $(TAIDEV)\bin\lited.dll
-copy debug\lited.lib $(TAIDEV)\lib\lited.lib
-copy debug\lited.exp $(TAIDEV)\lib\lited.exp
-copy debug\lited.pdb $(TAIDEV)\bin\lited.pdb
-</Command>
+      <Command>
+      </Command>
     </PostBuildEvent>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Unicode_Release|Win32'">
@@ -265,8 +257,8 @@ copy debug\lited.pdb $(TAIDEV)\bin\lited.pdb
     <ClCompile>
       <AdditionalOptions>/Zm250  %(AdditionalOptions)</AdditionalOptions>
       <InlineFunctionExpansion>OnlyExplicitInline</InlineFunctionExpansion>
-      <AdditionalIncludeDirectories>$(TAI)\include\Api\lite;$(TAI)\include\Api\web;$(TAI)\include\Api;$(TAI)\wn;$(TAI)\icu\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
-      <PreprocessorDefinitions>NONSTD_;WIN32;NDEBUG;_WINDOWS;_USRDLL;UNICODE;_UNICODE;LITE_EXPORTS;WORDNET;GENPRETTY_;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>..\include\Api\lite;..\include\Api;..\include;..\include\unicode;..\include\cs\include;..\src\web;..\src\words;..\wn;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>NONSTD_;WIN32;NDEBUG;_WINDOWS;_USRDLL;UNICODE;_UNICODE;LITE_EXPORTS;WORDNET;GENPRETTY_;_CRT_SECURE_NO_WARNINGS;_CRT_NON_CONFORMING_SWPRINTFS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <StringPooling>true</StringPooling>
       <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
       <FunctionLevelLinking>true</FunctionLevelLinking>
@@ -292,7 +284,7 @@ copy debug\lited.pdb $(TAIDEV)\bin\lited.pdb
       <AdditionalDependencies>odbc32.lib;odbccp32.lib;webu.lib;libconshu.lib;wordsu.lib;libprimu.lib;libstreamu.lib;wnu.lib;icudt.lib;icuuc.lib;%(AdditionalDependencies)</AdditionalDependencies>
       <OutputFile>.\Unicode_Release/liteu.dll</OutputFile>
       <SuppressStartupBanner>true</SuppressStartupBanner>
-      <AdditionalLibraryDirectories>$(TAI)\lib;$(TAI)\icu\lib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalLibraryDirectories>..\cs\libprim\Unicode_Release;..\cs\libkbm\Unicode_Release;..\cs\libconsh\Unicode_Release;..\cs\libStream\Unicode_Release;..\src\words\Unicode_Release;..\src\web\Unicode_Release;..\wn\Unicode_Release;..\lib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
       <GenerateDebugInformation>true</GenerateDebugInformation>
       <ProgramDatabaseFile>.\Unicode_Release/liteu.pdb</ProgramDatabaseFile>
       <RandomizedBaseAddress>false</RandomizedBaseAddress>
@@ -300,13 +292,10 @@ copy debug\lited.pdb $(TAIDEV)\bin\lited.pdb
       <ImportLibrary>.\Unicode_Release/liteu.lib</ImportLibrary>
     </Link>
     <PostBuildEvent>
-      <Command>del /q $(TAI)\bin\liteu.dll
-del /q $(TAI)\lib\liteu.lib
-del /q $(TAI)\lib\liteu.exp
-copy Unicode_release\liteu.dll $(TAI)\bin\liteu.dll
-copy Unicode_release\liteu.lib $(TAI)\lib\liteu.lib
-copy Unicode_release\liteu.exp $(TAI)\lib\liteu.exp
-</Command>
+      <Command>del ..\..\visualtext3\Unicode_Release\liteu.dll
+copy Unicode_Release\liteu.dll ..\..\visualtext3\Unicode_Release\liteu.dll
+del ..\..\vt3\liteu.dll
+copy Unicode_Release\liteu.dll ..\..\vt3\liteu.dll</Command>
     </PostBuildEvent>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Unicode_Debug|Win32'">
@@ -321,8 +310,8 @@ copy Unicode_release\liteu.exp $(TAI)\lib\liteu.exp
     <ClCompile>
       <AdditionalOptions>/Zm200  %(AdditionalOptions)</AdditionalOptions>
       <Optimization>Disabled</Optimization>
-      <AdditionalIncludeDirectories>$(TAI)\include\Api\lite;$(TAI)\include\Api\web;$(TAI)\include\Api;$(TAI)\wn;$(TAI)\icu\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
-      <PreprocessorDefinitions>NONSTD_;GENPRETTY_;WIN32;_DEBUG;_WINDOWS;_USRDLL;UNICODE;_UNICODE;LITE_EXPORTS;WORDNET;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>..\include\Api\lite;..\include\Api;..\include;..\include\unicode;..\include\cs\include;..\src\web;..\src\words;..\wn;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>NONSTD_;GENPRETTY_;WIN32;_DEBUG;_WINDOWS;_USRDLL;UNICODE;_UNICODE;LITE_EXPORTS;WORDNET;_CRT_SECURE_NO_WARNINGS;_CRT_NON_CONFORMING_SWPRINTFS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
       <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
       <TreatWChar_tAsBuiltInType>true</TreatWChar_tAsBuiltInType>
@@ -349,7 +338,7 @@ copy Unicode_release\liteu.exp $(TAI)\lib\liteu.exp
       <AdditionalDependencies>odbc32.lib;odbccp32.lib;webdu.lib;libconshdu.lib;wordsdu.lib;libprimdu.lib;libstreamdu.lib;wndu.lib;icudt.lib;icuuc.lib;%(AdditionalDependencies)</AdditionalDependencies>
       <OutputFile>Unicode_Debug/litedu.dll</OutputFile>
       <SuppressStartupBanner>true</SuppressStartupBanner>
-      <AdditionalLibraryDirectories>$(TAI)\lib;$(TAI)\icu\lib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalLibraryDirectories>..\cs\libprim\Unicode_Debug;..\cs\libkbm\Unicode_Debug;..\cs\libconsh\Unicode_Debug;..\cs\libStream\Unicode_Debug;..\src\words\Unicode_Debug;..\src\web\Unicode_Debug;..\wn\Unicode_Debug;..\lib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
       <GenerateDebugInformation>true</GenerateDebugInformation>
       <ProgramDatabaseFile>.\Unicode_Debug/litedu.pdb</ProgramDatabaseFile>
       <RandomizedBaseAddress>false</RandomizedBaseAddress>
@@ -357,13 +346,10 @@ copy Unicode_release\liteu.exp $(TAI)\lib\liteu.exp
       <ImportLibrary>.\Unicode_Debug/litedu.lib</ImportLibrary>
     </Link>
     <PostBuildEvent>
-      <Command>del $(TAI)\bin\litedu.dll
-del $(TAI)\lib\litedu.lib
-del $(TAI)\lib\litedu.exp
-copy Unicode_debug\litedu.dll $(TAI)\bin\litedu.dll
-copy Unicode_debug\litedu.lib $(TAI)\lib\litedu.lib
-copy Unicode_debug\litedu.exp $(TAI)\lib\litedu.exp
-</Command>
+      <Command>del ..\..\visualtext3\Unicode_Debug\litedu.dll
+copy Unicode_Debug\litedu.dll ..\..\visualtext3\Unicode_Debug\litedu.dll
+del ..\..\vt3d\litedu.dll
+copy Unicode_Debug\litedu.dll ..\..\vt3d\litedu.dll</Command>
     </PostBuildEvent>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release_Static|Win32'">
