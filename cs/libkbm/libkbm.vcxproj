@@ -20,29 +20,30 @@
   </ItemGroup>
   <PropertyGroup Label="Globals">
     <ProjectGuid>{334B440D-2B5F-48CC-94E3-9D0BCC4D8922}</ProjectGuid>
+    <WindowsTargetPlatformVersion>8.1</WindowsTargetPlatformVersion>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Unicode_Release|Win32'" Label="Configuration">
     <ConfigurationType>DynamicLibrary</ConfigurationType>
-    <PlatformToolset>v140</PlatformToolset>
+    <PlatformToolset>v120</PlatformToolset>
     <UseOfMfc>false</UseOfMfc>
     <CharacterSet>Unicode</CharacterSet>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Unicode_Debug|Win32'" Label="Configuration">
     <ConfigurationType>DynamicLibrary</ConfigurationType>
-    <PlatformToolset>v140</PlatformToolset>
+    <PlatformToolset>v120</PlatformToolset>
     <UseOfMfc>false</UseOfMfc>
     <CharacterSet>Unicode</CharacterSet>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
     <ConfigurationType>DynamicLibrary</ConfigurationType>
-    <PlatformToolset>v140</PlatformToolset>
+    <PlatformToolset>v120</PlatformToolset>
     <UseOfMfc>false</UseOfMfc>
     <CharacterSet>MultiByte</CharacterSet>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
     <ConfigurationType>DynamicLibrary</ConfigurationType>
-    <PlatformToolset>v140</PlatformToolset>
+    <PlatformToolset>v120</PlatformToolset>
     <UseOfMfc>false</UseOfMfc>
     <CharacterSet>MultiByte</CharacterSet>
   </PropertyGroup>
@@ -84,6 +85,7 @@
     <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
     <CodeAnalysisRules />
     <CodeAnalysisRuleAssemblies />
+    <TargetName>$(ProjectName)d</TargetName>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Unicode_Debug|Win32'">
     <OutDir>Unicode_Debug\</OutDir>
@@ -92,6 +94,7 @@
     <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
     <CodeAnalysisRules />
     <CodeAnalysisRuleAssemblies />
+    <TargetName>$(ProjectName)du</TargetName>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Unicode_Release|Win32'">
     <OutDir>Unicode_Release\</OutDir>
@@ -100,6 +103,7 @@
     <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
     <CodeAnalysisRules />
     <CodeAnalysisRuleAssemblies />
+    <TargetName>$(ProjectName)u</TargetName>
   </PropertyGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
     <Midl>
@@ -111,8 +115,8 @@
     </Midl>
     <ClCompile>
       <InlineFunctionExpansion>OnlyExplicitInline</InlineFunctionExpansion>
-      <AdditionalIncludeDirectories>$(TAIDEV)\include\Api;$(TAIDEV)\cs\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
-      <PreprocessorDefinitions>WIN32;NDEBUG;_WINDOWS;_USRDLL;LIBKBM_EXPORTS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>..\..\include\Api;..\..\cs\include</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>WIN32;NDEBUG;_WINDOWS;_USRDLL;LIBKBM_EXPORTS;_CRT_SECURE_NO_WARNINGS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <StringPooling>true</StringPooling>
       <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
       <FunctionLevelLinking>true</FunctionLevelLinking>
@@ -136,7 +140,7 @@
       <AdditionalDependencies>odbc32.lib;odbccp32.lib;libprim.lib;%(AdditionalDependencies)</AdditionalDependencies>
       <OutputFile>.\Release/libkbm.dll</OutputFile>
       <SuppressStartupBanner>true</SuppressStartupBanner>
-      <AdditionalLibraryDirectories>$(TAIDEV)\lib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalLibraryDirectories>..\..\cs\libprim\Release</AdditionalLibraryDirectories>
       <GenerateDebugInformation>true</GenerateDebugInformation>
       <ProgramDatabaseFile>.\Release/libkbm.pdb</ProgramDatabaseFile>
       <RandomizedBaseAddress>false</RandomizedBaseAddress>
@@ -144,13 +148,8 @@
       <ImportLibrary>.\Release/libkbm.lib</ImportLibrary>
     </Link>
     <PostBuildEvent>
-      <Command>del /q $(TAIDEV)\bin\libkbm.dll
-del /q $(TAIDEV)\lib\libkbm.lib
-del /q $(TAIDEV)\lib\libkbm.exp
-copy release\libkbm.dll $(TAIDEV)\bin\libkbm.dll
-copy release\libkbm.lib $(TAIDEV)\lib\libkbm.lib
-copy release\libkbm.exp $(TAIDEV)\lib\libkbm.exp
-</Command>
+      <Command>
+      </Command>
     </PostBuildEvent>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
@@ -163,8 +162,8 @@ copy release\libkbm.exp $(TAIDEV)\lib\libkbm.exp
     </Midl>
     <ClCompile>
       <Optimization>Disabled</Optimization>
-      <AdditionalIncludeDirectories>$(TAIDEV)\include\Api;$(TAIDEV)\cs\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
-      <PreprocessorDefinitions>WIN32;_DEBUG;_WINDOWS;_USRDLL;LIBKBM_EXPORTS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>..\..\include\Api;..\..\cs\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>WIN32;_DEBUG;_WINDOWS;_USRDLL;LIBKBM_EXPORTS;_CRT_SECURE_NO_WARNINGS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <BasicRuntimeChecks>Default</BasicRuntimeChecks>
       <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
       <PrecompiledHeader>Use</PrecompiledHeader>
@@ -188,7 +187,7 @@ copy release\libkbm.exp $(TAIDEV)\lib\libkbm.exp
       <AdditionalDependencies>odbc32.lib;odbccp32.lib;libprimd.lib;%(AdditionalDependencies)</AdditionalDependencies>
       <OutputFile>Debug/libkbmd.dll</OutputFile>
       <SuppressStartupBanner>true</SuppressStartupBanner>
-      <AdditionalLibraryDirectories>$(TAIDEV)\lib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalLibraryDirectories>..\..\cs\libprim\Debug</AdditionalLibraryDirectories>
       <IgnoreSpecificDefaultLibraries>msvcrt;%(IgnoreSpecificDefaultLibraries)</IgnoreSpecificDefaultLibraries>
       <GenerateDebugInformation>true</GenerateDebugInformation>
       <ProgramDatabaseFile>.\Debug/libkbmd.pdb</ProgramDatabaseFile>
@@ -197,14 +196,8 @@ copy release\libkbm.exp $(TAIDEV)\lib\libkbm.exp
       <ImportLibrary>.\Debug/libkbmd.lib</ImportLibrary>
     </Link>
     <PostBuildEvent>
-      <Command>del $(TAIDEV)\bin\libkbmd.dll
-del $(TAIDEV)\lib\libkbmd.lib
-del $(TAIDEV)\lib\libkbmd.exp
-copy debug\libkbmd.dll $(TAIDEV)\bin\libkbmd.dll
-copy debug\libkbmd.lib $(TAIDEV)\lib\libkbmd.lib
-copy debug\libkbmd.exp $(TAIDEV)\lib\libkbmd.exp
-copy debug\libkbmd.pdb $(TAIDEV)\bin\libkbmd.pdb
-</Command>
+      <Command>
+      </Command>
     </PostBuildEvent>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Unicode_Debug|Win32'">
@@ -218,8 +211,8 @@ copy debug\libkbmd.pdb $(TAIDEV)\bin\libkbmd.pdb
     </Midl>
     <ClCompile>
       <Optimization>Disabled</Optimization>
-      <AdditionalIncludeDirectories>$(TAI)\include\Api;$(TAI)\cs\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
-      <PreprocessorDefinitions>WIN32;_DEBUG;_WINDOWS;_USRDLL;UNICODE;_UNICODE;LIBKBM_EXPORTS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>..\..\include\Api;..\..\cs\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>WIN32;_DEBUG;_WINDOWS;_USRDLL;UNICODE;_UNICODE;LIBKBM_EXPORTS;_CRT_SECURE_NO_WARNINGS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
       <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
       <TreatWChar_tAsBuiltInType>true</TreatWChar_tAsBuiltInType>
@@ -246,7 +239,7 @@ copy debug\libkbmd.pdb $(TAIDEV)\bin\libkbmd.pdb
       <AdditionalDependencies>odbc32.lib;odbccp32.lib;libprimdu.lib;%(AdditionalDependencies)</AdditionalDependencies>
       <OutputFile>Unicode_Debug/libkbmdu.dll</OutputFile>
       <SuppressStartupBanner>true</SuppressStartupBanner>
-      <AdditionalLibraryDirectories>$(TAI)\lib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalLibraryDirectories>..\libprim\Unicode_Debug;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
       <IgnoreSpecificDefaultLibraries>msvcrt;%(IgnoreSpecificDefaultLibraries)</IgnoreSpecificDefaultLibraries>
       <GenerateDebugInformation>true</GenerateDebugInformation>
       <ProgramDatabaseFile>.\Unicode_Debug/libkbmdu.pdb</ProgramDatabaseFile>
@@ -255,13 +248,12 @@ copy debug\libkbmd.pdb $(TAIDEV)\bin\libkbmd.pdb
       <ImportLibrary>.\Unicode_Debug/libkbmdu.lib</ImportLibrary>
     </Link>
     <PostBuildEvent>
-      <Command>del $(TAI)\bin\libkbmdu.dll
-del $(TAI)\lib\libkbmdu.lib
-del $(TAI)\lib\libkbmdu.exp
-copy Unicode_debug\libkbmdu.dll $(TAI)\bin\libkbmdu.dll
-copy Unicode_debug\libkbmdu.lib $(TAI)\lib\libkbmdu.lib
-copy Unicode_debug\libkbmdu.exp $(TAI)\lib\libkbmdu.exp
-</Command>
+      <Command>del ..\..\..\visualtext3\Unicode_Debug\libkbmdu.dll
+copy Unicode_Debug\libkbmdu.dll ..\..\..\visualtext3\Unicode_Debug\libkbmdu.dll
+del ..\..\lib\libkbmdu.lib
+copy Unicode_Debug\libkbmdu.dll ..\..\lib\libkbmdu.lib
+del ..\..\..\vt3d\libkbmdu.dll
+copy Unicode_Debug\libkbmdu.dll ..\..\..\vt3d\libkbmdu.dll</Command>
     </PostBuildEvent>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Unicode_Release|Win32'">
@@ -275,8 +267,8 @@ copy Unicode_debug\libkbmdu.exp $(TAI)\lib\libkbmdu.exp
     </Midl>
     <ClCompile>
       <InlineFunctionExpansion>OnlyExplicitInline</InlineFunctionExpansion>
-      <AdditionalIncludeDirectories>$(TAI)\include\Api;$(TAI)\cs\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
-      <PreprocessorDefinitions>WIN32;NDEBUG;_WINDOWS;_USRDLL;UNICODE;_UNICODE;LIBKBM_EXPORTS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>..\..\include\Api;..\..\cs\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>WIN32;NDEBUG;_WINDOWS;_USRDLL;UNICODE;_UNICODE;LIBKBM_EXPORTS;_CRT_SECURE_NO_WARNINGS;_CRT_NON_CONFORMING_SWPRINTFS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <StringPooling>true</StringPooling>
       <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
       <FunctionLevelLinking>true</FunctionLevelLinking>
@@ -302,7 +294,7 @@ copy Unicode_debug\libkbmdu.exp $(TAI)\lib\libkbmdu.exp
       <AdditionalDependencies>odbc32.lib;odbccp32.lib;libprimu.lib;%(AdditionalDependencies)</AdditionalDependencies>
       <OutputFile>.\Unicode_Release/libkbmu.dll</OutputFile>
       <SuppressStartupBanner>true</SuppressStartupBanner>
-      <AdditionalLibraryDirectories>$(TAI)\lib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalLibraryDirectories>..\..\lib;..\..\..\vt3;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
       <GenerateDebugInformation>true</GenerateDebugInformation>
       <ProgramDatabaseFile>.\Unicode_Release/libkbmu.pdb</ProgramDatabaseFile>
       <RandomizedBaseAddress>false</RandomizedBaseAddress>
@@ -310,13 +302,12 @@ copy Unicode_debug\libkbmdu.exp $(TAI)\lib\libkbmdu.exp
       <ImportLibrary>.\Unicode_Release/libkbmu.lib</ImportLibrary>
     </Link>
     <PostBuildEvent>
-      <Command>del /q $(TAI)\bin\libkbmu.dll
-del /q $(TAI)\lib\libkbmu.lib
-del /q $(TAI)\lib\libkbmu.exp
-copy Unicode_release\libkbmu.dll $(TAI)\bin\libkbmu.dll
-copy Unicode_release\libkbmu.lib $(TAI)\lib\libkbmu.lib
-copy Unicode_release\libkbmu.exp $(TAI)\lib\libkbmu.exp
-</Command>
+      <Command>del ..\..\..\visualtext3\Unicode_Release\libkbmu.dll
+copy Unicode_Release\libkbmu.dll ..\..\..\visualtext3\Unicode_Release\libkbmu.dll
+del ..\..\lib\libkbmu.lib
+copy Unicode_Release\libkbmu.dll ..\..\lib\libkbmu.lib
+del ..\..\..\vt3\libkbmu.dll
+copy Unicode_Release\libkbmu.dll ..\..\..\vt3\libkbmu.dll</Command>
     </PostBuildEvent>
   </ItemDefinitionGroup>
   <ItemGroup>

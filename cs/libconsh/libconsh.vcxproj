@@ -20,29 +20,30 @@
   </ItemGroup>
   <PropertyGroup Label="Globals">
     <ProjectGuid>{9670D2E5-B333-4260-BEBB-BB3242BE1374}</ProjectGuid>
+    <WindowsTargetPlatformVersion>8.1</WindowsTargetPlatformVersion>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Unicode_Release|Win32'" Label="Configuration">
     <ConfigurationType>DynamicLibrary</ConfigurationType>
-    <PlatformToolset>v140</PlatformToolset>
+    <PlatformToolset>v120</PlatformToolset>
     <UseOfMfc>false</UseOfMfc>
     <CharacterSet>Unicode</CharacterSet>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Unicode_Debug|Win32'" Label="Configuration">
     <ConfigurationType>DynamicLibrary</ConfigurationType>
-    <PlatformToolset>v140</PlatformToolset>
+    <PlatformToolset>v120</PlatformToolset>
     <UseOfMfc>false</UseOfMfc>
     <CharacterSet>Unicode</CharacterSet>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
     <ConfigurationType>DynamicLibrary</ConfigurationType>
-    <PlatformToolset>v140</PlatformToolset>
+    <PlatformToolset>v120</PlatformToolset>
     <UseOfMfc>false</UseOfMfc>
     <CharacterSet>MultiByte</CharacterSet>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
     <ConfigurationType>DynamicLibrary</ConfigurationType>
-    <PlatformToolset>v140</PlatformToolset>
+    <PlatformToolset>v120</PlatformToolset>
     <UseOfMfc>false</UseOfMfc>
     <CharacterSet>MultiByte</CharacterSet>
   </PropertyGroup>
@@ -92,6 +93,7 @@
     <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
     <CodeAnalysisRules />
     <CodeAnalysisRuleAssemblies />
+    <TargetName>$(ProjectName)du</TargetName>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Unicode_Release|Win32'">
     <OutDir>Unicode_Release\</OutDir>
@@ -100,6 +102,7 @@
     <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
     <CodeAnalysisRules />
     <CodeAnalysisRuleAssemblies />
+    <TargetName>$(ProjectName)u</TargetName>
   </PropertyGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <Midl>
@@ -111,8 +114,8 @@
     </Midl>
     <ClCompile>
       <Optimization>Disabled</Optimization>
-      <AdditionalIncludeDirectories>$(TAIDEV)\cs\include;$(TAIDEV)\include\Api</AdditionalIncludeDirectories>
-      <PreprocessorDefinitions>WIN32;_DEBUG;_WINDOWS;_USRDLL;LIBCONSH_EXPORTS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>..\..\include\Api;..\..\cs\include</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>WIN32;_DEBUG;_WINDOWS;_USRDLL;LIBCONSH_EXPORTS;_CRT_SECURE_NO_WARNINGS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <BasicRuntimeChecks>Default</BasicRuntimeChecks>
       <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
       <PrecompiledHeader>Use</PrecompiledHeader>
@@ -136,7 +139,7 @@
       <AdditionalDependencies>odbc32.lib;odbccp32.lib;libprimd.lib;libkbmd.lib;%(AdditionalDependencies)</AdditionalDependencies>
       <OutputFile>Debug/libconshd.dll</OutputFile>
       <SuppressStartupBanner>true</SuppressStartupBanner>
-      <AdditionalLibraryDirectories>$(TAIDEV)\lib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalLibraryDirectories>..\..\cs\libkbm\Debug;..\..\cs\libprim\Debug</AdditionalLibraryDirectories>
       <IgnoreSpecificDefaultLibraries>msvcrt;%(IgnoreSpecificDefaultLibraries)</IgnoreSpecificDefaultLibraries>
       <GenerateDebugInformation>true</GenerateDebugInformation>
       <ProgramDatabaseFile>.\Debug/libconshd.pdb</ProgramDatabaseFile>
@@ -145,14 +148,8 @@
       <ImportLibrary>.\Debug/libconshd.lib</ImportLibrary>
     </Link>
     <PostBuildEvent>
-      <Command>del $(TAIDEV)\bin\libconshd.dll
-del $(TAIDEV)\lib\libconshd.lib
-del $(TAIDEV)\lib\libconshd.exp
-copy debug\libconshd.dll $(TAIDEV)\bin\libconshd.dll
-copy debug\libconshd.lib $(TAIDEV)\lib\libconshd.lib
-copy debug\libconshd.exp $(TAIDEV)\lib\libconshd.exp
-copy debug\libconshd.pdb $(TAIDEV)\bin\libconshd.pdb
-</Command>
+      <Command>
+      </Command>
     </PostBuildEvent>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
@@ -165,8 +162,8 @@ copy debug\libconshd.pdb $(TAIDEV)\bin\libconshd.pdb
     </Midl>
     <ClCompile>
       <InlineFunctionExpansion>OnlyExplicitInline</InlineFunctionExpansion>
-      <AdditionalIncludeDirectories>$(TAIDEV)\cs\include;$(TAIDEV)\include\Api</AdditionalIncludeDirectories>
-      <PreprocessorDefinitions>WIN32;NDEBUG;_WINDOWS;_USRDLL;LIBCONSH_EXPORTS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>..\..\cs\include;..\..\include\Api</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>WIN32;NDEBUG;_WINDOWS;_USRDLL;LIBCONSH_EXPORTS;_CRT_SECURE_NO_WARNINGS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <StringPooling>true</StringPooling>
       <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
       <FunctionLevelLinking>true</FunctionLevelLinking>
@@ -191,7 +188,7 @@ copy debug\libconshd.pdb $(TAIDEV)\bin\libconshd.pdb
       <AdditionalDependencies>odbc32.lib;odbccp32.lib;libprim.lib;libkbm.lib;%(AdditionalDependencies)</AdditionalDependencies>
       <OutputFile>.\Release/libconsh.dll</OutputFile>
       <SuppressStartupBanner>true</SuppressStartupBanner>
-      <AdditionalLibraryDirectories>$(TAIDEV)\lib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalLibraryDirectories>..\libprim\Release;..\libkbm\Release</AdditionalLibraryDirectories>
       <GenerateDebugInformation>true</GenerateDebugInformation>
       <ProgramDatabaseFile>.\Release/libconsh.pdb</ProgramDatabaseFile>
       <RandomizedBaseAddress>false</RandomizedBaseAddress>
@@ -199,13 +196,8 @@ copy debug\libconshd.pdb $(TAIDEV)\bin\libconshd.pdb
       <ImportLibrary>.\Release/libconsh.lib</ImportLibrary>
     </Link>
     <PostBuildEvent>
-      <Command>del /q $(TAIDEV)\bin\libconsh.dll
-del /q $(TAIDEV)\lib\libconsh.lib
-del /q $(TAIDEV)\lib\libconsh.exp
-copy release\libconsh.dll $(TAIDEV)\bin\libconsh.dll
-copy release\libconsh.lib $(TAIDEV)\lib\libconsh.lib
-copy release\libconsh.exp $(TAIDEV)\lib\libconsh.exp
-</Command>
+      <Command>
+      </Command>
     </PostBuildEvent>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Unicode_Debug|Win32'">
@@ -219,8 +211,8 @@ copy release\libconsh.exp $(TAIDEV)\lib\libconsh.exp
     </Midl>
     <ClCompile>
       <Optimization>Disabled</Optimization>
-      <AdditionalIncludeDirectories>$(TAIDEV)\cs\include;$(TAIDEV)\include\Api;$(TAIDEV)\include;</AdditionalIncludeDirectories>
-      <PreprocessorDefinitions>WIN32;_DEBUG;_WINDOWS;_USRDLL;UNICODE;_UNICODE;LIBCONSH_EXPORTS;NONSTD_;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>..\..\cs\include;..\..\include\Api</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>WIN32;_DEBUG;_WINDOWS;_USRDLL;UNICODE;_UNICODE;LIBCONSH_EXPORTS;NONSTD_;_CRT_SECURE_NO_WARNINGS;_CRT_NON_CONFORMING_SWPRINTFS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
       <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
       <TreatWChar_tAsBuiltInType>true</TreatWChar_tAsBuiltInType>
@@ -247,7 +239,7 @@ copy release\libconsh.exp $(TAIDEV)\lib\libconsh.exp
       <AdditionalDependencies>odbc32.lib;odbccp32.lib;libprimdu.lib;libkbmdu.lib;libstreamdu.lib;%(AdditionalDependencies)</AdditionalDependencies>
       <OutputFile>Unicode_Debug/libconshdu.dll</OutputFile>
       <SuppressStartupBanner>true</SuppressStartupBanner>
-      <AdditionalLibraryDirectories>$(TAI)\lib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalLibraryDirectories>..\libkbm\Unicode_Debug;..\libprim\Unicode_Debug;..\libStream\Unicode_Debug;..\..\lib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
       <IgnoreSpecificDefaultLibraries>msvcrt;%(IgnoreSpecificDefaultLibraries)</IgnoreSpecificDefaultLibraries>
       <GenerateDebugInformation>true</GenerateDebugInformation>
       <ProgramDatabaseFile>.\Unicode_Debug/libconshdu.pdb</ProgramDatabaseFile>
@@ -256,13 +248,10 @@ copy release\libconsh.exp $(TAIDEV)\lib\libconsh.exp
       <ImportLibrary>.\Unicode_Debug/libconshdu.lib</ImportLibrary>
     </Link>
     <PostBuildEvent>
-      <Command>del $(TAI)\bin\libconshdu.dll
-del $(TAI)\lib\libconshdu.lib
-del $(TAI)\lib\libconshdu.exp
-copy Unicode_debug\libconshdu.dll $(TAI)\bin\libconshdu.dll
-copy Unicode_debug\libconshdu.lib $(TAI)\lib\libconshdu.lib
-copy Unicode_debug\libconshdu.exp $(TAI)\lib\libconshdu.exp
-</Command>
+      <Command>del ..\..\..\visualtext3\Unicode_Debug\libconshdu.dll
+copy Unicode_Debug\libconshdu.dll ..\..\..\visualtext3\Unicode_Debug\libconshdu.dll
+del ..\..\..\vt3d\libconshdu.dll
+copy Unicode_Debug\libconshdu.dll ..\..\..\vt3d\libconshdu.dll</Command>
     </PostBuildEvent>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Unicode_Release|Win32'">
@@ -276,8 +265,8 @@ copy Unicode_debug\libconshdu.exp $(TAI)\lib\libconshdu.exp
     </Midl>
     <ClCompile>
       <InlineFunctionExpansion>OnlyExplicitInline</InlineFunctionExpansion>
-      <AdditionalIncludeDirectories>$(TAIDEV)\cs\include;$(TAIDEV)\include\Api</AdditionalIncludeDirectories>
-      <PreprocessorDefinitions>WIN32;NDEBUG;_WINDOWS;_USRDLL;UNICODE;_UNICODE;LIBCONSH_EXPORTS;NONSTD_;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>..\..\cs\include;..\..\include\Api</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>WIN32;NDEBUG;_WINDOWS;_USRDLL;UNICODE;_UNICODE;LIBCONSH_EXPORTS;NONSTD_;_CRT_SECURE_NO_WARNINGS;_CRT_NON_CONFORMING_SWPRINTFS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <StringPooling>true</StringPooling>
       <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
       <FunctionLevelLinking>true</FunctionLevelLinking>
@@ -305,7 +294,7 @@ copy Unicode_debug\libconshdu.exp $(TAI)\lib\libconshdu.exp
       <AdditionalDependencies>odbc32.lib;odbccp32.lib;libprimu.lib;libkbmu.lib;libstreamu.lib;%(AdditionalDependencies)</AdditionalDependencies>
       <OutputFile>.\Unicode_Release/libconshu.dll</OutputFile>
       <SuppressStartupBanner>true</SuppressStartupBanner>
-      <AdditionalLibraryDirectories>$(TAI)\lib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalLibraryDirectories>..\libkbm\Unicode_Release;..\libprim\Unicode_Release;..\libStream\Unicode_Release;..\..\lib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
       <GenerateDebugInformation>true</GenerateDebugInformation>
       <ProgramDatabaseFile>.\Unicode_Release/libconshu.pdb</ProgramDatabaseFile>
       <RandomizedBaseAddress>false</RandomizedBaseAddress>
@@ -313,13 +302,10 @@ copy Unicode_debug\libconshdu.exp $(TAI)\lib\libconshdu.exp
       <ImportLibrary>.\Unicode_Release/libconshu.lib</ImportLibrary>
     </Link>
     <PostBuildEvent>
-      <Command>del /q $(TAI)\bin\libconshu.dll
-del /q $(TAI)\lib\libconshu.lib
-del /q $(TAI)\lib\libconshu.exp
-copy Unicode_release\libconshu.dll $(TAI)\bin\libconshu.dll
-copy Unicode_release\libconshu.lib $(TAI)\lib\libconshu.lib
-copy Unicode_release\libconshu.exp $(TAI)\lib\libconshu.exp
-</Command>
+      <Command>del ..\..\..\visualtext3\Unicode_Release\libconshu.dll
+copy Unicode_Release\libconshu.dll ..\..\..\visualtext3\Unicode_Release\libconshu.dll
+del ..\..\..\vt3\libconshu.dll
+copy Unicode_Release\libconshu.dll ..\..\..\vt3\libconshu.dll</Command>
     </PostBuildEvent>
   </ItemDefinitionGroup>
   <ItemGroup>
