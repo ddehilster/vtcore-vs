@@ -22,7 +22,8 @@ All rights reserved.
 #define _2_16		((long) 32768)
 #define _32_K		_2_16
 
-#ifndef LINUX
+//#ifndef LINUX
+#ifdef IGNORE_THIS_NOW
 #define INFINITY
 #endif
 

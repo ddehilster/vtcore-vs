@@ -4,5 +4,5 @@
 
 #include "stdafx.h"
 
-// TODO: reference any additional headers you need in STDAFX.H
+// TODO: reference any additional headers you need in STDAFX.HF
 // and not in this file

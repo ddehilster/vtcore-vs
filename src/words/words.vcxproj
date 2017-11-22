@@ -20,29 +20,30 @@
   </ItemGroup>
   <PropertyGroup Label="Globals">
     <ProjectGuid>{15951DAE-EA16-4563-B1A8-8672F7515717}</ProjectGuid>
+    <WindowsTargetPlatformVersion>8.1</WindowsTargetPlatformVersion>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Unicode_Release|Win32'" Label="Configuration">
     <ConfigurationType>DynamicLibrary</ConfigurationType>
-    <PlatformToolset>v140</PlatformToolset>
+    <PlatformToolset>v120</PlatformToolset>
     <UseOfMfc>false</UseOfMfc>
     <CharacterSet>Unicode</CharacterSet>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Unicode_Debug|Win32'" Label="Configuration">
     <ConfigurationType>DynamicLibrary</ConfigurationType>
-    <PlatformToolset>v140</PlatformToolset>
+    <PlatformToolset>v120</PlatformToolset>
     <UseOfMfc>false</UseOfMfc>
     <CharacterSet>Unicode</CharacterSet>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
     <ConfigurationType>DynamicLibrary</ConfigurationType>
-    <PlatformToolset>v140</PlatformToolset>
+    <PlatformToolset>v120</PlatformToolset>
     <UseOfMfc>false</UseOfMfc>
     <CharacterSet>MultiByte</CharacterSet>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
     <ConfigurationType>DynamicLibrary</ConfigurationType>
-    <PlatformToolset>v140</PlatformToolset>
+    <PlatformToolset>v120</PlatformToolset>
     <UseOfMfc>false</UseOfMfc>
     <CharacterSet>MultiByte</CharacterSet>
   </PropertyGroup>
@@ -78,16 +79,19 @@
     <OutDir>.\Debug\</OutDir>
     <IntDir>.\Debug\</IntDir>
     <LinkIncremental>false</LinkIncremental>
+    <TargetName>$(ProjectName)d</TargetName>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Unicode_Debug|Win32'">
     <OutDir>Unicode_Debug\</OutDir>
     <IntDir>Unicode_Debug\</IntDir>
     <LinkIncremental>false</LinkIncremental>
+    <TargetName>$(ProjectName)du</TargetName>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Unicode_Release|Win32'">
     <OutDir>Unicode_Release\</OutDir>
     <IntDir>Unicode_Release\</IntDir>
     <LinkIncremental>false</LinkIncremental>
+    <TargetName>$(ProjectName)u</TargetName>
   </PropertyGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
     <Midl>
@@ -100,8 +104,8 @@
     <ClCompile>
       <AdditionalOptions>/Zm200  %(AdditionalOptions)</AdditionalOptions>
       <InlineFunctionExpansion>OnlyExplicitInline</InlineFunctionExpansion>
-      <AdditionalIncludeDirectories>$(TAI)\include\Api;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
-      <PreprocessorDefinitions>WIN32;NDEBUG;_WINDOWS;_USRDLL;WORDS_EXPORTS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>..\..\include\Api;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>WIN32;NDEBUG;_WINDOWS;_USRDLL;WORDS_EXPORTS;_CRT_SECURE_NO_WARNINGS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <StringPooling>true</StringPooling>
       <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
       <FunctionLevelLinking>true</FunctionLevelLinking>
@@ -132,13 +136,8 @@
       <ImportLibrary>.\Release/words.lib</ImportLibrary>
     </Link>
     <PostBuildEvent>
-      <Command>del /q $(TAIDEV)\bin\words.dll
-del /q $(TAIDEV)\lib\words.lib
-del /q $(TAIDEV)\lib\words.exp
-copy release\words.dll $(TAIDEV)\bin\words.dll
-copy release\words.lib $(TAIDEV)\lib\words.lib
-copy release\words.exp $(TAIDEV)\lib\words.exp
-</Command>
+      <Command>
+      </Command>
     </PostBuildEvent>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
@@ -152,8 +151,8 @@ copy release\words.exp $(TAIDEV)\lib\words.exp
     <ClCompile>
       <AdditionalOptions>/Zm200  %(AdditionalOptions)</AdditionalOptions>
       <Optimization>Disabled</Optimization>
-      <AdditionalIncludeDirectories>$(TAI)\include\Api;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
-      <PreprocessorDefinitions>WIN32;_DEBUG;_WINDOWS;_USRDLL;WORDS_EXPORTS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>..\..\include\Api;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>WIN32;_DEBUG;_WINDOWS;_USRDLL;WORDS_EXPORTS;_CRT_SECURE_NO_WARNINGS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <BasicRuntimeChecks>Default</BasicRuntimeChecks>
       <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
       <PrecompiledHeader>Use</PrecompiledHeader>
@@ -184,14 +183,8 @@ copy release\words.exp $(TAIDEV)\lib\words.exp
       <ImportLibrary>.\Debug/wordsd.lib</ImportLibrary>
     </Link>
     <PostBuildEvent>
-      <Command>del $(TAIDEV)\bin\wordsd.dll
-del $(TAIDEV)\lib\wordsd.lib
-del $(TAIDEV)\lib\wordsd.exp
-copy debug\wordsd.dll $(TAIDEV)\bin\wordsd.dll
-copy debug\wordsd.lib $(TAIDEV)\lib\wordsd.lib
-copy debug\wordsd.exp $(TAIDEV)\lib\wordsd.exp
-copy debug\wordsd.pdb $(TAIDEV)\bin\wordsd.pdb
-</Command>
+      <Command>
+      </Command>
     </PostBuildEvent>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Unicode_Debug|Win32'">
@@ -206,7 +199,7 @@ copy debug\wordsd.pdb $(TAIDEV)\bin\wordsd.pdb
     <ClCompile>
       <AdditionalOptions>/Zm200  %(AdditionalOptions)</AdditionalOptions>
       <Optimization>Disabled</Optimization>
-      <AdditionalIncludeDirectories>$(TAI)\include\Api;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>..\..\include\Api</AdditionalIncludeDirectories>
       <PreprocessorDefinitions>WIN32;_DEBUG;_WINDOWS;_USRDLL;UNICODE;_UNICODE;WORDS_EXPORTS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
       <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
@@ -240,13 +233,10 @@ copy debug\wordsd.pdb $(TAIDEV)\bin\wordsd.pdb
       <ImportLibrary>.\Unicode_Debug/wordsdu.lib</ImportLibrary>
     </Link>
     <PostBuildEvent>
-      <Command>del $(TAI)\bin\wordsdu.dll
-del $(TAI)\lib\wordsdu.lib
-del $(TAI)\lib\wordsdu.exp
-copy Unicode_debug\wordsdu.dll $(TAI)\bin\wordsdu.dll
-copy Unicode_debug\wordsdu.lib $(TAI)\lib\wordsdu.lib
-copy Unicode_debug\wordsdu.exp $(TAI)\lib\wordsdu.exp
-</Command>
+      <Command>del ..\..\..\visualtext3\Unicode_Debug\wordsdu.dll
+copy Unicode_Debug\wordsdu.dll ..\..\..\visualtext3\Unicode_Debug\wordsdu.dll
+del ..\..\..\vt3d\wordsdu.dll
+copy Unicode_Debug\wordsdu.dll ..\..\..\vt3d\wordsdu.dll</Command>
     </PostBuildEvent>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Unicode_Release|Win32'">
@@ -261,7 +251,7 @@ copy Unicode_debug\wordsdu.exp $(TAI)\lib\wordsdu.exp
     <ClCompile>
       <AdditionalOptions>/Zm200  %(AdditionalOptions)</AdditionalOptions>
       <InlineFunctionExpansion>OnlyExplicitInline</InlineFunctionExpansion>
-      <AdditionalIncludeDirectories>$(TAI)\include\Api;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>..\..\include\Api</AdditionalIncludeDirectories>
       <PreprocessorDefinitions>WIN32;NDEBUG;_WINDOWS;_USRDLL;UNICODE;_UNICODE;WORDS_EXPORTS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <StringPooling>true</StringPooling>
       <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
@@ -295,13 +285,10 @@ copy Unicode_debug\wordsdu.exp $(TAI)\lib\wordsdu.exp
       <ImportLibrary>.\Unicode_Release/wordsu.lib</ImportLibrary>
     </Link>
     <PostBuildEvent>
-      <Command>del /q $(TAI)\bin\wordsu.dll
-del /q $(TAI)\lib\wordsu.lib
-del /q $(TAI)\lib\wordsu.exp
-copy Unicode_release\wordsu.dll $(TAI)\bin\wordsu.dll
-copy Unicode_release\wordsu.lib $(TAI)\lib\wordsu.lib
-copy Unicode_release\wordsu.exp $(TAI)\lib\wordsu.exp
-</Command>
+      <Command>del ..\..\..\visualtext3\Unicode_Release\wordsu.dll
+copy Unicode_Release\wordsu.dll ..\..\..\visualtext3\Unicode_Release\wordsu.dll
+del ..\..\..\vt3\wordsu.dll
+copy Unicode_Release\wordsu.dll ..\..\..\vt3\wordsu.dll</Command>
     </PostBuildEvent>
   </ItemDefinitionGroup>
   <ItemGroup>
