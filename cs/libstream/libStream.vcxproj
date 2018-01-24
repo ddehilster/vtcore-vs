@@ -17,13 +17,13 @@
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Unicode_Release|Win32'" Label="Configuration">
     <ConfigurationType>DynamicLibrary</ConfigurationType>
-    <PlatformToolset>v120</PlatformToolset>
+    <PlatformToolset>v140</PlatformToolset>
     <UseOfMfc>false</UseOfMfc>
     <CharacterSet>Unicode</CharacterSet>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Unicode_Debug|Win32'" Label="Configuration">
     <ConfigurationType>DynamicLibrary</ConfigurationType>
-    <PlatformToolset>v120</PlatformToolset>
+    <PlatformToolset>v140</PlatformToolset>
     <UseOfMfc>false</UseOfMfc>
     <CharacterSet>Unicode</CharacterSet>
   </PropertyGroup>
@@ -97,8 +97,10 @@
     <PostBuildEvent>
       <Command>del ..\..\..\visualtext3\Unicode_Debug\libStreamdu.dll
 copy Unicode_Debug\libStreamdu.dll ..\..\..\visualtext3\Unicode_Debug\libStreamdu.dll
-del ..\..\..\vt3d\libStreamdu.dll
-copy Unicode_Debug\libStreamdu.dll ..\..\..\vt3d\libStreamdu.dll</Command>
+del ..\..\lib\libStreamdu.lib
+copy Unicode_Debug\libStreamdu.lib ..\..\lib\libStreamdu.lib
+del ..\..\..\vt3\libStreamdu.dll
+copy Unicode_Debug\libStreamdu.dll ..\..\..\vt3\libStreamdu.dll</Command>
     </PostBuildEvent>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Unicode_Release|Win32'">
@@ -145,6 +147,8 @@ copy Unicode_Debug\libStreamdu.dll ..\..\..\vt3d\libStreamdu.dll</Command>
     <PostBuildEvent>
       <Command>del ..\..\..\visualtext3\Unicode_Release\libStreamu.dll
 copy Unicode_Release\libStreamu.dll ..\..\..\visualtext3\Unicode_Release\libStreamu.dll
+del ..\..\lib\libStreamu.lib
+copy Unicode_Release\libStreamu.lib ..\..\lib\libStreamu.lib
 del ..\..\..\vt3\libStreamu.dll
 copy Unicode_Release\libStreamu.dll ..\..\..\vt3\libStreamu.dll</Command>
     </PostBuildEvent>
