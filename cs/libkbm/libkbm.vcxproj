@@ -25,25 +25,25 @@
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Unicode_Release|Win32'" Label="Configuration">
     <ConfigurationType>DynamicLibrary</ConfigurationType>
-    <PlatformToolset>v120</PlatformToolset>
+    <PlatformToolset>v140</PlatformToolset>
     <UseOfMfc>false</UseOfMfc>
     <CharacterSet>Unicode</CharacterSet>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Unicode_Debug|Win32'" Label="Configuration">
     <ConfigurationType>DynamicLibrary</ConfigurationType>
-    <PlatformToolset>v120</PlatformToolset>
+    <PlatformToolset>v140</PlatformToolset>
     <UseOfMfc>false</UseOfMfc>
     <CharacterSet>Unicode</CharacterSet>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
     <ConfigurationType>DynamicLibrary</ConfigurationType>
-    <PlatformToolset>v120</PlatformToolset>
+    <PlatformToolset>v140</PlatformToolset>
     <UseOfMfc>false</UseOfMfc>
     <CharacterSet>MultiByte</CharacterSet>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
     <ConfigurationType>DynamicLibrary</ConfigurationType>
-    <PlatformToolset>v120</PlatformToolset>
+    <PlatformToolset>v140</PlatformToolset>
     <UseOfMfc>false</UseOfMfc>
     <CharacterSet>MultiByte</CharacterSet>
   </PropertyGroup>
@@ -239,7 +239,7 @@
       <AdditionalDependencies>odbc32.lib;odbccp32.lib;libprimdu.lib;%(AdditionalDependencies)</AdditionalDependencies>
       <OutputFile>Unicode_Debug/libkbmdu.dll</OutputFile>
       <SuppressStartupBanner>true</SuppressStartupBanner>
-      <AdditionalLibraryDirectories>..\libprim\Unicode_Debug;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalLibraryDirectories>..\..\lib;..\..\..\vt3;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
       <IgnoreSpecificDefaultLibraries>msvcrt;%(IgnoreSpecificDefaultLibraries)</IgnoreSpecificDefaultLibraries>
       <GenerateDebugInformation>true</GenerateDebugInformation>
       <ProgramDatabaseFile>.\Unicode_Debug/libkbmdu.pdb</ProgramDatabaseFile>
@@ -251,9 +251,9 @@
       <Command>del ..\..\..\visualtext3\Unicode_Debug\libkbmdu.dll
 copy Unicode_Debug\libkbmdu.dll ..\..\..\visualtext3\Unicode_Debug\libkbmdu.dll
 del ..\..\lib\libkbmdu.lib
-copy Unicode_Debug\libkbmdu.dll ..\..\lib\libkbmdu.lib
-del ..\..\..\vt3d\libkbmdu.dll
-copy Unicode_Debug\libkbmdu.dll ..\..\..\vt3d\libkbmdu.dll</Command>
+copy Unicode_Debug\libkbmdu.lib ..\..\lib\libkbmdu.lib
+del ..\..\..\vt3\libkbmdu.dll
+copy Unicode_Debug\libkbmdu.dll ..\..\..\vt3\libkbmdu.dll</Command>
     </PostBuildEvent>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Unicode_Release|Win32'">
@@ -305,7 +305,7 @@ copy Unicode_Debug\libkbmdu.dll ..\..\..\vt3d\libkbmdu.dll</Command>
       <Command>del ..\..\..\visualtext3\Unicode_Release\libkbmu.dll
 copy Unicode_Release\libkbmu.dll ..\..\..\visualtext3\Unicode_Release\libkbmu.dll
 del ..\..\lib\libkbmu.lib
-copy Unicode_Release\libkbmu.dll ..\..\lib\libkbmu.lib
+copy Unicode_Release\libkbmu.lib ..\..\lib\libkbmu.lib
 del ..\..\..\vt3\libkbmu.dll
 copy Unicode_Release\libkbmu.dll ..\..\..\vt3\libkbmu.dll</Command>
     </PostBuildEvent>
