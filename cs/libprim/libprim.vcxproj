@@ -177,7 +177,7 @@
       <AdditionalDependencies>odbc32.lib;odbccp32.lib;libstreamdu.lib;icudt.lib;icuuc.lib;%(AdditionalDependencies)</AdditionalDependencies>
       <OutputFile>Unicode_Debug/libprimdu.dll</OutputFile>
       <SuppressStartupBanner>true</SuppressStartupBanner>
-      <AdditionalLibraryDirectories>..\..\lib;..\libstream\Unicode_Debug</AdditionalLibraryDirectories>
+      <AdditionalLibraryDirectories>..\..\lib;..\..\..\vt3</AdditionalLibraryDirectories>
       <IgnoreSpecificDefaultLibraries>msvcrt;%(IgnoreSpecificDefaultLibraries)</IgnoreSpecificDefaultLibraries>
       <GenerateDebugInformation>true</GenerateDebugInformation>
       <ProgramDatabaseFile>.\Unicode_Debug/libprimdu.pdb</ProgramDatabaseFile>
@@ -188,8 +188,10 @@
     <PostBuildEvent>
       <Command>del ..\..\..\visualtext3\Unicode_Debug\libprimdu.dll
 copy Unicode_Debug\libprimdu.dll ..\..\..\visualtext3\Unicode_Debug\libprimdu.dll
-del ..\..\..\vt3d\libprimdu.dll
-copy Unicode_Debug\libprimdu.dll ..\..\..\vt3d\libprimdu.dll</Command>
+del ..\..\lib\libprimdu.lib
+copy Unicode_Debug\libprimdu.lib ..\..\lib\libprimdu.lib
+del ..\..\..\vt3\libprimdu.dll
+copy Unicode_Debug\libprimdu.dll ..\..\..\vt3\libprimdu.dll</Command>
     </PostBuildEvent>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Unicode Release|Win32'">
@@ -242,6 +244,8 @@ copy Unicode_Debug\libprimdu.dll ..\..\..\vt3d\libprimdu.dll</Command>
     <PostBuildEvent>
       <Command>del ..\..\..\visualtext3\Unicode_Release\libprimu.dll
 copy Unicode_Release\libprimu.dll ..\..\..\visualtext3\Unicode_Release\libprimu.dll
+del ..\..\lib\libprimu.lib
+copy Unicode_Release\libprimu.lib ..\..\lib\libprimu.lib
 del ..\..\..\vt3\libprimu.dll
 copy Unicode_Release\libprimu.dll ..\..\..\vt3\libprimu.dll</Command>
     </PostBuildEvent>

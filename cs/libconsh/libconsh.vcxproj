@@ -239,7 +239,7 @@
       <AdditionalDependencies>odbc32.lib;odbccp32.lib;libprimdu.lib;libkbmdu.lib;libstreamdu.lib;%(AdditionalDependencies)</AdditionalDependencies>
       <OutputFile>Unicode_Debug/libconshdu.dll</OutputFile>
       <SuppressStartupBanner>true</SuppressStartupBanner>
-      <AdditionalLibraryDirectories>..\libkbm\Unicode_Debug;..\libprim\Unicode_Debug;..\libStream\Unicode_Debug;..\..\lib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalLibraryDirectories>..\..\lib;..\..\..\vt3;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
       <IgnoreSpecificDefaultLibraries>msvcrt;%(IgnoreSpecificDefaultLibraries)</IgnoreSpecificDefaultLibraries>
       <GenerateDebugInformation>true</GenerateDebugInformation>
       <ProgramDatabaseFile>.\Unicode_Debug/libconshdu.pdb</ProgramDatabaseFile>
@@ -250,8 +250,10 @@
     <PostBuildEvent>
       <Command>del ..\..\..\visualtext3\Unicode_Debug\libconshdu.dll
 copy Unicode_Debug\libconshdu.dll ..\..\..\visualtext3\Unicode_Debug\libconshdu.dll
-del ..\..\..\vt3d\libconshdu.dll
-copy Unicode_Debug\libconshdu.dll ..\..\..\vt3d\libconshdu.dll</Command>
+del ..\..\lib\libconshdu.lib
+copy Unicode_Debug\libconshdu.lib ..\..\lib\libconshdu.lib
+del ..\..\..\vt3\libconshdu.dll
+copy Unicode_Debug\libconshdu.dll ..\..\..\vt3\libconshdu.dll</Command>
     </PostBuildEvent>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Unicode_Release|Win32'">
@@ -294,7 +296,7 @@ copy Unicode_Debug\libconshdu.dll ..\..\..\vt3d\libconshdu.dll</Command>
       <AdditionalDependencies>odbc32.lib;odbccp32.lib;libprimu.lib;libkbmu.lib;libstreamu.lib;%(AdditionalDependencies)</AdditionalDependencies>
       <OutputFile>.\Unicode_Release/libconshu.dll</OutputFile>
       <SuppressStartupBanner>true</SuppressStartupBanner>
-      <AdditionalLibraryDirectories>..\libkbm\Unicode_Release;..\libprim\Unicode_Release;..\libStream\Unicode_Release;..\..\lib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalLibraryDirectories>..\..\lib;..\..\..\vt3;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
       <GenerateDebugInformation>true</GenerateDebugInformation>
       <ProgramDatabaseFile>.\Unicode_Release/libconshu.pdb</ProgramDatabaseFile>
       <RandomizedBaseAddress>false</RandomizedBaseAddress>
@@ -304,6 +306,8 @@ copy Unicode_Debug\libconshdu.dll ..\..\..\vt3d\libconshdu.dll</Command>
     <PostBuildEvent>
       <Command>del ..\..\..\visualtext3\Unicode_Release\libconshu.dll
 copy Unicode_Release\libconshu.dll ..\..\..\visualtext3\Unicode_Release\libconshu.dll
+del ..\..\lib\libconshu.lib
+copy Unicode_Release\libconshu.lib ..\..\lib\libconshu.lib
 del ..\..\..\vt3\libconshu.dll
 copy Unicode_Release\libconshu.dll ..\..\..\vt3\libconshu.dll</Command>
     </PostBuildEvent>

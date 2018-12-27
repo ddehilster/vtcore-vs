@@ -176,7 +176,7 @@
       <SuppressStartupBanner>true</SuppressStartupBanner>
     </Lib>
     <PostBuildEvent>
-      <Command>del ..\..\visualtext3\Unicode_Debug\wnu.lib
+      <Command>del ..\..\visualtext3\Unicode_Release\wnu.lib
 copy Unicode_Release\wnu.lib ..\..\visualtext3\Unicode_Release\wnu.lib
 del ..\..\vt3\wnu.lib
 copy Unicode_Release\wnu.lib ..\..\vt3\wnu.lib</Command>
@@ -209,8 +209,8 @@ copy Unicode_Release\wnu.lib ..\..\vt3\wnu.lib</Command>
     <PostBuildEvent>
       <Command>del ..\..\visualtext3\Unicode_Debug\wndu.lib
 copy Unicode_Debug\wndu.lib ..\..\visualtext3\Unicode_Debug\wndu.lib
-del ..\..\vt3d\wndu.lib
-copy Unicode_Debug\wndu.lib ..\..\vt3d\wndu.lib</Command>
+del ..\..\vt3\wndu.lib
+copy Unicode_Debug\wndu.lib ..\..\vt3\wndu.lib</Command>
     </PostBuildEvent>
   </ItemDefinitionGroup>
   <ItemGroup>

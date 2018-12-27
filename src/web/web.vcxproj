@@ -231,8 +231,10 @@
       <ImportLibrary>.\Unicode_Release/webu.lib</ImportLibrary>
     </Link>
     <PostBuildEvent>
-      <Command>del ..\..\..\visualtext3\Unicode_Debug\webu.dll
+      <Command>del ..\..\..\visualtext3\Unicode_Release\webu.dll
 copy Unicode_Release\webu.dll ..\..\..\visualtext3\Unicode_Release\webu.dll
+del ..\..\lib\webu.lib
+copy Unicode_Release\webu.lib ..\..\lib\webu.lib
 del ..\..\..\vt3\webu.dll
 copy Unicode_Release\webu.dll ..\..\..\vt3\webu.dll</Command>
     </PostBuildEvent>
@@ -285,8 +287,10 @@ copy Unicode_Release\webu.dll ..\..\..\vt3\webu.dll</Command>
     <PostBuildEvent>
       <Command>del ..\..\..\visualtext3\Unicode_Debug\webdu.dll
 copy Unicode_Debug\webdu.dll ..\..\..\visualtext3\Unicode_Debug\webdu.dll
-del ..\..\..\vt3d\webdu.dll
-copy Unicode_Debug\webdu.dll ..\..\..\vt3d\webdu.dll</Command>
+del ..\..\lib\webdu.lib
+copy Unicode_Debug\webdu.lib ..\..\lib\webdu.lib
+del ..\..\..\vt3\webdu.dll
+copy Unicode_Debug\webdu.dll ..\..\..\vt3\webdu.dll</Command>
     </PostBuildEvent>
   </ItemDefinitionGroup>
   <ItemGroup>

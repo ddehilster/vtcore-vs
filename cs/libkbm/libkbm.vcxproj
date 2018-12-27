@@ -239,7 +239,7 @@
       <AdditionalDependencies>odbc32.lib;odbccp32.lib;libprimdu.lib;%(AdditionalDependencies)</AdditionalDependencies>
       <OutputFile>Unicode_Debug/libkbmdu.dll</OutputFile>
       <SuppressStartupBanner>true</SuppressStartupBanner>
-      <AdditionalLibraryDirectories>..\libprim\Unicode_Debug;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalLibraryDirectories>..\..\lib;..\..\..\vt3;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
       <IgnoreSpecificDefaultLibraries>msvcrt;%(IgnoreSpecificDefaultLibraries)</IgnoreSpecificDefaultLibraries>
       <GenerateDebugInformation>true</GenerateDebugInformation>
       <ProgramDatabaseFile>.\Unicode_Debug/libkbmdu.pdb</ProgramDatabaseFile>
@@ -250,8 +250,10 @@
     <PostBuildEvent>
       <Command>del ..\..\..\visualtext3\Unicode_Debug\libkbmdu.dll
 copy Unicode_Debug\libkbmdu.dll ..\..\..\visualtext3\Unicode_Debug\libkbmdu.dll
-del ..\..\..\vt3d\libkbmdu.dll
-copy Unicode_Debug\libkbmdu.dll ..\..\..\vt3d\libkbmdu.dll</Command>
+del ..\..\lib\libkbmdu.lib
+copy Unicode_Debug\libkbmdu.lib ..\..\lib\libkbmdu.lib
+del ..\..\..\vt3\libkbmdu.dll
+copy Unicode_Debug\libkbmdu.dll ..\..\..\vt3\libkbmdu.dll</Command>
     </PostBuildEvent>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Unicode_Release|Win32'">
@@ -303,7 +305,7 @@ copy Unicode_Debug\libkbmdu.dll ..\..\..\vt3d\libkbmdu.dll</Command>
       <Command>del ..\..\..\visualtext3\Unicode_Release\libkbmu.dll
 copy Unicode_Release\libkbmu.dll ..\..\..\visualtext3\Unicode_Release\libkbmu.dll
 del ..\..\lib\libkbmu.lib
-copy Unicode_Release\libkbmu.dll ..\..\lib\libkbmu.lib
+copy Unicode_Release\libkbmu.lib ..\..\lib\libkbmu.lib
 del ..\..\..\vt3\libkbmu.dll
 copy Unicode_Release\libkbmu.dll ..\..\..\vt3\libkbmu.dll</Command>
     </PostBuildEvent>
