@@ -37,19 +37,19 @@
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release_QDBM|Win32'" Label="Configuration">
     <ConfigurationType>DynamicLibrary</ConfigurationType>
-    <PlatformToolset>v120</PlatformToolset>
+    <PlatformToolset>v140</PlatformToolset>
     <UseOfMfc>false</UseOfMfc>
     <CharacterSet>MultiByte</CharacterSet>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug_QDBM|Win32'" Label="Configuration">
     <ConfigurationType>DynamicLibrary</ConfigurationType>
-    <PlatformToolset>v120</PlatformToolset>
+    <PlatformToolset>v140</PlatformToolset>
     <UseOfMfc>false</UseOfMfc>
     <CharacterSet>MultiByte</CharacterSet>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release_Static|Win32'" Label="Configuration">
     <ConfigurationType>StaticLibrary</ConfigurationType>
-    <PlatformToolset>v120</PlatformToolset>
+    <PlatformToolset>v140</PlatformToolset>
     <UseOfMfc>false</UseOfMfc>
     <CharacterSet>MultiByte</CharacterSet>
   </PropertyGroup>
@@ -73,7 +73,7 @@
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
     <ConfigurationType>DynamicLibrary</ConfigurationType>
-    <PlatformToolset>v120</PlatformToolset>
+    <PlatformToolset>v140</PlatformToolset>
     <UseOfMfc>false</UseOfMfc>
     <CharacterSet>MultiByte</CharacterSet>
   </PropertyGroup>
@@ -284,7 +284,7 @@
       <AdditionalDependencies>odbc32.lib;odbccp32.lib;webu.lib;libconshu.lib;wordsu.lib;libprimu.lib;libstreamu.lib;wnu.lib;icudt.lib;icuuc.lib;%(AdditionalDependencies)</AdditionalDependencies>
       <OutputFile>.\Unicode_Release/liteu.dll</OutputFile>
       <SuppressStartupBanner>true</SuppressStartupBanner>
-      <AdditionalLibraryDirectories>..\cs\libprim\Unicode_Release;..\cs\libkbm\Unicode_Release;..\cs\libconsh\Unicode_Release;..\cs\libStream\Unicode_Release;..\src\words\Unicode_Release;..\src\web\Unicode_Release;..\wn\Unicode_Release;..\lib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalLibraryDirectories>..\lib;..\..\vt3;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
       <GenerateDebugInformation>true</GenerateDebugInformation>
       <ProgramDatabaseFile>.\Unicode_Release/liteu.pdb</ProgramDatabaseFile>
       <RandomizedBaseAddress>false</RandomizedBaseAddress>
@@ -294,6 +294,8 @@
     <PostBuildEvent>
       <Command>del ..\..\visualtext3\Unicode_Release\liteu.dll
 copy Unicode_Release\liteu.dll ..\..\visualtext3\Unicode_Release\liteu.dll
+del ..\lib\liteu.lib
+copy Unicode_Release\liteu.lib ..\lib\liteu.lib
 del ..\..\vt3\liteu.dll
 copy Unicode_Release\liteu.dll ..\..\vt3\liteu.dll</Command>
     </PostBuildEvent>
@@ -338,7 +340,7 @@ copy Unicode_Release\liteu.dll ..\..\vt3\liteu.dll</Command>
       <AdditionalDependencies>odbc32.lib;odbccp32.lib;webdu.lib;libconshdu.lib;wordsdu.lib;libprimdu.lib;libstreamdu.lib;wndu.lib;icudt.lib;icuuc.lib;%(AdditionalDependencies)</AdditionalDependencies>
       <OutputFile>Unicode_Debug/litedu.dll</OutputFile>
       <SuppressStartupBanner>true</SuppressStartupBanner>
-      <AdditionalLibraryDirectories>..\cs\libprim\Unicode_Debug;..\cs\libkbm\Unicode_Debug;..\cs\libconsh\Unicode_Debug;..\cs\libStream\Unicode_Debug;..\src\words\Unicode_Debug;..\src\web\Unicode_Debug;..\wn\Unicode_Debug;..\lib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalLibraryDirectories>..\lib;..\..\vt3;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
       <GenerateDebugInformation>true</GenerateDebugInformation>
       <ProgramDatabaseFile>.\Unicode_Debug/litedu.pdb</ProgramDatabaseFile>
       <RandomizedBaseAddress>false</RandomizedBaseAddress>
@@ -348,8 +350,10 @@ copy Unicode_Release\liteu.dll ..\..\vt3\liteu.dll</Command>
     <PostBuildEvent>
       <Command>del ..\..\visualtext3\Unicode_Debug\litedu.dll
 copy Unicode_Debug\litedu.dll ..\..\visualtext3\Unicode_Debug\litedu.dll
-del ..\..\vt3d\litedu.dll
-copy Unicode_Debug\litedu.dll ..\..\vt3d\litedu.dll</Command>
+del ..\lib\litedu.lib
+copy Unicode_Debug\litedu.lib ..\lib\litedu.lib
+del ..\..\vt3\litedu.dll
+copy Unicode_Debug\litedu.dll ..\..\vt3\litedu.dll</Command>
     </PostBuildEvent>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release_Static|Win32'">

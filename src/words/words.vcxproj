@@ -235,8 +235,10 @@
     <PostBuildEvent>
       <Command>del ..\..\..\visualtext3\Unicode_Debug\wordsdu.dll
 copy Unicode_Debug\wordsdu.dll ..\..\..\visualtext3\Unicode_Debug\wordsdu.dll
-del ..\..\..\vt3d\wordsdu.dll
-copy Unicode_Debug\wordsdu.dll ..\..\..\vt3d\wordsdu.dll</Command>
+del ..\..\lib\wordsdu.lib
+copy Unicode_Debug\wordsdu.lib ..\..\lib\wordsdu.lib
+del ..\..\..\vt3\wordsdu.dll
+copy Unicode_Debug\wordsdu.dll ..\..\..\vt3\wordsdu.dll</Command>
     </PostBuildEvent>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Unicode_Release|Win32'">
@@ -287,6 +289,8 @@ copy Unicode_Debug\wordsdu.dll ..\..\..\vt3d\wordsdu.dll</Command>
     <PostBuildEvent>
       <Command>del ..\..\..\visualtext3\Unicode_Release\wordsu.dll
 copy Unicode_Release\wordsu.dll ..\..\..\visualtext3\Unicode_Release\wordsu.dll
+del ..\..\lib\wordsu.lib
+copy Unicode_Release\wordsu.lib ..\..\lib\wordsu.lib
 del ..\..\..\vt3\wordsu.dll
 copy Unicode_Release\wordsu.dll ..\..\..\vt3\wordsu.dll</Command>
     </PostBuildEvent>
