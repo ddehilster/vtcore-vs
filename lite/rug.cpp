@@ -860,7 +860,7 @@ if (justDirty)										// 08/25/99 AM.
 		// Set up to read rules file here.
 		// Attach pass to analyzer sequence.
 		rugpass = Aseq::insertAfter(nlp_, seq,
-							_T("pat"),			// Algorithm name.
+							_T("nlp"),			// Algorithm name.
 							conname,			// Concept name == pass file name.
 							_T("RUG file!"),	// Comment.
 							true);			// An active pass.
@@ -887,7 +887,7 @@ else if (skipLocks)								// 08/25/99 AM.
 		// Set up to read rules file here.
 		// Attach pass to analyzer sequence.
 		rugpass = Aseq::insertAfter(nlp_, seq,
-							_T("pat"),			// Algorithm name.
+							_T("nlp"),			// Algorithm name.
 							conname,			// Concept name == pass file name.
 							_T("RUG file!"),	// Comment.
 							true);			// An active pass.
@@ -1094,7 +1094,7 @@ Arug::prettyRules(rules);
 
 // Attach pass to analyzer sequence.
 rugpass = Aseq::insertAfter(nlp_, seq,
-					_T("pat"),			// Algorithm name.
+					_T("nlp"),			// Algorithm name.
 					conname,			// Concept name == pass file name.
 					_T("RUG file!"),	// Comment.
 					true);			// An active pass.
@@ -1105,7 +1105,7 @@ Arug::fillPass(rugpass, rules, selects);
 
 // Build file path for pass.
 _TCHAR buff[1024];
-_stprintf(buff, _T("%s%c%s%c%s.pat"), appdir_,DIR_CH,
+_stprintf(buff, _T("%s%c%s%c%s.nlp"), appdir_,DIR_CH,
 			SPECDIRNAME,														// 05/14/00 AM.
 			DIR_CH, conname);
 
@@ -1137,7 +1137,7 @@ if (!conname || !*conname)
 
 // Build file path for pass.
 _TCHAR buff[1024];
-_stprintf(buff, _T("%s%c%s%c%s.pat"), appdir_,DIR_CH,
+_stprintf(buff, _T("%s%c%s%c%s.nlp"), appdir_,DIR_CH,
 			SPECDIRNAME,														// 05/14/00 AM.
 			DIR_CH, conname);
 

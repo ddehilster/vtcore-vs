@@ -123,7 +123,7 @@ void RFA::setDebug(bool x)	{debug_ = x;}
 *			in C functions that don't belong to any class.
 *			BUILDING RF ANALYZER DEFINITION BY HAND.  (Because there's no
 *			machinery for reading rules yet -- we're building it here!)
-* REF:	See DEV\RULES RULES\ANALYZER.SEQ and *.PAT .
+* REF:	See DEV\RULES RULES\ANALYZER.SEQ and *.NLP .
 ********************************************/
 
 void RFA::make_rfa(Ana &rfa)
@@ -154,7 +154,7 @@ seqn->setAlgoname(_T("line"));							// 11/04/99 AM.
 rfa.addSeq(delt);
 
 // PASS 3: Retokenize.
-// REF: RETOK.PAT
+// REF: RETOK.NLP
 rfa_retok(rfa);
 
 // PASS 4: Big tokens (comments and strings.)
@@ -168,7 +168,7 @@ rfa_excise(_T(","), _T("x_commas"), rfa);			// 11/20/98 AM.
 rfa_components(rfa);
 
 // PASS 7: Zap whitespace.
-// REF: X_WHITE.PAT
+// REF: X_WHITE.NLP
 rfa_excise(_T("_xWHITE"), _T("x_white"), rfa);			// 11/20/98 AM.
 //rfa_x_white(rfa);									// 11/20/98 AM.
 
@@ -182,19 +182,19 @@ rfa_action(rfa);
 rfa_pair(rfa);
 
 // PASS 11: Recognize pairs.
-// REF: PAIRS.PAT
+// REF: PAIRS.NLP
 rfa_pairs(rfa);
 
 // PASS 12: Recognize elements.
-// REF: ELEMENT.PAT
+// REF: ELEMENT.NLP
 rfa_element(rfa);
 
 // PASS 13: Recognize rules.
-// REF: RULE.PAT
+// REF: RULE.NLP
 rfa_rule(rfa);
 
 // PASS 14: Collect rules into lists.
-// REF: RULE.PAT
+// REF: RULE.NLP
 rfa_rules(rfa);
 
 // PASS 15: Collect actions into lists.
@@ -285,8 +285,8 @@ parse.setAlgo(algo);			// Algo of input file.					// 05/31/00 AM.
 parse.setInputpass(passnum);	// For debug info.					// 08/23/02 AM.
 PostRFA::setDebug(debug);													// 10/13/99 AM.
 
-// Check on rules file for .PAT suffix.  If absent, add it.
-if (!(file = rfa_fix_file_name(specdir, file, _T("pat"))))
+// Check on rules file for .NLP suffix.  If absent, add it.
+if (!(file = rfa_fix_file_name(specdir, file, _T("nlp"))))
 	return false;
 
 if (debug)					// 10/13/99 AM.
@@ -543,7 +543,7 @@ rfa_rule_bs_lit(_T(">"), _T("_cRANGLE"), rules);			// 11/19/98 AM.
 // RULE  7:   _LIT <- \\ \  @@    # SINGLE SPACE
 rfa_rule_bs_lit(_T(" "), _T("_cSPACE"), rules);			// 11/19/98 AM.
 
-// A GAGGLE OF RULES (ref retok.pat)	// 11/19/98 AM.
+// A GAGGLE OF RULES (ref retok.NLP)	// 11/19/98 AM.
 
 // The alphabetics are special.  They need a rename.
 rfa_rule_bs_lit(_T("n"), _T("_cLF"),  rules, _T("\n"));
@@ -602,7 +602,7 @@ algo = new Pat();
 algo->setDebug(RFA::Debug());
 delt = Seqn::makeDelt(algo, _T("retok"), rules);
 Seqn *seqn = delt->getData();										// 11/04/99 AM.
-seqn->setAlgoname(_T("pat"));											// 11/04/99 AM.
+seqn->setAlgoname(_T("nlp"));											// 11/04/99 AM.
 rfa.addSeq(delt);
 
 // Attach pat algo to the RFA pass sequence.
@@ -807,7 +807,7 @@ algo = new Pat();
 algo->setDebug(RFA::Debug());
 delt = Seqn::makeDelt(algo, _T("bigtok"), rules);
 Seqn *seqn = delt->getData();										// 11/04/99 AM.
-seqn->setAlgoname(_T("pat"));											// 11/04/99 AM.
+seqn->setAlgoname(_T("nlp"));											// 11/04/99 AM.
 rfa.addSeq(delt);
 
 // Attach pat algo to the RFA pass sequence.
@@ -1094,7 +1094,7 @@ algo = new Pat();
 algo->setDebug(RFA::Debug());
 delt = Seqn::makeDelt(algo, _T("components"), rules);
 Seqn *seqn = delt->getData();										// 11/04/99 AM.
-seqn->setAlgoname(_T("pat"));											// 11/04/99 AM.
+seqn->setAlgoname(_T("nlp"));											// 11/04/99 AM.
 rfa.addSeq(delt);
 }
 
@@ -1512,7 +1512,7 @@ algo = new Pat();
 algo->setDebug(RFA::Debug());
 delt = Seqn::makeDelt(algo, _T("list"), rules);
 Seqn *seqn = delt->getData();										// 11/04/99 AM.
-seqn->setAlgoname(_T("pat"));											// 11/04/99 AM.
+seqn->setAlgoname(_T("nlp"));											// 11/04/99 AM.
 rfa.addSeq(delt);
 
 // Attach pat algo to the RFA pass sequence.
@@ -1703,7 +1703,7 @@ algo = new Pat();
 algo->setDebug(RFA::Debug());
 delt = Seqn::makeDelt(algo, _T("action"), rules);
 Seqn *seqn = delt->getData();										// 11/04/99 AM.
-seqn->setAlgoname(_T("pat"));											// 11/04/99 AM.
+seqn->setAlgoname(_T("nlp"));											// 11/04/99 AM.
 rfa.addSeq(delt);
 
 // Attach pat algo to the RFA pass sequence.
@@ -1850,7 +1850,7 @@ algo = new Pat();
 algo->setDebug(RFA::Debug());
 delt = Seqn::makeDelt(algo, _T("pair"), rules);
 Seqn *seqn = delt->getData();										// 11/04/99 AM.
-seqn->setAlgoname(_T("pat"));											// 11/04/99 AM.
+seqn->setAlgoname(_T("nlp"));											// 11/04/99 AM.
 rfa.addSeq(delt);
 
 // Attach pat algo to the RFA pass sequence.
@@ -2052,7 +2052,7 @@ algo = new Pat();
 algo->setDebug(RFA::Debug());
 delt = Seqn::makeDelt(algo, _T("pairs"), rules);
 Seqn *seqn = delt->getData();										// 11/04/99 AM.
-seqn->setAlgoname(_T("pat"));											// 11/04/99 AM.
+seqn->setAlgoname(_T("nlp"));											// 11/04/99 AM.
 rfa.addSeq(delt);
 
 // Attach pat algo to the RFA pass sequence.
@@ -2220,7 +2220,7 @@ algo = new Pat();
 algo->setDebug(RFA::Debug());
 delt = Seqn::makeDelt(algo, _T("element"), rules);
 Seqn *seqn = delt->getData();										// 11/04/99 AM.
-seqn->setAlgoname(_T("pat"));											// 11/04/99 AM.
+seqn->setAlgoname(_T("nlp"));											// 11/04/99 AM.
 rfa.addSeq(delt);
 
 // Attach pat algo to the RFA pass sequence.
@@ -2823,7 +2823,7 @@ algo = new Pat();
 algo->setDebug(RFA::Debug());
 delt = Seqn::makeDelt(algo, _T("rule"), rules);
 Seqn *seqn = delt->getData();										// 11/04/99 AM.
-seqn->setAlgoname(_T("pat"));											// 11/04/99 AM.
+seqn->setAlgoname(_T("nlp"));											// 11/04/99 AM.
 rfa.addSeq(delt);
 
 // Attach pat algo to the RFA pass sequence.
@@ -2913,7 +2913,7 @@ algo = new Pat();
 algo->setDebug(RFA::Debug());
 delt = Seqn::makeDelt(algo, _T("rules"), rules);
 Seqn *seqn = delt->getData();										// 11/04/99 AM.
-seqn->setAlgoname(_T("pat"));											// 11/04/99 AM.
+seqn->setAlgoname(_T("nlp"));											// 11/04/99 AM.
 rfa.addSeq(delt);
 
 // Attach pat algo to the RFA pass sequence.
@@ -3338,7 +3338,7 @@ algo = new Pat();
 algo->setDebug(RFA::Debug());
 delt = Seqn::makeDelt(algo, _T("actions"), rules);
 Seqn *seqn = delt->getData();										// 11/04/99 AM.
-seqn->setAlgoname(_T("pat"));											// 11/04/99 AM.
+seqn->setAlgoname(_T("nlp"));											// 11/04/99 AM.
 rfa.addSeq(delt);
 
 // Attach pat algo to the RFA pass sequence.
@@ -3446,7 +3446,7 @@ algo = new Pat();
 algo->setDebug(RFA::Debug());
 delt = Seqn::makeDelt(algo, _T("code"), rules);
 Seqn *seqn = delt->getData();										// 11/04/99 AM.
-seqn->setAlgoname(_T("pat"));											// 11/04/99 AM.
+seqn->setAlgoname(_T("nlp"));											// 11/04/99 AM.
 rfa.addSeq(delt);
 }
 
@@ -3532,7 +3532,7 @@ algo = new Pat();
 algo->setDebug(RFA::Debug());
 delt = Seqn::makeDelt(algo, _T("nodes"), rules);
 Seqn *seqn = delt->getData();										// 11/04/99 AM.
-seqn->setAlgoname(_T("pat"));											// 11/04/99 AM.
+seqn->setAlgoname(_T("nlp"));											// 11/04/99 AM.
 rfa.addSeq(delt);
 }
 
@@ -3618,7 +3618,7 @@ algo = new Pat();
 algo->setDebug(RFA::Debug());
 delt = Seqn::makeDelt(algo, _T("multi"), rules);
 Seqn *seqn = delt->getData();										// 11/04/99 AM.
-seqn->setAlgoname(_T("pat"));											// 11/04/99 AM.
+seqn->setAlgoname(_T("nlp"));											// 11/04/99 AM.
 rfa.addSeq(delt);
 }
 
@@ -3704,7 +3704,7 @@ algo = new Pat();
 algo->setDebug(RFA::Debug());
 delt = Seqn::makeDelt(algo, _T("path"), rules);
 Seqn *seqn = delt->getData();										// 11/04/99 AM.
-seqn->setAlgoname(_T("pat"));											// 11/04/99 AM.
+seqn->setAlgoname(_T("nlp"));											// 11/04/99 AM.
 rfa.addSeq(delt);
 }
 
@@ -3850,7 +3850,7 @@ algo = new Pat();
 algo->setDebug(RFA::Debug());
 delt = Seqn::makeDelt(algo, _T("select"), rules);
 Seqn *seqn = delt->getData();										// 11/04/99 AM.
-seqn->setAlgoname(_T("pat"));											// 11/04/99 AM.
+seqn->setAlgoname(_T("nlp"));											// 11/04/99 AM.
 rfa.addSeq(delt);
 }
 
@@ -3942,7 +3942,7 @@ algo = new Pat();
 algo->setDebug(RFA::Debug());
 delt = Seqn::makeDelt(algo, _T("region"), rules);
 Seqn *seqn = delt->getData();										// 11/04/99 AM.
-seqn->setAlgoname(_T("pat"));											// 11/04/99 AM.
+seqn->setAlgoname(_T("nlp"));											// 11/04/99 AM.
 rfa.addSeq(delt);
 
 // Attach pat algo to the RFA pass sequence.
@@ -4029,7 +4029,7 @@ algo = new Pat();
 algo->setDebug(RFA::Debug());
 delt = Seqn::makeDelt(algo, _T("regions"), rules);
 Seqn *seqn = delt->getData();										// 11/04/99 AM.
-seqn->setAlgoname(_T("pat"));											// 11/04/99 AM.
+seqn->setAlgoname(_T("nlp"));											// 11/04/99 AM.
 rfa.addSeq(delt);
 }
 
@@ -4137,7 +4137,7 @@ algo = new Pat();
 algo->setDebug(RFA::Debug());
 delt = Seqn::makeDelt(algo, _T("recurse"), rules);
 Seqn *seqn = delt->getData();										// 11/04/99 AM.
-seqn->setAlgoname(_T("pat"));											// 11/04/99 AM.
+seqn->setAlgoname(_T("nlp"));											// 11/04/99 AM.
 rfa.addSeq(delt);
 
 // Attach pat algo to the RFA pass sequence.
@@ -4223,7 +4223,7 @@ algo = new Pat();
 algo->setDebug(RFA::Debug());
 delt = Seqn::makeDelt(algo, _T("recurses"), rules);
 Seqn *seqn = delt->getData();										// 11/04/99 AM.
-seqn->setAlgoname(_T("pat"));											// 11/04/99 AM.
+seqn->setAlgoname(_T("nlp"));											// 11/04/99 AM.
 rfa.addSeq(delt);
 }
 
@@ -4324,7 +4324,7 @@ algo = new Pat();
 algo->setDebug(RFA::Debug());
 delt = Seqn::makeDelt(algo, _T("rulesfile"), rules);
 Seqn *seqn = delt->getData();										// 11/04/99 AM.
-seqn->setAlgoname(_T("pat"));											// 11/04/99 AM.
+seqn->setAlgoname(_T("nlp"));											// 11/04/99 AM.
 rfa.addSeq(delt);
 }
 
@@ -4416,7 +4416,7 @@ algo = new Pat();
 algo->setDebug(RFA::Debug());
 delt = Seqn::makeDelt(algo, passname, rules);
 Seqn *seqn = delt->getData();										// 11/04/99 AM.
-seqn->setAlgoname(_T("pat"));											// 11/04/99 AM.
+seqn->setAlgoname(_T("nlp"));											// 11/04/99 AM.
 rfa.addSeq(delt);
 
 // Attach pat algo to the RFA pass sequence.
@@ -4612,7 +4612,7 @@ algo = new Pat();
 //algo->setDebug(RFA::Debug());
 delt = Seqn::makeDelt(algo, _T("test"), rules);
 Seqn *seqn = delt->getData();										// 11/04/99 AM.
-seqn->setAlgoname(_T("pat"));											// 11/04/99 AM.
+seqn->setAlgoname(_T("nlp"));											// 11/04/99 AM.
 rfa.addSeq(delt);
 
 // Attach pat algo to the RFA pass sequence.

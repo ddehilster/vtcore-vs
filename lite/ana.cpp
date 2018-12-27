@@ -600,7 +600,7 @@ else if (	!strcmp_i(s_algo, _T("lines"))
 	if (gen)		// Gen'ing code for analyzer.							// 05/10/00 AM.
 		genLines(pass, gen);													// 05/10/00 AM.
 	}
-else if (!strcmp_i(s_algo, _T("pat")))
+else if (is_rule_file(s_algo))
 	{
 	// 12/02/98 AM. Pat algorithm should have all the code in this case.
 	// Current function should merely say: Pat, instantiate yourself.

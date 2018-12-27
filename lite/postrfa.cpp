@@ -814,7 +814,7 @@ for (; nelts != bound; nelts = nelts->Right())
 	}
 
 // RFB grammar now collects strings, comments, and backslashed chars
-// in the same pass (retok.pat).  Therefore, need to restore this
+// in the same pass (retok.nlp).  Therefore, need to restore this
 // C string conversion.														// 08/19/00 AM.
 // Since RFA and RFB grammars have rules to collect backslashed
 // chars, this conversion is INVALID!									// 08/10/00 AM.

@@ -257,26 +257,26 @@ bool Seqn::genSeqn(
 {
 if (!rules_)
 	return false;
-if (_tcscmp(algo_name_, _T("pat")))
-	return true;		// Rules file only for PAT algorithm.
+if (!is_rule_file(algo_name_))
+	return true;		// Rules file only for NLP algorithm.
 if (!rules_file_name_ || !*rules_file_name_)
-	return false;		// PAT should have rules file.
+	return false;		// NLP should have rules file.
 
 // Set up sequence filename.
 _TCHAR fname[MAXSTR];
 //ostrstream *outStr = 0;													// 03/08/00 AM.
 //ofstream *fout = 0;														// 03/08/00 AM.
 //outStr = new ostrstream(fname, MAXSTR, ios::out);				// 03/08/00 AM.
-//*outStr << dir << "\\" << rules_file_name_ << ".pat" << ends; // 03/08/00 AM.
+//*outStr << dir << "\\" << rules_file_name_ << ".NLP" << ends; // 03/08/00 AM.
 //fout = new ofstream(fname, ios::out);								// 03/08/00 AM.
 
 #ifdef UNICODE
-wsprintf(fname, _T("%s%c%s%s"), dir, DIR_CH, rules_file_name_, _T(".pat"));
+wsprintf(fname, _T("%s%c%s%s"), dir, DIR_CH, rules_file_name_, _T(".NLP"));
 #elif LINUX
-sprintf_s(fname, _T("%s%c%s%s"), dir, DIR_CH, rules_file_name_, _T(".pat"));
+sprintf_s(fname, _T("%s%c%s%s"), dir, DIR_CH, rules_file_name_, _T(".NLP"));
 #else
 _t_ostrstream outStr(fname, MAXSTR, ios::out);							// 03/08/00 AM.
-outStr << dir << DIR_CH << rules_file_name_ << _T(".pat") << ends; // 03/08/00 AM.
+outStr << dir << DIR_CH << rules_file_name_ << _T(".NLP") << ends; // 03/08/00 AM.
 #endif
 _t_ofstream fout(TCHAR2CA(fname), ios::out);											// 03/08/00 AM.
 
@@ -284,7 +284,7 @@ _t_ofstream fout(TCHAR2CA(fname), ios::out);											// 03/08/00 AM.
 _TCHAR fhead[MAXSTR];
 _TCHAR upp[MAXSTR];
 str_to_upper(rules_file_name_, upp);
-_stprintf(fhead, _T("%s.PAT (pass %d)"), upp, passnum_);
+_stprintf(fhead, _T("%s.NLP (pass %d)"), upp, passnum_);
 
 // Write out file header.
 genFileheader(
@@ -578,7 +578,7 @@ for (dseq = seqs->getFirst(); dseq; dseq = dseq->Right())
 	name = seq->getAlgoname();												// 06/04/00 AM.
 	active = seq->getActive();												// 08/04/02 AM.
 	++count;
-	if (!_tcscmp(_T("pat"), name))
+	if (is_rule_file(name))
 		{
 		if (active)																// 08/04 02 AM.
 			*fcode << _T("patExecute") << count << _T("(parse);");

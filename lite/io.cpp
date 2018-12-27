@@ -22,6 +22,20 @@ All rights reserved.
 #include "chars.h"
 #include "io.h"
 
+/********************************************
+*
+* FN:		IS_RULE_FILE
+* CR:		12/26/18 Dd.
+* SUBJ:	Check to see if the file has a rule file extension
+* NOTE:	Adding this function to accomidate the new nlp extension
+*       The nlp extension is now the default.
+*
+********************************************/
+
+bool is_rule_file(_TCHAR *algo)
+{
+	return !_tcscmp(algo, _T("pat")) || !_tcscmp(algo, _T("nlp"));
+}
 
 /********************************************
 *

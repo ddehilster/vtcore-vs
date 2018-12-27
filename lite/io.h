@@ -12,6 +12,7 @@ All rights reserved.
 
 //#include "fstream.h"
 
+bool is_rule_file(_TCHAR *algo);	// 12/27/18
 void copy_file(const _TCHAR *, const _TCHAR *);
 bool file_exists(const _TCHAR *iname);				// 12/14/98 AM.
 void file_to_buffer(const _TCHAR *, _TCHAR *,
