@@ -1,0 +1,66 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <ClCompile Include="binsrch.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="morph.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="search.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="setutil.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="stopsearch.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="wnglobal.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="wnhelp.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="wnrtl.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="wnutil.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="license.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="setutil.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="wn.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="wnconsts.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="wnglobal.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="wnhelp.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="wnrtl.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="wntypes.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="Header Files">
+      <UniqueIdentifier>{eef16f88-149e-489c-a1be-ce6639c11617}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{a5c81ca6-6a49-4229-aa18-8420657dc1d6}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+</Project>
