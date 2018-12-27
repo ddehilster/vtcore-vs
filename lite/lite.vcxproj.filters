@@ -1,0 +1,540 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <ClCompile Include="Agram.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="algo.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="ana.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="angen.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="arg.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Arug.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Arun.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Aseq.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Auser.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Avar.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="chars.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="check.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="cmltok.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="code.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="dicttok.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="dir.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="dirfile.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="dsem.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="dyn.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="eana.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="fn.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="fnrun.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="folder.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="ivar.cpp">
+      <Filter>Header Files</Filter>
+    </ClCompile>
+    <ClCompile Include="gen.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="genhash.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="global.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Gui.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="htab.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="iaction.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="iarg.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="ielement.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="ielt.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="iexpr.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="iexprstmt.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="ifile.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="ifunc.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="iifstmt.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="intern.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="io.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="iop.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="ipair.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="ipnode.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="ipost.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="ipre.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="irecurse.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="iregion.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="ireturn.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="irule.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="istmt.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="istr.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="isugg.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="iwhilestmt.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="kb.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="lextagger.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="line.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="lite.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="literug.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="ln.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="mach.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="mode.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="multi.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="nintern.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="nlp.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="nlppp.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="nug.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="parse.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="pat.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="path.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="phash.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="pn.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="post.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="postrfa.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="pre.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="rec.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="regexp.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="rfa.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="rfasem.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="rug.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="sem.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="seqn.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="stab.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="starr.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="std.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="StdAfx.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="str.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="string.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="stub_e.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="stub_s.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="sym.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="tok.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="tsym.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="u_ofstream.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="u_out.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="uAlgo.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="var.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="vtrun.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="WNFunctions.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="xml.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="angen.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Arug.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="chars.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="check.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="cmltok.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="dicttok.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="dsem.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="dyn.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="eana.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="fn.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="folder.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="funcs.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="gen.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="genhash.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="htab.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="iaction.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="ielement.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="ielt.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="iexpr.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="iexprstmt.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="ifile.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="ifunc.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="iifstmt.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="intern.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="io.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="iop.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="ipair.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="ipnode.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="ipost.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="ipre.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="irecurse.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="iregion.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="ireturn.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="irule.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="istmt.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="istr.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="func_defs.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="isugg.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="ivar.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="iwhilestmt.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="lextagger.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="line.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="ln.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="mode.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="multi.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="nintern.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="nug.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="pat.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="path.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="phash.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="post.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="postrfa.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="rec.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="regexp.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="resource.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="rfa.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="seqn.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="stab.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="starr.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="StdAfx.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="str.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="string.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="stub_e.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="stub_s.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="sym.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="thtab.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="tok.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="tsym.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="u_out.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="uAlgo.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="var.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="web.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="WNFunctions.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="xml.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="kb.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="u_ofstream.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="Header Files">
+      <UniqueIdentifier>{0296f1e7-e069-43f5-86fc-551cb51e654c}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{e952cfd9-d088-461b-9d84-e5392dc993ea}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+</Project>
