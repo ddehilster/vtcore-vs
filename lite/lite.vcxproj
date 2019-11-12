@@ -32,48 +32,48 @@
   </ItemGroup>
   <PropertyGroup Label="Globals">
     <ProjectGuid>{5B63F12C-3F96-4650-8CD2-FC5A1D98167F}</ProjectGuid>
-    <WindowsTargetPlatformVersion>8.1</WindowsTargetPlatformVersion>
+    <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release_QDBM|Win32'" Label="Configuration">
     <ConfigurationType>DynamicLibrary</ConfigurationType>
-    <PlatformToolset>v140</PlatformToolset>
+    <PlatformToolset>v142</PlatformToolset>
     <UseOfMfc>false</UseOfMfc>
     <CharacterSet>MultiByte</CharacterSet>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug_QDBM|Win32'" Label="Configuration">
     <ConfigurationType>DynamicLibrary</ConfigurationType>
-    <PlatformToolset>v140</PlatformToolset>
+    <PlatformToolset>v142</PlatformToolset>
     <UseOfMfc>false</UseOfMfc>
     <CharacterSet>MultiByte</CharacterSet>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release_Static|Win32'" Label="Configuration">
     <ConfigurationType>StaticLibrary</ConfigurationType>
-    <PlatformToolset>v140</PlatformToolset>
+    <PlatformToolset>v142</PlatformToolset>
     <UseOfMfc>false</UseOfMfc>
     <CharacterSet>MultiByte</CharacterSet>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Unicode_Debug|Win32'" Label="Configuration">
     <ConfigurationType>DynamicLibrary</ConfigurationType>
-    <PlatformToolset>v140</PlatformToolset>
+    <PlatformToolset>v142</PlatformToolset>
     <UseOfMfc>false</UseOfMfc>
     <CharacterSet>Unicode</CharacterSet>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Unicode_Release|Win32'" Label="Configuration">
     <ConfigurationType>DynamicLibrary</ConfigurationType>
-    <PlatformToolset>v140</PlatformToolset>
+    <PlatformToolset>v142</PlatformToolset>
     <UseOfMfc>false</UseOfMfc>
     <CharacterSet>Unicode</CharacterSet>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
     <ConfigurationType>DynamicLibrary</ConfigurationType>
-    <PlatformToolset>v140</PlatformToolset>
+    <PlatformToolset>v142</PlatformToolset>
     <UseOfMfc>false</UseOfMfc>
     <CharacterSet>MultiByte</CharacterSet>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
     <ConfigurationType>DynamicLibrary</ConfigurationType>
-    <PlatformToolset>v140</PlatformToolset>
+    <PlatformToolset>v142</PlatformToolset>
     <UseOfMfc>false</UseOfMfc>
     <CharacterSet>MultiByte</CharacterSet>
   </PropertyGroup>
@@ -192,8 +192,12 @@
       <ImportLibrary>.\Release/lite.lib</ImportLibrary>
     </Link>
     <PostBuildEvent>
-      <Command>
-      </Command>
+      <Command>del ..\..\visualtext3\Debug\lite.dll
+copy Debug\lite.dll ..\..\visualtext3\Debug\lite.dll
+del ..\lib\lite.lib
+copy Debug\lited.lib ..\lib\lite.lib
+del ..\..\vt3\lite.dll
+copy Debug\lited.dll ..\..\vt3\lite.dll</Command>
     </PostBuildEvent>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
@@ -241,8 +245,12 @@
       <ImportLibrary>.\Debug/lited.lib</ImportLibrary>
     </Link>
     <PostBuildEvent>
-      <Command>
-      </Command>
+      <Command>del ..\..\visualtext3\Debug\lited.dll
+copy Debug\lited.dll ..\..\visualtext3\Debug\lited.dll
+del ..\lib\lited.lib
+copy Debug\lited.lib ..\lib\lited.lib
+del ..\..\vt3\lited.dll
+copy Debug\lited.dll ..\..\vt3\lited.dll</Command>
     </PostBuildEvent>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Unicode_Release|Win32'">
@@ -284,7 +292,7 @@
       <AdditionalDependencies>odbc32.lib;odbccp32.lib;webu.lib;libconshu.lib;wordsu.lib;libprimu.lib;libstreamu.lib;wnu.lib;icudt.lib;icuuc.lib;%(AdditionalDependencies)</AdditionalDependencies>
       <OutputFile>.\Unicode_Release/liteu.dll</OutputFile>
       <SuppressStartupBanner>true</SuppressStartupBanner>
-      <AdditionalLibraryDirectories>..\lib;..\..\vt3;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalLibraryDirectories>..\lib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
       <GenerateDebugInformation>true</GenerateDebugInformation>
       <ProgramDatabaseFile>.\Unicode_Release/liteu.pdb</ProgramDatabaseFile>
       <RandomizedBaseAddress>false</RandomizedBaseAddress>
@@ -292,12 +300,8 @@
       <ImportLibrary>.\Unicode_Release/liteu.lib</ImportLibrary>
     </Link>
     <PostBuildEvent>
-      <Command>del ..\..\visualtext3\Unicode_Release\liteu.dll
-copy Unicode_Release\liteu.dll ..\..\visualtext3\Unicode_Release\liteu.dll
-del ..\lib\liteu.lib
-copy Unicode_Release\liteu.lib ..\lib\liteu.lib
-del ..\..\vt3\liteu.dll
-copy Unicode_Release\liteu.dll ..\..\vt3\liteu.dll</Command>
+      <Command>del ..\lib\liteu.lib
+copy Unicode_Release\liteu.lib ..\lib\liteu.lib</Command>
     </PostBuildEvent>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Unicode_Debug|Win32'">
@@ -348,12 +352,11 @@ copy Unicode_Release\liteu.dll ..\..\vt3\liteu.dll</Command>
       <ImportLibrary>.\Unicode_Debug/litedu.lib</ImportLibrary>
     </Link>
     <PostBuildEvent>
-      <Command>del ..\..\visualtext3\Unicode_Debug\litedu.dll
-copy Unicode_Debug\litedu.dll ..\..\visualtext3\Unicode_Debug\litedu.dll
-del ..\lib\litedu.lib
+      <Command>del ..\lib\litedu.lib
 copy Unicode_Debug\litedu.lib ..\lib\litedu.lib
-del ..\..\vt3\litedu.dll
-copy Unicode_Debug\litedu.dll ..\..\vt3\litedu.dll</Command>
+del ..\nlp\Unicode_Debug\litedu.dll
+copy Unicode_Debug\litedu.dll ..\nlp\Unicode_Debug\litedu.dll
+</Command>
     </PostBuildEvent>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release_Static|Win32'">
@@ -392,9 +395,8 @@ copy Unicode_Debug\litedu.dll ..\..\vt3\litedu.dll</Command>
       <IgnoreAllDefaultLibraries>true</IgnoreAllDefaultLibraries>
     </Lib>
     <PostBuildEvent>
-      <Command>del /q $(TAI)\lib\lite_static.lib
-copy release_static\lite_static.lib $(TAI)\lib\lite_static.lib
-</Command>
+      <Command>del ..\..\lib\liteu.lib
+copy Unicode_Release\liteu.lib ..\..\lib\liteu.lib</Command>
     </PostBuildEvent>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug_QDBM|Win32'">

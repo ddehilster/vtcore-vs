@@ -20,30 +20,30 @@
   </ItemGroup>
   <PropertyGroup Label="Globals">
     <ProjectGuid>{15951DAE-EA16-4563-B1A8-8672F7515717}</ProjectGuid>
-    <WindowsTargetPlatformVersion>8.1</WindowsTargetPlatformVersion>
+    <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Unicode_Release|Win32'" Label="Configuration">
     <ConfigurationType>DynamicLibrary</ConfigurationType>
-    <PlatformToolset>v140</PlatformToolset>
+    <PlatformToolset>v142</PlatformToolset>
     <UseOfMfc>false</UseOfMfc>
     <CharacterSet>Unicode</CharacterSet>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Unicode_Debug|Win32'" Label="Configuration">
     <ConfigurationType>DynamicLibrary</ConfigurationType>
-    <PlatformToolset>v140</PlatformToolset>
+    <PlatformToolset>v142</PlatformToolset>
     <UseOfMfc>false</UseOfMfc>
     <CharacterSet>Unicode</CharacterSet>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
     <ConfigurationType>DynamicLibrary</ConfigurationType>
-    <PlatformToolset>v140</PlatformToolset>
+    <PlatformToolset>v142</PlatformToolset>
     <UseOfMfc>false</UseOfMfc>
     <CharacterSet>MultiByte</CharacterSet>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
     <ConfigurationType>DynamicLibrary</ConfigurationType>
-    <PlatformToolset>v140</PlatformToolset>
+    <PlatformToolset>v142</PlatformToolset>
     <UseOfMfc>false</UseOfMfc>
     <CharacterSet>MultiByte</CharacterSet>
   </PropertyGroup>
@@ -233,12 +233,10 @@
       <ImportLibrary>.\Unicode_Debug/wordsdu.lib</ImportLibrary>
     </Link>
     <PostBuildEvent>
-      <Command>del ..\..\..\visualtext3\Unicode_Debug\wordsdu.dll
-copy Unicode_Debug\wordsdu.dll ..\..\..\visualtext3\Unicode_Debug\wordsdu.dll
-del ..\..\lib\wordsdu.lib
+      <Command>del ..\..\lib\wordsdu.lib
 copy Unicode_Debug\wordsdu.lib ..\..\lib\wordsdu.lib
-del ..\..\..\vt3\wordsdu.dll
-copy Unicode_Debug\wordsdu.dll ..\..\..\vt3\wordsdu.dll</Command>
+del ..\..\nlp\Unicode_Debug\wordsdu.dll
+copy Unicode_Debug\wordsdu.dll ..\..\nlp\Unicode_Debug\wordsdu.dll</Command>
     </PostBuildEvent>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Unicode_Release|Win32'">
@@ -287,12 +285,8 @@ copy Unicode_Debug\wordsdu.dll ..\..\..\vt3\wordsdu.dll</Command>
       <ImportLibrary>.\Unicode_Release/wordsu.lib</ImportLibrary>
     </Link>
     <PostBuildEvent>
-      <Command>del ..\..\..\visualtext3\Unicode_Release\wordsu.dll
-copy Unicode_Release\wordsu.dll ..\..\..\visualtext3\Unicode_Release\wordsu.dll
-del ..\..\lib\wordsu.lib
-copy Unicode_Release\wordsu.lib ..\..\lib\wordsu.lib
-del ..\..\..\vt3\wordsu.dll
-copy Unicode_Release\wordsu.dll ..\..\..\vt3\wordsu.dll</Command>
+      <Command>del ..\..\lib\wordsu.lib
+copy Unicode_Release\wordsu.lib ..\..\lib\wordsu.lib</Command>
     </PostBuildEvent>
   </ItemDefinitionGroup>
   <ItemGroup>
@@ -338,12 +332,6 @@ copy Unicode_Release\wordsu.dll ..\..\..\vt3\wordsu.dll</Command>
   <ItemGroup>
     <ClInclude Include="resource.h" />
     <ClInclude Include="StdAfx.h" />
-  </ItemGroup>
-  <ItemGroup>
-    <Text Include="ReadMe.txt" />
-  </ItemGroup>
-  <ItemGroup>
-    <ResourceCompile Include="words.rc" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

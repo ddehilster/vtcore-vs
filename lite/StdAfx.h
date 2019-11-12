@@ -6,8 +6,11 @@ All rights reserved.
 //  or project specific include files that are used frequently, but
 //      are changed infrequently
 //
-#ifndef LINUX
 
+#pragma warning (disable : 4005)
+#pragma warning (disable : 4091)
+
+#ifndef LINUX
 #if !defined(AFX_STDAFX_H__1AE1F752_88BC_11D2_9E65_000000000000__INCLUDED_)
 #define AFX_STDAFX_H__1AE1F752_88BC_11D2_9E65_000000000000__INCLUDED_
 

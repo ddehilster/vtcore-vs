@@ -20,30 +20,30 @@
   </ItemGroup>
   <PropertyGroup Label="Globals">
     <ProjectGuid>{9670D2E5-B333-4260-BEBB-BB3242BE1374}</ProjectGuid>
-    <WindowsTargetPlatformVersion>8.1</WindowsTargetPlatformVersion>
+    <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Unicode_Release|Win32'" Label="Configuration">
     <ConfigurationType>DynamicLibrary</ConfigurationType>
-    <PlatformToolset>v140</PlatformToolset>
+    <PlatformToolset>v142</PlatformToolset>
     <UseOfMfc>false</UseOfMfc>
     <CharacterSet>Unicode</CharacterSet>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Unicode_Debug|Win32'" Label="Configuration">
     <ConfigurationType>DynamicLibrary</ConfigurationType>
-    <PlatformToolset>v140</PlatformToolset>
+    <PlatformToolset>v142</PlatformToolset>
     <UseOfMfc>false</UseOfMfc>
     <CharacterSet>Unicode</CharacterSet>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
     <ConfigurationType>DynamicLibrary</ConfigurationType>
-    <PlatformToolset>v140</PlatformToolset>
+    <PlatformToolset>v142</PlatformToolset>
     <UseOfMfc>false</UseOfMfc>
     <CharacterSet>MultiByte</CharacterSet>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
     <ConfigurationType>DynamicLibrary</ConfigurationType>
-    <PlatformToolset>v140</PlatformToolset>
+    <PlatformToolset>v142</PlatformToolset>
     <UseOfMfc>false</UseOfMfc>
     <CharacterSet>MultiByte</CharacterSet>
   </PropertyGroup>
@@ -248,12 +248,10 @@
       <ImportLibrary>.\Unicode_Debug/libconshdu.lib</ImportLibrary>
     </Link>
     <PostBuildEvent>
-      <Command>del ..\..\..\visualtext3\Unicode_Debug\libconshdu.dll
-copy Unicode_Debug\libconshdu.dll ..\..\..\visualtext3\Unicode_Debug\libconshdu.dll
-del ..\..\lib\libconshdu.lib
+      <Command>del ..\..\lib\libconshdu.lib
 copy Unicode_Debug\libconshdu.lib ..\..\lib\libconshdu.lib
-del ..\..\..\vt3\libconshdu.dll
-copy Unicode_Debug\libconshdu.dll ..\..\..\vt3\libconshdu.dll</Command>
+del ..\..\nlp\Unicode_Debug\libconshdu.dll
+copy Unicode_Debug\libconshdu.dll ..\..\nlp\Unicode_Debug\libconshdu.dll</Command>
     </PostBuildEvent>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Unicode_Release|Win32'">
@@ -296,7 +294,7 @@ copy Unicode_Debug\libconshdu.dll ..\..\..\vt3\libconshdu.dll</Command>
       <AdditionalDependencies>odbc32.lib;odbccp32.lib;libprimu.lib;libkbmu.lib;libstreamu.lib;%(AdditionalDependencies)</AdditionalDependencies>
       <OutputFile>.\Unicode_Release/libconshu.dll</OutputFile>
       <SuppressStartupBanner>true</SuppressStartupBanner>
-      <AdditionalLibraryDirectories>..\..\lib;..\..\..\vt3;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalLibraryDirectories>..\..\lib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
       <GenerateDebugInformation>true</GenerateDebugInformation>
       <ProgramDatabaseFile>.\Unicode_Release/libconshu.pdb</ProgramDatabaseFile>
       <RandomizedBaseAddress>false</RandomizedBaseAddress>
@@ -304,12 +302,8 @@ copy Unicode_Debug\libconshdu.dll ..\..\..\vt3\libconshdu.dll</Command>
       <ImportLibrary>.\Unicode_Release/libconshu.lib</ImportLibrary>
     </Link>
     <PostBuildEvent>
-      <Command>del ..\..\..\visualtext3\Unicode_Release\libconshu.dll
-copy Unicode_Release\libconshu.dll ..\..\..\visualtext3\Unicode_Release\libconshu.dll
-del ..\..\lib\libconshu.lib
-copy Unicode_Release\libconshu.lib ..\..\lib\libconshu.lib
-del ..\..\..\vt3\libconshu.dll
-copy Unicode_Release\libconshu.dll ..\..\..\vt3\libconshu.dll</Command>
+      <Command>del ..\..\lib\libconshu.lib
+copy Unicode_Release\libconshu.lib ..\..\lib\libconshu.lib</Command>
     </PostBuildEvent>
   </ItemDefinitionGroup>
   <ItemGroup>
