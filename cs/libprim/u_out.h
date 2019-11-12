@@ -56,11 +56,7 @@ _t_ostream &STDOPERATOR<<(_t_ostream &os, _TCHAR* &lpszBuffer);
 #include <iostream>
 #include <fstream>
 using namespace std;
-#ifdef LINUX
-#include <sstream>
-#else
 #include <strstream>
-#endif
 
 #endif
 
